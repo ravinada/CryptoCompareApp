@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_layout_news_card"
+        android:layout_marginEnd="@dimen/marginEnd_news_card"
+        android:layout_marginRight="@dimen/margin_right_newsCard">
+
+        <ImageView
+            android:id="@+id/news_image"
+            android:layout_width="@dimen/width_image_newsCard"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_iage_news"
+            android:layout_marginLeft="@dimen/marginLeft_image_newscard"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_launcher_foreground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/news_source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_news_type"
+            android:layout_marginLeft="@dimen/margin_left_newsname"
+            android:layout_marginTop="@dimen/margintop_newsname"
+            android:text="@string/cryptonewsz"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size_news_type"
+            app:layout_constraintLeft_toRightOf="@+id/news_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/news_title"
+            android:layout_width="@dimen/margin_width_newsheadlines"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_news_headlines"
+            android:layout_marginLeft="@dimen/margin_left_newsheadlines"
+            android:layout_marginTop="@dimen/margin_top_newsheadlines"
+            android:paddingBottom="10dp"
+            android:text="@string/bitcoin_maintains_its_trent_of_oscillation_and_trades_with_upper_swing"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size_newsheadlines"
+            app:layout_constraintLeft_toRightOf="@+id/news_image"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/news_source" />
+
+        <TextView
+            android:id="@+id/news_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left_news_category"
+            android:layout_marginBottom="12dp"
+            android:text="@string/btc_market_altcoin"
+            android:textSize="@dimen/textsize_news_category"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/news_image" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="6dp"
+            android:background="@color/colorLightGrey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
