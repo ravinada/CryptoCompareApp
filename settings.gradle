@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name='CryptoCompare_ver_1.0'
+rootProject.name='CryptoCompare'

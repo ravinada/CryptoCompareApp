@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimaryDark">#969696</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="colorGreen">#02e050</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGrey">#A36B696A</color>
+    <color name="colorLightGrey">#A3CECECE</color>
+    <color name="colorLightestGrey">#A3DDDDDD</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="colorAccent1">#81333E</color>
+    <color name="colorRose">#3D5B9D</color>
+    <color name="white">#FFF</color>
+
+    <color name="color_edit_bg">#f7f6f6</color>
+    <color name="color_hint">#949494</color>
+    <color name="google_color">#dd4b39</color>
+    <color name="google_color_dark">#942113</color>
+
+    <color name="text_dark">#808080</color>
+    <color name="boarder_color">#D8D8CF</color>
+    <color name="dark_transparent">#24000000</color>
+    <color name="light_transparent">#16000000</color>
+    <color name="dark_gray">#777777</color>
+    <color name="semiTransparent">#20000000</color>
+    <color name="primary_transparent">#e2e5e5e5</color>
 </resources>
