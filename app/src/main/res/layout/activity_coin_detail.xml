@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/detail_backSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        app:layout_constraintEnd_toStartOf="@+id/detail_coin_Name"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/detail_coin_Name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="80dp"
+        android:text="@string/bitcoin"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/textSize_coinName"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/detail_viewbar"
+        app:layout_constraintEnd_toStartOf="@+id/guide1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/currencyTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+        android:text="@string/usd"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size_usdmain"
+        app:layout_constraintBottom_toBottomOf="@+id/detail_coin_Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.979"
+        app:layout_constraintStart_toStartOf="@+id/guide1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/detail_viewbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_view"
+        android:background="@color/colorLightGrey"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="44dp" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/detail_coin_symbol_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintEnd_toStartOf="@+id/guide1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail_backSign" />
+
+    <TextView
+        android:id="@+id/detail_current_coin_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:maxLines="1"
+        android:paddingEnd="8dp"
+        android:text="@string/_9807_01"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/textsize_coindata"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/detail_follow"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guide1"
+        app:layout_constraintTop_toTopOf="@+id/detail_coin_symbol_image"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/detail_chg24h"
+        android:layout_width="@dimen/width_upandDown"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:paddingEnd="8dp"
+        android:text="@string/_2_80"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/colorRed"
+        android:textSize="@dimen/text_size_upanddown"
+        app:layout_constraintBottom_toBottomOf="@+id/detail_coin_symbol_image"
+        app:layout_constraintEnd_toStartOf="@+id/detail_follow"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guide1"
+        app:layout_constraintTop_toBottomOf="@+id/detail_current_coin_price"
+        app:layout_constraintVertical_bias="0.136"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/detail_follow"
+        android:layout_width="@dimen/width_follow"
+        android:layout_height="@dimen/height_follow"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_border_follow"
+        android:paddingTop="4dp"
+        android:text="@string/follow"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size_follow"
+        app:layout_constraintBottom_toBottomOf="@+id/detail_coin_symbol_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/detail_coin_symbol_image"
+        tools:ignore="MissingConstraints" />
+
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/line_chart"
+        android:layout_width="413dp"
+        android:layout_height="247dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail_coin_symbol_image"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/detail_market_cap"
+        style="@style/detailCoinsData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/market_cap"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toStartOf="@+id/guide1"
+        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintStart_toStartOf="@+id/one_day"
+        app:layout_constraintTop_toBottomOf="@+id/one_day" />
+
+    <TextView
+        android:id="@+id/detail_total_vol_24h"
+        style="@style/detailCoinsData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/total_vol_24h"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toEndOf="@+id/detail_market_cap"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/detail_market_cap"
+        app:layout_constraintTop_toBottomOf="@+id/detail_market_cap" />
+
+    <TextView
+        android:id="@+id/detail_direct_vol_24h"
+        style="@style/detailCoinsData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/direct_vol_24h"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toEndOf="@+id/detail_total_vol_24h"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/detail_total_vol_24h"
+        app:layout_constraintTop_toBottomOf="@+id/detail_total_vol_24h" />
+
+    <TextView
+        android:id="@+id/detail_direct_sign"
+        style="@style/detailCoinsData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/direct_vol"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toEndOf="@+id/detail_direct_vol_24h"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/detail_direct_vol_24h"
+        app:layout_constraintTop_toBottomOf="@+id/detail_direct_vol_24h" />
+
+
+    <TextView
+        android:id="@+id/detail_open_24h"
+        style="@style/detailCoinsData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/open_24h"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toEndOf="@+id/detail_direct_sign"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/detail_direct_sign"
+        app:layout_constraintTop_toBottomOf="@+id/detail_direct_sign" />
+
+    <TextView
+        android:id="@+id/detail_high_low_24h"
+        style="@style/detailCoinsData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/low_high_24h"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toEndOf="@+id/detail_open_24h"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/detail_open_24h"
+        app:layout_constraintTop_toBottomOf="@+id/detail_open_24h" />
+
+    <TextView
+        android:id="@+id/detail_market_cap_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@string/_174_94_b"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/textsize_right"
+        app:layout_constraintBottom_toBottomOf="@+id/detail_market_cap"
+        app:layout_constraintStart_toEndOf="@+id/detail_market_cap"
+        app:layout_constraintStart_toStartOf="@+id/guide1" />
+
+    <TextView
+        android:id="@+id/detail_total_vol_24h_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/_284_12_k"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/textsize_right"
+        app:layout_constraintBottom_toBottomOf="@+id/detail_total_vol_24h"
+        app:layout_constraintEnd_toEndOf="@+id/detail_market_cap_number"
+        app:layout_constraintStart_toStartOf="@+id/detail_market_cap_number"
+        app:layout_constraintTop_toBottomOf="@+id/detail_market_cap_number" />
+
+    <TextView
+        android:id="@+id/detail_direct_vol_24h_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/_36_106_4"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/textsize_right"
+        app:layout_constraintBottom_toBottomOf="@+id/detail_direct_vol_24h"
+        app:layout_constraintEnd_toEndOf="@+id/detail_total_vol_24h_number"
+        app:layout_constraintStart_toStartOf="@+id/detail_total_vol_24h_number"
+        app:layout_constraintTop_toBottomOf="@+id/detail_total_vol_24h_number" />
+
+    <TextView
+        android:id="@+id/detail_open_24h_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/_10_089_8"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/textsize_right"
+        app:layout_constraintBottom_toBottomOf="@+id/detail_open_24h"
+        app:layout_constraintEnd_toEndOf="@+id/detail_direct_sign_number"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guide1"
+        app:layout_constraintTop_toBottomOf="@+id/detail_direct_sign_number"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/detail_direct_sign_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/_357_174_519_3"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/textsize_right"
+        app:layout_constraintBottom_toBottomOf="@+id/detail_direct_sign"
+        app:layout_constraintEnd_toEndOf="@+id/detail_direct_vol_24h_number"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="@+id/detail_direct_vol_24h_number"
+        app:layout_constraintTop_toBottomOf="@+id/detail_direct_vol_24h_number"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/detail_low_24h_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/_9_648_55"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/textsize_right"
+        app:layout_constraintBottom_toBottomOf="@+id/detail_high_low_24h"
+        app:layout_constraintEnd_toEndOf="@+id/detail_open_24h_number"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guide1"
+        app:layout_constraintTop_toBottomOf="@+id/detail_open_24h_number" />
+
+    <Button
+        android:id="@+id/one_hour"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:background="@color/white"
+        android:onClick="onClick"
+        android:text="1 H"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="13sp"
+        app:layout_constraintTop_toBottomOf="@+id/line_chart"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/one_day"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:background="@color/colorGreen"
+        android:onClick="onClick"
+        android:text="1 D"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@+id/one_week"
+        app:layout_constraintStart_toEndOf="@+id/one_hour"
+        app:layout_constraintTop_toBottomOf="@+id/line_chart"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/one_week"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:background="@color/colorWhite"
+        android:onClick="onClick"
+        android:text="1 W"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@+id/one_month"
+        app:layout_constraintStart_toEndOf="@+id/one_day"
+        app:layout_constraintTop_toBottomOf="@+id/line_chart"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide1"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.47" />
+
+    <Button
+        android:id="@+id/one_month"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:background="@color/colorWhite"
+        android:onClick="onClick"
+        android:text="1 M"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@+id/six_month"
+        app:layout_constraintStart_toEndOf="@+id/one_week"
+        app:layout_constraintTop_toBottomOf="@+id/line_chart"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/six_month"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:background="@color/colorWhite"
+        android:onClick="onClick"
+        android:text="6 M"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/one_month"
+        app:layout_constraintTop_toBottomOf="@+id/line_chart"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

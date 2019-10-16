@@ -16,7 +16,7 @@
     <dimen name="margin_top_view">10dp</dimen>
     <dimen name="margin_top_layout_constraint">25dp</dimen>
     <dimen name="height_image">0dp</dimen>
-    <dimen name="margin_left_image">0dp</dimen>
+    <dimen name="margin_left_image">4dp</dimen>
     <dimen name="margin_end_image_view">30dp</dimen>
     <dimen name="margin_right_image_view">40dp</dimen>
     <dimen name="marginright_coinData">10sp</dimen>
