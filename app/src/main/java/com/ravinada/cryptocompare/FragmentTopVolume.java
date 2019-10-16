@@ -36,7 +36,7 @@ public class FragmentTopVolume extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.activity_main_new, container, false);
+        View v = inflater.inflate(R.layout.fragment_top_volume, container, false);
 
         recyclerView = v.findViewById(R.id.recycler_view);
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(container.getContext(), 1);
@@ -45,13 +45,14 @@ public class FragmentTopVolume extends Fragment {
         recyclerView.setAdapter(adapter);
 
         String url = BASE_URL + "/data/top/totalvolfull?limit=20&tsym=USD";
-        prepareCurrencies(url,container);
+        prepareCurrencies(url);
 
         return v;
 
     }
-    private void prepareCurrencies(String url,ViewGroup container) {
-        RequestQueue queue = Volley.newRequestQueue(container.getContext());
+
+    private void prepareCurrencies(String url) {
+        RequestQueue queue = Volley.newRequestQueue(getActivity());
         JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
 
             @Override

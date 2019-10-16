@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<RelativeLayout
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintlayoutsearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_searchbar"
+        android:focusableInTouchMode="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/cclogo"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintlayoutsearch"
+            app:layout_constraintLeft_toLeftOf="@+id/constraintlayoutsearch"
+            app:layout_constraintTop_toTopOf="@+id/constraintlayoutsearch" />
+
+        <SearchView
+            android:id="@+id/searchBar"
+            android:layout_width="@dimen/searchview_width"
+            android:layout_height="@dimen/search_view_height"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="@dimen/margin_left_searchview"
+            android:layout_marginTop="@dimen/margin_top_searchView"
+            android:layout_marginEnd="@dimen/margin_right_search_view"
+            android:layout_marginRight="@dimen/margin_right_search_view"
+            android:background="@color/colorLightestGrey"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search"
+            android:textSize="@dimen/search_view_textsize"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintlayoutsearch"
+            app:layout_constraintLeft_toRightOf="@+id/imageView1"
+            app:layout_constraintRight_toLeftOf="@+id/currencyTag"
+            app:layout_constraintTop_toTopOf="@+id/constraintlayoutsearch" />
+
+        <TextView
+            android:id="@+id/currencyTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/marginend_usdmain"
+            android:layout_marginRight="@dimen/marginRight_usd"
+            android:text="@string/usd"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size_usdmain"
+            android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintlayoutsearch"
+            app:layout_constraintRight_toRightOf="@+id/constraintlayoutsearch"
+            app:layout_constraintTop_toTopOf="@+id/constraintlayoutsearch" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/llDashboardMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/nav_view"
+        android:layout_below="@+id/constraintlayoutsearch"
+        android:orientation="vertical">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="@color/colorBlack"
+            app:tabSelectedTextColor="@color/colorBlack">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabMenuSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Following" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabMenuSharing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Top Volume" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemTextColor="@color/colorBlack"
+        app:itemIconTint="@color/colorBlack"/>
+
+</RelativeLayout>
+</layout>
