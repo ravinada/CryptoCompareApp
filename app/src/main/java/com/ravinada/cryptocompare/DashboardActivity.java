@@ -34,11 +34,13 @@ public class DashboardActivity extends AppCompatActivity {
                     setViewWatchList();
                     return true;
                 case R.id.portfolio_bar:
-                    FragmentManager fragmentManager1 = getSupportFragmentManager();
-                    FragmentTransaction fragmentTransaction1 = fragmentManager1.beginTransaction();
-                    fragmentTransaction1
-                            .replace(R.id.llDashboardMain, new NotificationsFragment())
-                            .commit();
+//                    FragmentManager fragmentManager1 = getSupportFragmentManager();
+//                    FragmentTransaction fragmentTransaction1 = fragmentManager1.beginTransaction();
+//                    fragmentTransaction1
+//                            .replace(R.id.llDashboardMain, new NotificationsFragment())
+//                            .commit();
+//                    Intent coin_detail_intent = new Intent(DashboardActivity.this, CoinDetailActivity.class);
+//                    DashboardActivity.this.startActivity(coin_detail_intent);
                     return true;
                 case R.id.newsBar: {
 //                    FragmentManager fragmentManager2 = getSupportFragmentManager();

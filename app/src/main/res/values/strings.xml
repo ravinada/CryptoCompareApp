@@ -13,9 +13,9 @@
     <string name="_2_80">-2.80%</string>
     <string name="follow">Follow</string>
     <string name="market_cap">Market Cap</string>
-    <string name="total_vol_24h">Total Vol.24h</string>
-    <string name="direct_vol_24h">Direct Vol.24h</string>
-    <string name="direct_vol">Direct Vol.24h $</string>
+    <string name="total_vol_24h">Total Vol. 24h</string>
+    <string name="direct_vol_24h">Direct Vol. 24h</string>
+    <string name="direct_vol">Direct Vol. 24h $</string>
     <string name="open_24h">Open 24h $</string>
     <string name="low_high_24h">Low/High 24h $</string>
     <string name="_174_94_b">174.94 B</string>
