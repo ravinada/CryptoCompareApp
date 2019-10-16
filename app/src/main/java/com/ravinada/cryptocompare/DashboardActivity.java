@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.MenuItem;
 import android.view.MotionEvent;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +22,7 @@ import com.ravinada.cryptocompare.ui.dashboard.MainListFragment;
 import com.ravinada.cryptocompare.ui.notifications.NotificationsFragment;
 
 public class DashboardActivity extends AppCompatActivity {
+    TextView currencySelector;
     ActivityDashboardBinding binding;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -59,7 +62,14 @@ public class DashboardActivity extends AppCompatActivity {
         binding.tabs.setupWithViewPager(binding.viewpager, true);
         setViewWatchList();
         binding.navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
+        currencySelector = findViewById(R.id.currencyTag);
+        currencySelector.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CurrencySelector bottomSheet = new CurrencySelector();
+                bottomSheet.show(getSupportFragmentManager(),"currencyTypeList");
+            }
+        });
     }
 
     private void setViewWatchList() {

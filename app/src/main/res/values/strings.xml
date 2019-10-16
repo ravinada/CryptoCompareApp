@@ -30,5 +30,6 @@
     <string name="news">News</string>
     <string name="cryptonewsz">CryptoNewsZ</string>
     <string name="bitcoin_maintains_its_trent_of_oscillation_and_trades_with_upper_swing">Bitcoin maintains its trent of oscillation and trades with upper swing</string>
-    <string name="btc_market_altcoin">BTC|Market|Altcoin</string>
+    <string name="btc_market_altcoin">BTC Market Altcoin</string>
+    <string name="pick_a_currency">Pick a Currency</string>
 </resources>
