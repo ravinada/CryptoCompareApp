@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -37,6 +38,7 @@ public class MainListFragment extends Fragment {
     String BASE_URL = "https://min-api.cryptocompare.com";
     String IMAGE_URL = "https://www.cryptocompare.com";
     MainListFragmentBinding binding;
+    String type;
     private CurrencyAdapter adapter;
     private List<Currency> currencyList = new ArrayList<>();
     private MainListViewModel mViewModel;
@@ -53,13 +55,18 @@ public class MainListFragment extends Fragment {
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        View view = getActivity().findViewById(R.id.currencyTag);
+        if( view instanceof TextView ) {
+            TextView currencyType = (TextView) view;
+            type = currencyType.getText().toString();
+        }
         super.onActivityCreated(savedInstanceState);
         mViewModel = ViewModelProviders.of(this).get(MainListViewModel.class);
         // TODO: Use the ViewModel
         binding.swipeRefresh.setColorSchemeResources(R.color.colorPrimary, R.color.colorAccent, R.color.colorPrimaryDark);
 //        ArrayList<String> roomList = new ArrayList<>();
 //        roomList.addAll(mViewModel.getLikeList());
-        String url = BASE_URL + "/data/top/totalvolfull?limit=20&tsym=USD";
+        String url = BASE_URL + "/data/top/totalvolfull?limit=20&tsym="+type;
         prepareCurrencies(url);
 //        RoomListAdapter adapter = new RoomListAdapter(getActivity(), roomList, new ListItemClickListener() {
 //            @Override
@@ -81,7 +88,7 @@ public class MainListFragment extends Fragment {
 
                         // This method performs the actual data-refresh operation.
                         // The method calls setRefreshing(false) when it's finished.
-                        String url = BASE_URL + "/data/top/totalvolfull?limit=20&tsym=USD";
+                        String url = BASE_URL + "/data/top/totalvolfull?limit=20&tsym="+type;
                         prepareCurrencies(url);
                     }
                 }
@@ -111,6 +118,7 @@ public class MainListFragment extends Fragment {
     private void prepareCurrencies(String url) {
 
         RequestQueue queue = Volley.newRequestQueue(getActivity());
+        currencyList.clear();
         JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
 
             @Override
@@ -118,7 +126,7 @@ public class MainListFragment extends Fragment {
                 try {
                     JSONArray js = response.getJSONArray("Data");
                     for (int i = 0; i < js.length(); i++) {
-                        JSONObject display = js.getJSONObject(i).getJSONObject("DISPLAY").getJSONObject("USD");
+                        JSONObject display = js.getJSONObject(i).getJSONObject("DISPLAY").getJSONObject(type);
                         String image = IMAGE_URL + display.getString("IMAGEURL");
                         JSONObject coinInfo = js.getJSONObject(i).getJSONObject("CoinInfo");
 

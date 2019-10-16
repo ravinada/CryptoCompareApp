@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.FragmentManager;
@@ -17,6 +18,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.ravinada.cryptocompare.databinding.ActivityDashboardBinding;
 import com.ravinada.cryptocompare.ui.dashboard.MainListFragment;
 import com.ravinada.cryptocompare.ui.notifications.NotificationsFragment;
@@ -24,6 +26,7 @@ import com.ravinada.cryptocompare.ui.notifications.NotificationsFragment;
 public class DashboardActivity extends AppCompatActivity {
     TextView currencySelector;
     ActivityDashboardBinding binding;
+    private BottomSheetBehavior<View> behavior;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -68,10 +71,26 @@ public class DashboardActivity extends AppCompatActivity {
         currencySelector.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CurrencySelector bottomSheet = new CurrencySelector();
-                bottomSheet.show(getSupportFragmentManager(),"currencyTypeList");
+                Intent intent = new Intent(DashboardActivity.this,CurrencySelector.class);
+                startActivityForResult(intent,1);
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setViewWatchList();
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode ==1 && resultCode ==RESULT_OK){
+            String currencyType = data.getStringExtra("CURRENCY_TYPE");
+            currencySelector.setText(currencyType);
+        }
     }
 
     private void setViewWatchList() {
