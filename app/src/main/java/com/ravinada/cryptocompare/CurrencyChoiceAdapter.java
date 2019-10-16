@@ -13,17 +13,20 @@ import java.util.ArrayList;
 
 public class CurrencyChoiceAdapter extends RecyclerView.Adapter<CurrencyChoiceAdapter.CurrencyChoiceViewHolder> {
     private ArrayList<CurrencyType> currencyTypes;
-    private Context context;
+    private SetCurrencyType currencyTypeClick;
 
-    public CurrencyChoiceAdapter(Context context, ArrayList<CurrencyType> currencyTypes) {
+    public CurrencyChoiceAdapter(SetCurrencyType currencyTypeClick){
+        this.currencyTypeClick = currencyTypeClick;
+    }
+
+    public void setCurrencies(ArrayList<CurrencyType> currencyTypes) {
         this.currencyTypes = currencyTypes;
-        this.context = context;
     }
 
     @NonNull
     @Override
     public CurrencyChoiceViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.currency_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.currency_item, parent, false);
         return new CurrencyChoiceViewHolder(view);
     }
 
@@ -37,7 +40,7 @@ public class CurrencyChoiceAdapter extends RecyclerView.Adapter<CurrencyChoiceAd
         return currencyTypes.size();
     }
 
-    public class CurrencyChoiceViewHolder extends RecyclerView.ViewHolder {
+    public class CurrencyChoiceViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView symbol;
         TextView abr;
         TextView name;
@@ -47,11 +50,23 @@ public class CurrencyChoiceAdapter extends RecyclerView.Adapter<CurrencyChoiceAd
             symbol = itemView.findViewById(R.id.currencySymbol);
             abr = itemView.findViewById(R.id.currencyAbr);
             name = itemView.findViewById(R.id.currencyDescription);
+            itemView.setOnClickListener(this);
         }
         void bind(CurrencyType currencyType){
             symbol.setText(currencyType.getSymbol());
             abr.setText(currencyType.getAbr());
             name.setText(currencyType.getName());
         }
+        @Override
+        public void onClick(View view){
+            int position = getAdapterPosition();
+            if(position!=RecyclerView.NO_POSITION){
+                CurrencyType type = currencyTypes.get(position);
+                currencyTypeClick.onCurrencyClick(type);
+            }
+        }
+    }
+    public interface SetCurrencyType{
+        void onCurrencyClick(CurrencyType type);
     }
 }

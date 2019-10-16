@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/marginend_usdmain"
             android:layout_marginRight="@dimen/marginRight_usd"
-            android:text="@string/usd"
+            android:text="USD"
             android:textColor="@color/colorBlack"
             android:textSize="@dimen/text_size_usdmain"
             android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
