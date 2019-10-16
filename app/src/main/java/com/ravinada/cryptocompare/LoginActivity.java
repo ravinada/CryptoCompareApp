@@ -49,7 +49,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     Utils.showToast("Please enter password");
                 }else{
                     PreferenceData.setLogin(true);
-                    Intent i = new Intent(LoginActivity.this, Main3Activity.class);
+                    Intent i = new Intent(LoginActivity.this, DashboardActivity.class);
                     startActivity(i);
                     overridePendingTransition(0, 0);
                     finish();
@@ -57,7 +57,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.llFacebook:
                 PreferenceData.setLogin(true);
-                Intent i = new Intent(LoginActivity.this, Main3Activity.class);
+                Intent i = new Intent(LoginActivity.this, DashboardActivity.class);
                 startActivity(i);
                 overridePendingTransition(0, 0);
                 finish();

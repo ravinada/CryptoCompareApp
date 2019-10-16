@@ -1,14 +1,8 @@
 package com.ravinada.cryptocompare;
 
-import android.content.Intent;
 import android.os.Bundle;
 
-import android.util.Log;
-import android.view.View;
-import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,32 +21,36 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main3Activity extends AppCompatActivity  {
+public class NewsActivity extends AppCompatActivity {
 
     String BASE_URL = "https://min-api.cryptocompare.com";
-    String IMAGE_URL = "https://www.cryptocompare.com";
     private RecyclerView recyclerView;
-    private CurrencyAdapter adapter;
-    private List<Currency> currencyList;
+    private NewsAdapter adapter;
+    private List<News> newsList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_new);
+        setContentView(R.layout.list_news);
 
         recyclerView = findViewById(R.id.recycler_view);
-        currencyList = new ArrayList<>();
-        adapter = new CurrencyAdapter(this, currencyList);
+
+        newsList = new ArrayList<>();
+
+        prepareNews();
+
+        adapter = new NewsAdapter(this, newsList);
+
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 1);
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapter);
 
-        String url = BASE_URL + "/data/top/totalvolfull?limit=20&tsym=USD";
-        prepareCurrencies(url);
     }
 
-    private void prepareCurrencies(String url) {
+    private void prepareNews() {
+
+        String url = BASE_URL + "/data/v2/news/?lang=EN";
 
         RequestQueue queue = Volley.newRequestQueue(this);
 
@@ -63,16 +61,17 @@ public class Main3Activity extends AppCompatActivity  {
                 try {
                     JSONArray js = response.getJSONArray("Data");
                     for (int i = 0; i < js.length(); i++) {
-                        JSONObject display = js.getJSONObject(i).getJSONObject("DISPLAY").getJSONObject("USD");
-                        String image = IMAGE_URL + display.getString("IMAGEURL");
-                        JSONObject coinInfo = js.getJSONObject(i).getJSONObject("CoinInfo");
-
-                        Currency c = new Currency(coinInfo.getString("FullName"),
-                                coinInfo.getString("Name"),
-                                display.getString("PRICE"),
-                                display.getString("OPENDAY"), image);
-                        currencyList.add(c);
-
+                        JSONObject display = js.getJSONObject(i);
+                        News n = new News(display.getString("id"),
+                                display.getString("title"),
+                                display.getJSONObject("source_info").getString("name"),
+                                display.getString("imageurl"),
+                                display.getString("categories"),
+                                display.getJSONObject("source_info").getString("img"),
+                                display.getString("body"),
+                                display.getLong("published_on"),
+                                display.getString("url"));
+                        newsList.add(n);
                     }
                     adapter.notifyDataSetChanged();
                 } catch (JSONException e) {
@@ -83,7 +82,6 @@ public class Main3Activity extends AppCompatActivity  {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.i("******", "Error");
             }
         });
 

@@ -48,7 +48,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                     Utils.showToast("Password and confirm password does not match!");
                 }else{
                     PreferenceData.setLogin(true);
-                    Intent i = new Intent(SignupActivity.this, MainActivity.class);
+                    Intent i = new Intent(SignupActivity.this, DashboardActivity.class);
                     startActivity(i);
                     overridePendingTransition(0, 0);
                     finish();
@@ -56,7 +56,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 break;
             case R.id.llFacebook:
                 PreferenceData.setLogin(true);
-                Intent i = new Intent(SignupActivity.this, MainActivity.class);
+                Intent i = new Intent(SignupActivity.this, DashboardActivity.class);
                 startActivity(i);
                 overridePendingTransition(0, 0);
                 finish();

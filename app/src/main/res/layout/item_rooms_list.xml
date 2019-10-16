@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:background="@drawable/list_item_ripple_effect"
+        android:paddingTop="3dp"
+        android:backgroundTint="@color/white"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgDevices"
+                android:layout_width="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_height="140dp"
+                android:background="#DADADF"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_search" />
+
+            <TextView
+                android:id="@+id/txtDeviceName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgDevices"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Whats App Status Latest Title"
+                android:textColor="@color/colorBlack"
+                tools:text="Name Of Devices" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_below="@+id/imgDevices"
+                android:src="@drawable/ic_search" />
+
+            <View
+                android:id="@+id/lineView"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:visibility="visible"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="2dp"
+                android:layout_below="@+id/txtDeviceName"
+                android:background="@color/boarder_color" />
+
+            <LinearLayout
+                android:id="@+id/llViewCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_below="@+id/lineView"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtShare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="5dp"
+                        android:drawableLeft="@drawable/ic_search"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginRight="6dp"
+                        android:text="Share"
+                        android:textSize="12sp"
+                        android:textColor="#808080" />
+
+                    <TextView
+                        android:id="@+id/txtShareCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginRight="6dp"
+                        android:text="50432"
+                        android:textSize="13sp"
+                        android:textColor="#808080" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtDownload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="5dp"
+                        android:drawableLeft="@drawable/ic_search"
+                        android:layout_marginTop="5dp"
+                        android:text="Download"
+                        android:textSize="12sp"
+                        android:textColor="#808080" />
+
+                    <TextView
+                        android:id="@+id/txtDownloadCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="2dp"
+                        android:text="1454532"
+                        android:textSize="13sp"
+                        android:textColor="#808080" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="5dp"
+                        android:drawableLeft="@drawable/ic_search"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Preview"
+                        android:textSize="12sp"
+                        android:textColor="#808080" />
+
+                    <TextView
+                        android:id="@+id/txtViewCount"
+                        android:layout_width="56dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="2dp"
+                        android:text="4577884"
+                        android:textSize="13sp"
+                        android:textColor="#808080" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:visibility="visible"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:layout_below="@+id/llViewCount"
+                android:background="@color/boarder_color" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <data>
+
+        <variable
+            name="itemClickListener"
+            type="com.ravinada.cryptocompare.listner.ListItemClickListener" />
+
+    </data>
+
+</layout>

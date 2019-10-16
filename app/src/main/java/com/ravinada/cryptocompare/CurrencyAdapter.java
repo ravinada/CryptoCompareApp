@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.ravinada.cryptocompare.ui.dashboard.MainListFragment;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -27,6 +28,12 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.MyView
 
     public CurrencyAdapter(FragmentActivity activity) {
     }
+
+    public CurrencyAdapter(NewTopVolumeFragment newTopVolumeFragment, List<Currency> currencyList) {
+        this.mContext = newTopVolumeFragment.getContext();
+        this.currencyList = currencyList;
+    }
+
 
     @NonNull
     @Override
