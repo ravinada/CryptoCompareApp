@@ -13,20 +13,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.ravinada.cryptocompare.databinding.ActivityDashboardBinding;
 import com.ravinada.cryptocompare.ui.dashboard.MainListFragment;
-import com.ravinada.cryptocompare.ui.notifications.NotificationsFragment;
 
 public class DashboardActivity extends AppCompatActivity {
     TextView currencySelector;
     ActivityDashboardBinding binding;
-    private BottomSheetBehavior<View> behavior;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -81,7 +76,6 @@ public class DashboardActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         setViewWatchList();
-
     }
 
     @Override

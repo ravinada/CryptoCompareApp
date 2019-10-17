@@ -2,10 +2,12 @@ package com.ravinada.cryptocompare;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
@@ -62,7 +64,7 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.MyView
         return currencyList.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView coinName, coinPrice,coinTag, openDay;
         public de.hdodenhof.circleimageview.CircleImageView coinImage;
 
@@ -75,6 +77,20 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.MyView
             coinPrice = view.findViewById(R.id.coin_price);
             openDay = view.findViewById(R.id.openDay);
             coinTag=view.findViewById(R.id.coin_tag);
+            view.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            int position = getAdapterPosition();
+            if(position!= RecyclerView.NO_POSITION){
+                String fsyms = currencyList.get(position).getCode();
+                String imageUrl = currencyList.get(position).getImageURL();
+                Intent intent = new Intent(mContext,CurrencyDetailActivity.class);
+                intent.putExtra("COIN_NAME",fsyms);
+                intent.putExtra("IMAGE_URL",imageUrl);
+                mContext.startActivity(intent);
+            }
         }
     }
 }
