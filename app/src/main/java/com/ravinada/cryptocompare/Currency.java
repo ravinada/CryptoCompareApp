@@ -1,6 +1,9 @@
 package com.ravinada.cryptocompare;
 
-public class Currency {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Currency  {
 
     String fullName;
     String code;

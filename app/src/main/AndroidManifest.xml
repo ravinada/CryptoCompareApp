@@ -44,6 +44,8 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".CurrencySelector"
             android:theme="@style/Theme.Transparent"/>
+        <activity android:name=".CurrencyDetailActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
 
     </application>
 
