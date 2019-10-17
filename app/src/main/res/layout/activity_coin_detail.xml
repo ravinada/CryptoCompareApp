@@ -63,9 +63,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="12dp"
         android:src="@mipmap/ic_launcher_round"
-        app:layout_constraintEnd_toStartOf="@+id/guide1"
+        app:layout_constraintEnd_toStartOf="@+id/detail_follow"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detail_backSign" />
@@ -74,6 +74,7 @@
         android:id="@+id/detail_current_coin_price"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:gravity="end"
         android:maxLines="1"
         android:paddingEnd="8dp"
@@ -82,8 +83,6 @@
         android:textColor="@color/colorBlack"
         android:textSize="@dimen/textsize_coindata"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/detail_follow"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guide1"
         app:layout_constraintTop_toTopOf="@+id/detail_coin_symbol_image"
         tools:ignore="MissingConstraints" />
@@ -99,17 +98,17 @@
         android:textColor="@color/colorRed"
         android:textSize="@dimen/text_size_upanddown"
         app:layout_constraintBottom_toBottomOf="@+id/detail_coin_symbol_image"
-        app:layout_constraintEnd_toStartOf="@+id/detail_follow"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guide1"
         app:layout_constraintTop_toBottomOf="@+id/detail_current_coin_price"
         app:layout_constraintVertical_bias="0.136"
         tools:ignore="MissingConstraints" />
 
+
     <TextView
         android:id="@+id/detail_follow"
         android:layout_width="@dimen/width_follow"
         android:layout_height="@dimen/height_follow"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/rounded_border_follow"
         android:paddingTop="4dp"
@@ -117,11 +116,9 @@
         android:textAlignment="center"
         android:textColor="@color/colorBlack"
         android:textSize="@dimen/text_size_follow"
-        app:layout_constraintBottom_toBottomOf="@+id/detail_coin_symbol_image"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/detail_coin_symbol_image"
+        app:layout_constraintTop_toTopOf="@+id/detail_current_coin_price"
         tools:ignore="MissingConstraints" />
-
 
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/line_chart"
@@ -234,7 +231,6 @@
         android:textColor="@color/colorBlack"
         android:textSize="@dimen/textsize_right"
         app:layout_constraintBottom_toBottomOf="@+id/detail_total_vol_24h"
-        app:layout_constraintEnd_toEndOf="@+id/detail_market_cap_number"
         app:layout_constraintStart_toStartOf="@+id/detail_market_cap_number"
         app:layout_constraintTop_toBottomOf="@+id/detail_market_cap_number" />
 
@@ -247,7 +243,6 @@
         android:textColor="@color/colorBlack"
         android:textSize="@dimen/textsize_right"
         app:layout_constraintBottom_toBottomOf="@+id/detail_direct_vol_24h"
-        app:layout_constraintEnd_toEndOf="@+id/detail_total_vol_24h_number"
         app:layout_constraintStart_toStartOf="@+id/detail_total_vol_24h_number"
         app:layout_constraintTop_toBottomOf="@+id/detail_total_vol_24h_number" />
 
@@ -255,15 +250,12 @@
         android:id="@+id/detail_open_24h_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:text="@string/_10_089_8"
         android:textColor="@color/colorBlack"
         android:textSize="@dimen/textsize_right"
         app:layout_constraintBottom_toBottomOf="@+id/detail_open_24h"
-        app:layout_constraintEnd_toEndOf="@+id/detail_direct_sign_number"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guide1"
+        app:layout_constraintStart_toStartOf="@+id/detail_direct_sign_number"
         app:layout_constraintTop_toBottomOf="@+id/detail_direct_sign_number"
         app:layout_constraintVertical_bias="1.0" />
 
@@ -276,8 +268,6 @@
         android:textColor="@color/colorBlack"
         android:textSize="@dimen/textsize_right"
         app:layout_constraintBottom_toBottomOf="@+id/detail_direct_sign"
-        app:layout_constraintEnd_toEndOf="@+id/detail_direct_vol_24h_number"
-        app:layout_constraintHorizontal_bias="0.03"
         app:layout_constraintStart_toStartOf="@+id/detail_direct_vol_24h_number"
         app:layout_constraintTop_toBottomOf="@+id/detail_direct_vol_24h_number"
         app:layout_constraintVertical_bias="1.0" />
@@ -291,10 +281,9 @@
         android:textColor="@color/colorBlack"
         android:textSize="@dimen/textsize_right"
         app:layout_constraintBottom_toBottomOf="@+id/detail_high_low_24h"
-        app:layout_constraintEnd_toEndOf="@+id/detail_open_24h_number"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guide1"
-        app:layout_constraintTop_toBottomOf="@+id/detail_open_24h_number" />
+        app:layout_constraintStart_toStartOf="@+id/detail_open_24h_number"
+        app:layout_constraintTop_toBottomOf="@+id/detail_open_24h_number"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/one_hour"

@@ -40,7 +40,7 @@
             android:name=".SignupActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".NewsActivity"
+            android:name=".NewsDetailsActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".CurrencySelector"
             android:theme="@style/Theme.Transparent"/>
