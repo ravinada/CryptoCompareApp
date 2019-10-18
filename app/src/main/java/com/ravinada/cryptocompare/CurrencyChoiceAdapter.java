@@ -1,6 +1,5 @@
 package com.ravinada.cryptocompare;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,7 +48,7 @@ public class CurrencyChoiceAdapter extends RecyclerView.Adapter<CurrencyChoiceAd
             super(itemView);
             symbol = itemView.findViewById(R.id.currencySymbol);
             abr = itemView.findViewById(R.id.currencyAbr);
-            name = itemView.findViewById(R.id.currencyDescription);
+            name = itemView.findViewById(R.id.lbl_description);
             itemView.setOnClickListener(this);
         }
         void bind(CurrencyType currencyType){

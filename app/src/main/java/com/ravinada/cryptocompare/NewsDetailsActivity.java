@@ -21,8 +21,8 @@ public class NewsDetailsActivity extends AppCompatActivity {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_news_details);
         binding.toolbar.setTitle("News Details");
-
         setSupportActionBar(binding.toolbar);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 

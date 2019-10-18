@@ -60,8 +60,8 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/detail_coin_symbol_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="225px"
+        android:layout_height="225px"
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
         android:src="@mipmap/ic_launcher_round"
@@ -70,11 +70,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detail_backSign" />
 
+
     <TextView
         android:id="@+id/detail_current_coin_price"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
         android:gravity="end"
         android:maxLines="1"
         android:paddingEnd="8dp"
@@ -83,7 +85,7 @@
         android:textColor="@color/colorBlack"
         android:textSize="@dimen/textsize_coindata"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/guide1"
+        app:layout_constraintStart_toEndOf="@+id/detail_coin_symbol_image"
         app:layout_constraintTop_toTopOf="@+id/detail_coin_symbol_image"
         tools:ignore="MissingConstraints" />
 
@@ -91,6 +93,7 @@
         android:id="@+id/detail_chg24h"
         android:layout_width="@dimen/width_upandDown"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:gravity="end"
         android:paddingEnd="8dp"
         android:text="@string/_2_80"
@@ -98,17 +101,14 @@
         android:textColor="@color/colorRed"
         android:textSize="@dimen/text_size_upanddown"
         app:layout_constraintBottom_toBottomOf="@+id/detail_coin_symbol_image"
-        app:layout_constraintStart_toStartOf="@+id/guide1"
+        app:layout_constraintStart_toStartOf="@+id/detail_current_coin_price"
         app:layout_constraintTop_toBottomOf="@+id/detail_current_coin_price"
-        app:layout_constraintVertical_bias="0.136"
         tools:ignore="MissingConstraints" />
-
 
     <TextView
         android:id="@+id/detail_follow"
         android:layout_width="@dimen/width_follow"
         android:layout_height="@dimen/height_follow"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/rounded_border_follow"
         android:paddingTop="4dp"
@@ -116,8 +116,9 @@
         android:textAlignment="center"
         android:textColor="@color/colorBlack"
         android:textSize="@dimen/text_size_follow"
+        app:layout_constraintBottom_toBottomOf="@+id/detail_coin_symbol_image"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/detail_current_coin_price"
+        app:layout_constraintTop_toTopOf="@+id/detail_coin_symbol_image"
         tools:ignore="MissingConstraints" />
 
     <com.github.mikephil.charting.charts.LineChart

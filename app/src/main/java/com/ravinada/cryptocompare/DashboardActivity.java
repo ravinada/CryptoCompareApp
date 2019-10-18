@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -24,7 +25,7 @@ import com.ravinada.cryptocompare.databinding.ActivityDashboardBinding;
 import com.ravinada.cryptocompare.ui.dashboard.MainListFragment;
 import com.ravinada.cryptocompare.ui.dashboard.NewsListFragment;
 import com.ravinada.cryptocompare.ui.dashboard.PortfolioFragment;
-import com.ravinada.cryptocompare.ui.notifications.NotificationsFragment;
+import com.ravinada.cryptocompare.ui.dashboard.TopVolumeFragment;
 
 public class DashboardActivity extends AppCompatActivity {
     TextView currencySelector;

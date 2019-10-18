@@ -4,7 +4,7 @@
     <string name="title_notifications">Notifications</string>
     <string name="app_name">Crypto Compare</string>
     <string name="title_watchlist">Watchlist</string>
-    <string name="title_portfolio">Portfolio</string>
+    <string name="title_portfolio">Portfolio Name</string>
     <string name="title_news">News</string>
 
     <string name="hello_blank_fragment" />
@@ -32,4 +32,13 @@
     <string name="bitcoin_maintains_its_trent_of_oscillation_and_trades_with_upper_swing">Bitcoin maintains its trent of oscillation and trades with upper swing</string>
     <string name="btc_market_altcoin">BTC Market Altcoin</string>
     <string name="pick_a_currency">Pick a Currency</string>
+    <string name="label_portfolio">Add Portfolio</string>
+    <string name="currency">Currency</string>
+    <string name="label_submit">Submit</string>
+    <string name="description">Description</string>
+    <string name="add_description">Add a desciption or leave this area empty</string>
+    <string name="access">Access</string>
+    <string name="Public">Public</string>
+    <string name="Private">Private</string>
+    <string name="btn_first_portfolio">Add your first portfolio</string>
 </resources>

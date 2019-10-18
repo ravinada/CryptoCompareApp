@@ -2,6 +2,7 @@
 <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:id="@+id/toolbar"
     android:layout_height="?android:attr/actionBarSize"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
 
@@ -10,28 +11,36 @@
         android:layout_height="match_parent">
 
         <ImageButton
-            android:id="@+id/btn_menu"
+            android:id="@+id/user_menu"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
             android:background="@android:color/transparent"
-            android:src="@mipmap/app_dp_round"
-            android:scaleType="fitXY"
             android:focusable="true"
-            android:layout_centerVertical="true" />
+            android:scaleType="fitXY"
+            android:src="@mipmap/app_dp_round" />
 
-        <TextView
-            android:id="@+id/txt_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchBar"
+            android:layout_width="280dp"
+            android:layout_height="36dp"
             android:layout_centerVertical="true"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
-            android:layout_toEndOf="@+id/btn_menu"
-            android:text="News"
+            android:layout_toEndOf="@+id/user_menu"
             android:textColor="@android:color/black"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+            android:textSize="@dimen/search_view_textsize" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/searchBar"
+            android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+            android:text="USD"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size_usdmain" />
     </RelativeLayout>
 </androidx.appcompat.widget.Toolbar>

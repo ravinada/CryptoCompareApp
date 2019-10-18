@@ -9,66 +9,59 @@
         android:layout_height="match_parent"
         tools:context=".DashboardActivity">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintlayoutsearch"
+        <RelativeLayout
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_top_searchbar"
-            android:focusableInTouchMode="true"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp">
 
-            <ImageView
-                android:id="@+id/imageView1"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/cclogo"
-                app:layout_constraintBottom_toBottomOf="@+id/constraintlayoutsearch"
-                app:layout_constraintLeft_toLeftOf="@+id/constraintlayoutsearch"
-                app:layout_constraintTop_toTopOf="@+id/constraintlayoutsearch" />
+            <ImageButton
+                android:id="@+id/user_menu"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:focusable="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/app_dp_round" />
 
             <androidx.appcompat.widget.SearchView
                 android:id="@+id/searchBar"
-                android:layout_width="@dimen/searchview_width"
-                android:layout_height="@dimen/search_view_height"
-                android:layout_marginStart="@dimen/margin_left_searchview"
-                android:layout_marginTop="@dimen/margin_top_searchView"
-                android:layout_marginRight="16dp"
-                android:background="@color/colorLightestGrey"
-                android:iconifiedByDefault="false"
-                android:queryBackground="@android:color/transparent"
-                android:queryHint="Search"
-                android:textSize="@dimen/search_view_textsize"
-                app:layout_constraintBottom_toBottomOf="@+id/constraintlayoutsearch"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintLeft_toRightOf="@+id/imageView1"
-                app:layout_constraintRight_toLeftOf="@+id/currencyTag"
-                app:layout_constraintTop_toTopOf="@+id/constraintlayoutsearch"
-                app:layout_constraintVertical_bias="0.0" />
+                android:layout_width="240dp"
+                android:layout_height="36dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_toEndOf="@+id/user_menu"
+                android:background="@drawable/bg_grey_rounded"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/search_view_textsize" />
 
             <TextView
                 android:id="@+id/currencyTag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/marginRight_usd"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@+id/searchBar"
                 android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                android:maxLines="1"
                 android:text="USD"
                 android:textColor="@color/colorBlack"
-                android:textSize="@dimen/text_size_usdmain"
-                app:layout_constraintBottom_toBottomOf="@+id/constraintlayoutsearch"
-                app:layout_constraintRight_toRightOf="@+id/constraintlayoutsearch"
-                app:layout_constraintTop_toTopOf="@+id/constraintlayoutsearch" />
+                android:textSize="@dimen/text_size_usdmain" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
-            android:layout_below="@+id/constraintlayoutsearch"
+            android:layout_height="match_parent"
             android:layout_above="@+id/tabsBottom"
-            android:layout_height="match_parent">
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="8dp">
 
         </androidx.viewpager.widget.ViewPager>
 
@@ -77,7 +70,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="4dp"
             app:tabIndicatorColor="@color/colorBlack"
             app:tabSelectedTextColor="@color/colorBlack">
 
@@ -85,22 +77,19 @@
                 android:id="@+id/tabMenuWatchList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:icon="@drawable/ic_home_black_24dp"
-                android:text="Watchlist" />
+                android:icon="@drawable/ic_home_black_16dp" />
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/tabMenuPortfolio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:icon="@drawable/ic_dashboard_black_24dp"
-                android:text="Port folio" />
+                android:icon="@drawable/ic_dashboard_black_16dp" />
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/tabMenuNews"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:icon="@drawable/ic_notifications_black_24dp"
-                android:text="News" />
+                android:icon="@drawable/ic_notifications_black_16dp" />
 
         </com.google.android.material.tabs.TabLayout>
 
