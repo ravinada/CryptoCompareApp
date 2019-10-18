@@ -28,7 +28,6 @@ public class CurrencyChoiceAdapter extends RecyclerView.Adapter<CurrencyChoiceAd
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.currency_item, parent, false);
         return new CurrencyChoiceViewHolder(view);
     }
-
     @Override
     public void onBindViewHolder(@NonNull CurrencyChoiceViewHolder holder, int position) {
         holder.bind(currencyTypes.get(position));

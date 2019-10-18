@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProviders;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -16,48 +17,77 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.ravinada.cryptocompare.room.FavouriteCoin;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.Objects;
 
 public class CurrencyDetailActivity extends AppCompatActivity {
     ImageView coinImage, detailBackSign;
     Button oneMonth,oneHour,oneDay,oneWeek,sixMonth;
     CurrencyDetailPOJO result;
     TextView coinName,currencySelector,currentCoinPrice,rateChg,follow,marketCap,totalVolume24h,directVolume24h,open24h,directVolumeSigned,lowHigh;
-    String name,imageURL,selectedCurrency;
+    String name,imageURL,selectedCurrency,fullName;
     String BASE_URL ="https://min-api.cryptocompare.com/data/pricemultifull?";
+
+    CoinViewModel coinViewModel;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coin_detail);
         inflateViews();
-        Bundle extras = getIntent().getExtras();
-        if (extras != null) {
-         name = getIntent().getExtras().getString("COIN_NAME");
-         imageURL = getIntent().getExtras().getString("IMAGE_URL");
-        }
+        getIntent().getExtras();
+        name = Objects.requireNonNull(getIntent().getExtras()).getString("COIN_TAG");
+        imageURL = getIntent().getExtras().getString("IMAGE_URL");
+        fullName = getIntent().getExtras().getString("COIN_NAME");
         Picasso.get().load(imageURL).into(coinImage);
+        coinName.setText(fullName);
         selectedCurrency = currencySelector.getText().toString();
         getCurrencyData(name,selectedCurrency);
 
         currencySelector.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(CurrencyDetailActivity.this,CurrencySelector.class);
+                Intent intent = new Intent(CurrencyDetailActivity.this, CurrencySelector.class);
                 startActivityForResult(intent,1);
             }
         });
         detailBackSign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               Intent intent = new Intent(CurrencyDetailActivity.this,DashboardActivity.class);
+               Intent intent = new Intent(CurrencyDetailActivity.this, DashboardActivity.class);
                startActivity(intent);
             }
         });
+        follow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(checkExistance(name)){
+                    deleteCoin();
+                    follow.setText("Follow");
+                    follow.setTextColor(getColor(R.color.colorBlack));
+                    follow.setBackground(getDrawable(R.drawable.rounded_border_follow));
+                }else {
+                    saveCoin();
+                    follow.setText("Following");
+                    follow.setTextColor(getColor(R.color.white));
+                    follow.setBackground(getDrawable(R.drawable.rounded_drawable_following));
+                }
+            }
+        });
+        if(checkExistance(name)){
+            follow.setText("Following");
+            follow.setTextColor(getColor(R.color.white));
+            follow.setBackground(getDrawable(R.drawable.rounded_drawable_following));
+        }else{
+            follow.setText("Follow");
+            follow.setTextColor(getColor(R.color.colorBlack));
+            follow.setBackground(getDrawable(R.drawable.rounded_border_follow));
+        }
     }
-
     @Override
     protected void onResume() {
         super.onResume();
@@ -69,6 +99,7 @@ public class CurrencyDetailActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode ==1 && resultCode ==RESULT_OK){
+            assert data != null;
             String currencyType = data.getStringExtra("CURRENCY_TYPE");
             currencySelector.setText(currencyType);
         }
@@ -133,6 +164,30 @@ public class CurrencyDetailActivity extends AppCompatActivity {
             }
         });
         queue.add(jsonObjectRequest);
-
+    }
+    private void saveCoin() {
+        coinViewModel = ViewModelProviders.of(this).get(CoinViewModel.class);
+        FavouriteCoin favouriteCoin = new FavouriteCoin(name,fullName,imageURL,
+                currentCoinPrice.getText().toString(),rateChg.getText().toString()
+                ,marketCap.getText().toString(),totalVolume24h.getText().toString(),
+                directVolume24h.getText().toString(),open24h.getText().toString(),
+                directVolumeSigned.getText().toString(),lowHigh.getText().toString(),true);
+        coinViewModel.insert(favouriteCoin);
+    }
+    private void deleteCoin(){
+        coinViewModel = ViewModelProviders.of(this).get(CoinViewModel.class);
+        FavouriteCoin favouriteCoin = new FavouriteCoin(name,fullName,imageURL,
+                currentCoinPrice.getText().toString(),rateChg.getText().toString()
+                ,marketCap.getText().toString(),totalVolume24h.getText().toString(),
+                directVolume24h.getText().toString(),open24h.getText().toString(),
+                directVolumeSigned.getText().toString(),lowHigh.getText().toString(),true);
+        coinViewModel.delete(favouriteCoin);
+    }
+    private Boolean checkExistance(String tag){
+        coinViewModel = ViewModelProviders.of(this).get(CoinViewModel.class);
+        if(coinViewModel.existance(tag)==null){
+            return false;
+        }
+        return coinViewModel.existance(tag);
     }
 }
