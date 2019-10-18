@@ -77,6 +77,18 @@ public class TopVolumeFragment extends Fragment {
         );
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        View view = getActivity().findViewById(R.id.currencyTag);
+        if (view instanceof TextView) {
+            TextView currencyType = (TextView) view;
+            type = currencyType.getText().toString();
+        }
+        String url = BASE_URL + "/data/top/totalvolfull?limit=20&tsym=" + type;
+        prepareCurrencies(url);
+    }
+
     private void prepareCurrencies(String url) {
         currencyList.clear();
         RequestQueue queue = Volley.newRequestQueue(getActivity());
@@ -93,8 +105,8 @@ public class TopVolumeFragment extends Fragment {
 
                         Currency c = new Currency(coinInfo.getString("FullName"),
                                 coinInfo.getString("Name"),
-                                display.getString("PRICE"),
-                                display.getString("OPENDAY"), image);
+                                display.getString("TOTALVOLUME24HTO"),
+                                display.getString("PRICE"), image);
                         currencyList.add(c);
                     }
                     Log.d("MainListFrag", "log");
@@ -108,12 +120,7 @@ public class TopVolumeFragment extends Fragment {
                 }
 
             }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.i("******", "Error");
-            }
-        });
+        }, error -> Log.i("******", "Error"));
 
         queue.add(jsObjRequest);
 

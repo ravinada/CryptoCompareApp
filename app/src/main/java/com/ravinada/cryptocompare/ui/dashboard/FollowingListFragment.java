@@ -67,12 +67,9 @@ public class FollowingListFragment extends Fragment {
         String url = BASE_URL + "/data/top/totalvolfull?limit=20&tsym=" + type;
         prepareCurrencies(url);
         binding.swipeRefresh.setOnRefreshListener(
-                new SwipeRefreshLayout.OnRefreshListener() {
-                    @Override
-                    public void onRefresh() {
-                        String url = BASE_URL + "/data/top/totalvolfull?limit=20&tsym=" + type;
-                        prepareCurrencies(url);
-                    }
+                () -> {
+                    String url1 = BASE_URL + "/data/top/totalvolfull?limit=20&tsym=" + type;
+                    prepareCurrencies(url1);
                 }
         );
     }

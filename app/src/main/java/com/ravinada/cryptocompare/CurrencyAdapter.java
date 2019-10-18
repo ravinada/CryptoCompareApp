@@ -7,13 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.ravinada.cryptocompare.ui.dashboard.MainListFragment;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -56,7 +54,6 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.MyView
         holder.coinPrice.setText(currency.getCurrentRate());
         holder.openDay.setText(currency.getOpenDay());
         Picasso.get().load(currency.getImageURL()).into(holder.coinImage);
-        holder.currency = currency;
     }
 
     @Override
@@ -68,7 +65,6 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.MyView
         public TextView coinName, coinPrice,coinTag, openDay;
         public de.hdodenhof.circleimageview.CircleImageView coinImage;
 
-        public Currency currency;
 
         public MyViewHolder(View view) {
             super(view);
@@ -85,10 +81,12 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.MyView
             int position = getAdapterPosition();
             if(position!= RecyclerView.NO_POSITION){
                 String fsyms = currencyList.get(position).getCode();
+                String coinName= currencyList.get(position).getFullName();
                 String imageUrl = currencyList.get(position).getImageURL();
-                Intent intent = new Intent(mContext,CurrencyDetailActivity.class);
-                intent.putExtra("COIN_NAME",fsyms);
+                Intent intent = new Intent(mContext, CurrencyDetailActivity.class);
+                intent.putExtra("COIN_TAG",fsyms);
                 intent.putExtra("IMAGE_URL",imageUrl);
+                intent.putExtra("COIN_NAME",coinName);
                 mContext.startActivity(intent);
             }
         }

@@ -35,12 +35,9 @@ public class DashboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_dashboard);
         currencySelector = findViewById(R.id.currencyTag);
-        currencySelector.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(DashboardActivity.this,CurrencySelector.class);
-                startActivityForResult(intent,1);
-            }
+        currencySelector.setOnClickListener(view -> {
+            Intent intent = new Intent(DashboardActivity.this,CurrencySelector.class);
+            startActivityForResult(intent,1);
         });
 
         binding.tabsBottom.setupWithViewPager(binding.viewPager);

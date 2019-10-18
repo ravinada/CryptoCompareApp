@@ -1,7 +1,5 @@
 package com.ravinada.cryptocompare;
 
-import java.util.Currency;
-
 public class CurrencyDetailPOJO {
     private String currentCoinPrice,rateChg,marketCap,totalVolume24h,directVolume24h,open24h,
             directVolumeSigned,low,high;
