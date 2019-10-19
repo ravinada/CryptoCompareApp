@@ -94,16 +94,13 @@ public abstract class CoinPortfolioDialogBinding extends ViewDataBinding {
   public final EditText editAmount;
 
   @NonNull
+  public final EditText editBuyInsertAmount;
+
+  @NonNull
   public final EditText editDate;
 
   @NonNull
   public final EditText editDescription;
-
-  @NonNull
-  public final EditText editDescription2;
-
-  @NonNull
-  public final EditText editInsertAmount;
 
   @NonNull
   public final HorizontalScrollView horizontalScrollView;
@@ -134,11 +131,10 @@ public abstract class CoinPortfolioDialogBinding extends ViewDataBinding {
       Button btnEur, Button btnGbp, Button btnGold, Button btnHkd, Button btnInr, Button btnJpy,
       Button btnKrw, Button btnNzd, Button btnPhp, Button btnPln, Button btnRon, Button btnRub,
       Button btnSgd, Button btnSubmit, Button btnUsd, Button btnVef, TextView buyPrice,
-      ImageView cancel, EditText editAmount, EditText editDate, EditText editDescription,
-      EditText editDescription2, EditText editInsertAmount,
-      HorizontalScrollView horizontalScrollView, TextView lblAddCoin, TextView lblAmount,
-      TextView lblBoughton, TextView lblCoin, TextView lblCurrency, TextView lblDescription,
-      EditText selectCoin) {
+      ImageView cancel, EditText editAmount, EditText editBuyInsertAmount, EditText editDate,
+      EditText editDescription, HorizontalScrollView horizontalScrollView, TextView lblAddCoin,
+      TextView lblAmount, TextView lblBoughton, TextView lblCoin, TextView lblCurrency,
+      TextView lblDescription, EditText selectCoin) {
     super(_bindingComponent, _root, _localFieldCount);
     this.btnAud = btnAud;
     this.btnBrl = btnBrl;
@@ -165,10 +161,9 @@ public abstract class CoinPortfolioDialogBinding extends ViewDataBinding {
     this.buyPrice = buyPrice;
     this.cancel = cancel;
     this.editAmount = editAmount;
+    this.editBuyInsertAmount = editBuyInsertAmount;
     this.editDate = editDate;
     this.editDescription = editDescription;
-    this.editDescription2 = editDescription2;
-    this.editInsertAmount = editInsertAmount;
     this.horizontalScrollView = horizontalScrollView;
     this.lblAddCoin = lblAddCoin;
     this.lblAmount = lblAmount;

@@ -14,6 +14,8 @@ public class CurrencyType {
     @Expose
     private String name;
 
+    private Boolean isChecked = false;
+
     public String getSymbol() {
         return symbol;
     }
@@ -36,5 +38,13 @@ public class CurrencyType {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Boolean getChecked() {
+        return isChecked;
+    }
+
+    public void setChecked(Boolean checked) {
+        isChecked = checked;
     }
 }

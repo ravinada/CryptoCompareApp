@@ -1198,6 +1198,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable dialog_basic_transparent
+drawable dialog_rounded_grey_box
 drawable facebook
 drawable google
 drawable ic_arrow_back_black_24dp
@@ -1235,6 +1236,9 @@ drawable notify_panel_notification_icon_bg
 drawable ripple_effect
 drawable ripple_effect_google
 drawable rounded_border_follow
+drawable rounded_drawable_following
+drawable rounded_drawable_submit_grey
+drawable rounded_drawable_symbol
 drawable rounded_rect_grey
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1401,10 +1405,9 @@ id dimensions
 id direct
 id disableHome
 id edit_amount
+id edit_buy_insert_amount
 id edit_date
 id edit_description
-id edit_description2
-id edit_insert_amount
 id edit_query
 id edtConfirmPassword
 id edtEmail

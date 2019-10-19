@@ -7,6 +7,8 @@ import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.util.Objects;
+
 @Entity(tableName = "favourite_coins")
 public class FavouriteCoin implements Parcelable {
     @NonNull
@@ -34,8 +36,8 @@ public class FavouriteCoin implements Parcelable {
         this.check = check;
     }
 
-    public FavouriteCoin(Parcel in) {
-        tag = in.readString();
+    private FavouriteCoin(Parcel in) {
+        tag = Objects.requireNonNull(in.readString());
         name = in.readString();
         imageUrl = in.readString();
         currentCoinPrice = in.readString();
