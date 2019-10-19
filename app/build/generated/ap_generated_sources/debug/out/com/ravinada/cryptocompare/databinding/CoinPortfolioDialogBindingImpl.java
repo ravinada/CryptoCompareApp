@@ -24,33 +24,32 @@ public class CoinPortfolioDialogBindingImpl extends CoinPortfolioDialogBinding  
         sViewsWithIds.put(R.id.lbl_amount, 8);
         sViewsWithIds.put(R.id.select_coin, 9);
         sViewsWithIds.put(R.id.edit_amount, 10);
-        sViewsWithIds.put(R.id.edit_description2, 11);
-        sViewsWithIds.put(R.id.edit_insert_amount, 12);
-        sViewsWithIds.put(R.id.edit_description, 13);
-        sViewsWithIds.put(R.id.edit_date, 14);
-        sViewsWithIds.put(R.id.horizontalScrollView, 15);
-        sViewsWithIds.put(R.id.btn_usd, 16);
-        sViewsWithIds.put(R.id.btn_eur, 17);
-        sViewsWithIds.put(R.id.btn_gbp, 18);
-        sViewsWithIds.put(R.id.btn_btc, 19);
-        sViewsWithIds.put(R.id.btn_eth, 20);
-        sViewsWithIds.put(R.id.btn_gold, 21);
-        sViewsWithIds.put(R.id.btn_aud, 22);
-        sViewsWithIds.put(R.id.btn_brl, 23);
-        sViewsWithIds.put(R.id.btn_cad, 24);
-        sViewsWithIds.put(R.id.btn_cny, 25);
-        sViewsWithIds.put(R.id.btn_hkd, 26);
-        sViewsWithIds.put(R.id.btn_inr, 27);
-        sViewsWithIds.put(R.id.btn_jpy, 28);
-        sViewsWithIds.put(R.id.btn_krw, 29);
-        sViewsWithIds.put(R.id.btn_nzd, 30);
-        sViewsWithIds.put(R.id.btn_php, 31);
-        sViewsWithIds.put(R.id.btn_pln, 32);
-        sViewsWithIds.put(R.id.btn_ron, 33);
-        sViewsWithIds.put(R.id.btn_rub, 34);
-        sViewsWithIds.put(R.id.btn_sgd, 35);
-        sViewsWithIds.put(R.id.btn_vef, 36);
-        sViewsWithIds.put(R.id.btn_submit, 37);
+        sViewsWithIds.put(R.id.edit_buy_insert_amount, 11);
+        sViewsWithIds.put(R.id.edit_description, 12);
+        sViewsWithIds.put(R.id.edit_date, 13);
+        sViewsWithIds.put(R.id.horizontalScrollView, 14);
+        sViewsWithIds.put(R.id.btn_usd, 15);
+        sViewsWithIds.put(R.id.btn_eur, 16);
+        sViewsWithIds.put(R.id.btn_gbp, 17);
+        sViewsWithIds.put(R.id.btn_btc, 18);
+        sViewsWithIds.put(R.id.btn_eth, 19);
+        sViewsWithIds.put(R.id.btn_gold, 20);
+        sViewsWithIds.put(R.id.btn_aud, 21);
+        sViewsWithIds.put(R.id.btn_brl, 22);
+        sViewsWithIds.put(R.id.btn_cad, 23);
+        sViewsWithIds.put(R.id.btn_cny, 24);
+        sViewsWithIds.put(R.id.btn_hkd, 25);
+        sViewsWithIds.put(R.id.btn_inr, 26);
+        sViewsWithIds.put(R.id.btn_jpy, 27);
+        sViewsWithIds.put(R.id.btn_krw, 28);
+        sViewsWithIds.put(R.id.btn_nzd, 29);
+        sViewsWithIds.put(R.id.btn_php, 30);
+        sViewsWithIds.put(R.id.btn_pln, 31);
+        sViewsWithIds.put(R.id.btn_ron, 32);
+        sViewsWithIds.put(R.id.btn_rub, 33);
+        sViewsWithIds.put(R.id.btn_sgd, 34);
+        sViewsWithIds.put(R.id.btn_vef, 35);
+        sViewsWithIds.put(R.id.btn_submit, 36);
     }
     // views
     @NonNull
@@ -61,19 +60,20 @@ public class CoinPortfolioDialogBindingImpl extends CoinPortfolioDialogBinding  
     // Inverse Binding Event Handlers
 
     public CoinPortfolioDialogBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 38, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 37, sIncludes, sViewsWithIds));
     }
     private CoinPortfolioDialogBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.Button) bindings[22]
-            , (android.widget.Button) bindings[23]
-            , (android.widget.Button) bindings[19]
-            , (android.widget.Button) bindings[24]
-            , (android.widget.Button) bindings[25]
-            , (android.widget.Button) bindings[20]
-            , (android.widget.Button) bindings[17]
-            , (android.widget.Button) bindings[18]
             , (android.widget.Button) bindings[21]
+            , (android.widget.Button) bindings[22]
+            , (android.widget.Button) bindings[18]
+            , (android.widget.Button) bindings[23]
+            , (android.widget.Button) bindings[24]
+            , (android.widget.Button) bindings[19]
+            , (android.widget.Button) bindings[16]
+            , (android.widget.Button) bindings[17]
+            , (android.widget.Button) bindings[20]
+            , (android.widget.Button) bindings[25]
             , (android.widget.Button) bindings[26]
             , (android.widget.Button) bindings[27]
             , (android.widget.Button) bindings[28]
@@ -83,18 +83,16 @@ public class CoinPortfolioDialogBindingImpl extends CoinPortfolioDialogBinding  
             , (android.widget.Button) bindings[32]
             , (android.widget.Button) bindings[33]
             , (android.widget.Button) bindings[34]
-            , (android.widget.Button) bindings[35]
-            , (android.widget.Button) bindings[37]
-            , (android.widget.Button) bindings[16]
             , (android.widget.Button) bindings[36]
+            , (android.widget.Button) bindings[15]
+            , (android.widget.Button) bindings[35]
             , (android.widget.TextView) bindings[4]
             , (android.widget.ImageView) bindings[3]
             , (android.widget.EditText) bindings[10]
-            , (android.widget.EditText) bindings[14]
-            , (android.widget.EditText) bindings[13]
             , (android.widget.EditText) bindings[11]
+            , (android.widget.EditText) bindings[13]
             , (android.widget.EditText) bindings[12]
-            , (android.widget.HorizontalScrollView) bindings[15]
+            , (android.widget.HorizontalScrollView) bindings[14]
             , (android.widget.TextView) bindings[1]
             , (android.widget.TextView) bindings[8]
             , (android.widget.TextView) bindings[5]

@@ -6,7 +6,6 @@
     android:layout_gravity="center"
     android:padding="25dp"
     android:orientation="vertical">
-
         <ProgressBar
             android:id="@+id/loader"
             android:layout_width="60dp"

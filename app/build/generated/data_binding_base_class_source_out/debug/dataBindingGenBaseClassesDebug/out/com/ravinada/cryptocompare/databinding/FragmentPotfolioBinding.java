@@ -5,11 +5,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
+import com.ravinada.cryptocompare.CurrencyAdapter;
 import com.ravinada.cryptocompare.R;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -21,11 +25,47 @@ public abstract class FragmentPotfolioBinding extends ViewDataBinding {
   @NonNull
   public final Button btnAddPortfolio;
 
+  @NonNull
+  public final Button myButton;
+
+  @NonNull
+  public final RecyclerView recyclerView;
+
+  @NonNull
+  public final TextView textView;
+
+  @NonNull
+  public final TextView textView2;
+
+  @NonNull
+  public final TextView textView3;
+
+  @NonNull
+  public final TextView textView4;
+
+  @Bindable
+  protected CurrencyAdapter mCurrencyAdapter;
+
   protected FragmentPotfolioBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CoordinatorLayout activityMain, Button btnAddPortfolio) {
+      CoordinatorLayout activityMain, Button btnAddPortfolio, Button myButton,
+      RecyclerView recyclerView, TextView textView, TextView textView2, TextView textView3,
+      TextView textView4) {
     super(_bindingComponent, _root, _localFieldCount);
     this.activityMain = activityMain;
     this.btnAddPortfolio = btnAddPortfolio;
+    this.myButton = myButton;
+    this.recyclerView = recyclerView;
+    this.textView = textView;
+    this.textView2 = textView2;
+    this.textView3 = textView3;
+    this.textView4 = textView4;
+  }
+
+  public abstract void setCurrencyAdapter(@Nullable CurrencyAdapter currencyAdapter);
+
+  @Nullable
+  public CurrencyAdapter getCurrencyAdapter() {
+    return mCurrencyAdapter;
   }
 
   @NonNull

@@ -1,58 +1,62 @@
 [
     {
-        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_dashboard.xml",
-        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\src\\main\\res\\layout\\activity_dashboard.xml"
+        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_potfolio1.xml",
+        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\src\\main\\res\\layout\\fragment_potfolio1.xml"
     },
     {
-        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\first_portfolio.xml",
-        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\src\\main\\res\\layout\\first_portfolio.xml"
+        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_news_details.xml",
+        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\src\\main\\res\\layout\\activity_news_details.xml"
     },
     {
-        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\coin_portfolio_dialog.xml",
-        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\src\\main\\res\\layout\\coin_portfolio_dialog.xml"
+        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\main_list_fragment.xml",
+        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\src\\main\\res\\layout\\main_list_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_potfolio.xml",
-        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\src\\main\\res\\layout\\fragment_potfolio.xml"
+        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\coin_portfolio_dialog.xml",
+        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\src\\main\\res\\layout\\coin_portfolio_dialog.xml"
     },
     {
-        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\portfolio_dialog.xml",
-        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\src\\main\\res\\layout\\portfolio_dialog.xml"
+        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_rooms_list.xml",
+        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\src\\main\\res\\layout\\item_rooms_list.xml"
     },
     {
-        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_following_list.xml",
-        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\src\\main\\res\\layout\\fragment_following_list.xml"
+        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\portfolio_dialog.xml",
+        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\src\\main\\res\\layout\\portfolio_dialog.xml"
     },
     {
-        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_signup.xml",
-        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\src\\main\\res\\layout\\activity_signup.xml"
+        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_topvolume_list.xml",
+        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\src\\main\\res\\layout\\fragment_topvolume_list.xml"
     },
     {
-        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_news_details.xml",
-        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\src\\main\\res\\layout\\activity_news_details.xml"
+        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_potfolio.xml",
+        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\src\\main\\res\\layout\\fragment_potfolio.xml"
     },
     {
-        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_forgot_password.xml",
-        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\src\\main\\res\\layout\\activity_forgot_password.xml"
+        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\first_portfolio.xml",
+        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\src\\main\\res\\layout\\first_portfolio.xml"
     },
     {
-        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_news_list.xml",
-        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\src\\main\\res\\layout\\fragment_news_list.xml"
+        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_forgot_password.xml",
+        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\src\\main\\res\\layout\\activity_forgot_password.xml"
     },
     {
-        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_rooms_list.xml",
-        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\src\\main\\res\\layout\\item_rooms_list.xml"
+        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
+        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_topvolume_list.xml",
-        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\src\\main\\res\\layout\\fragment_topvolume_list.xml"
+        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_following_list.xml",
+        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\src\\main\\res\\layout\\fragment_following_list.xml"
     },
     {
-        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
-        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\src\\main\\res\\layout\\activity_login.xml"
+        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_dashboard.xml",
+        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\src\\main\\res\\layout\\activity_dashboard.xml"
     },
     {
-        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\main_list_fragment.xml",
-        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.1\\app\\src\\main\\res\\layout\\main_list_fragment.xml"
+        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_signup.xml",
+        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\src\\main\\res\\layout\\activity_signup.xml"
+    },
+    {
+        "merged": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_news_list.xml",
+        "source": "C:\\Users\\ravin\\OneDrive\\Desktop\\Crypto_Compare_1.2\\app\\src\\main\\res\\layout\\fragment_news_list.xml"
     }
 ]

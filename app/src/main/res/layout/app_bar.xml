@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<com.google.android.material.appbar.AppBarLayout
+    android:id="@+id/appBarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:theme="@style/MyTheme"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.appcompat.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:id="@+id/toolbar"
     android:layout_height="?android:attr/actionBarSize"
@@ -33,6 +40,7 @@
             android:textSize="@dimen/search_view_textsize" />
 
         <TextView
+            android:id="@+id/currencyTag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -44,3 +52,4 @@
             android:textSize="@dimen/text_size_usdmain" />
     </RelativeLayout>
 </androidx.appcompat.widget.Toolbar>
+</com.google.android.material.appbar.AppBarLayout>

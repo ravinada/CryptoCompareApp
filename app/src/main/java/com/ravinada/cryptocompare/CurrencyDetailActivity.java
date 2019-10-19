@@ -1,6 +1,8 @@
 package com.ravinada.cryptocompare;
 
 import android.content.Intent;
+
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
 
@@ -17,23 +20,29 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+
+import com.github.mikephil.charting.charts.LineChart;
 import com.ravinada.cryptocompare.room.FavouriteCoin;
 import com.squareup.picasso.Picasso;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Objects;
 
-public class CurrencyDetailActivity extends AppCompatActivity {
+@RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+
+public class CurrencyDetailActivity extends AppCompatActivity  {
     ImageView coinImage, detailBackSign;
     Button oneMonth,oneHour,oneDay,oneWeek,sixMonth;
     CurrencyDetailPOJO result;
     TextView coinName,currencySelector,currentCoinPrice,rateChg,follow,marketCap,totalVolume24h,directVolume24h,open24h,directVolumeSigned,lowHigh;
     String name,imageURL,selectedCurrency,fullName;
     String BASE_URL ="https://min-api.cryptocompare.com/data/pricemultifull?";
-
+    LineChart lineChart;
     CoinViewModel coinViewModel;
+    public static String time="histominute";
+    public static final String DATA_SET = "dataSet";
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +56,7 @@ public class CurrencyDetailActivity extends AppCompatActivity {
         coinName.setText(fullName);
         selectedCurrency = currencySelector.getText().toString();
         getCurrencyData(name,selectedCurrency);
+       // callGraphData();
 
         currencySelector.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,7 +117,7 @@ public class CurrencyDetailActivity extends AppCompatActivity {
     public void inflateViews(){
         coinImage = findViewById(R.id.detail_coin_symbol_image);
         detailBackSign =findViewById(R.id.detail_backSign);
-        //  lineChart = findViewById(R.id.line_chart);
+        lineChart = findViewById(R.id.line_chart);
         oneMonth=findViewById(R.id.one_month);
         oneHour=findViewById(R.id.one_hour);
         oneDay=findViewById(R.id.one_day);
@@ -190,4 +200,5 @@ public class CurrencyDetailActivity extends AppCompatActivity {
         }
         return coinViewModel.existance(tag);
     }
+
 }

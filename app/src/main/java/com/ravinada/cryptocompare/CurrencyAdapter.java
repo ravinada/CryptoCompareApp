@@ -29,11 +29,6 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.MyView
     public CurrencyAdapter(FragmentActivity activity) {
     }
 
-    public CurrencyAdapter(NewTopVolumeFragment newTopVolumeFragment, List<Currency> currencyList) {
-        this.mContext = newTopVolumeFragment.getContext();
-        this.currencyList = currencyList;
-    }
-
 
     @NonNull
     @Override

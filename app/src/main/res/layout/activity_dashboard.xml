@@ -43,7 +43,7 @@
                 android:id="@+id/currencyTag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="8dp"
                 android:layout_toEndOf="@+id/searchBar"
@@ -61,7 +61,7 @@
             android:layout_height="match_parent"
             android:layout_above="@+id/tabsBottom"
             android:layout_below="@+id/toolbar"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="2dp">
 
         </androidx.viewpager.widget.ViewPager>
 
@@ -77,7 +77,8 @@
                 android:id="@+id/tabMenuWatchList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:icon="@drawable/ic_home_black_16dp" />
+                android:icon="@drawable/ic_home_black_16dp"
+                android:text="Watch list"/>
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/tabMenuPortfolio"

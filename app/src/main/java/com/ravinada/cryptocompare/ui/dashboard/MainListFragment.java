@@ -47,8 +47,8 @@ public class MainListFragment extends Fragment {
                     fragmentTransaction = fragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.llDashboardMain, FollowingListFragment.newInstance()).commit();
                 }else{
-                     fragmentTransaction = fragmentManager.beginTransaction();
-                     fragmentTransaction.replace(R.id.llDashboardMain, TopVolumeFragment.newInstance()).commit();
+                    fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.llDashboardMain, TopVolumeFragment.newInstance()).commit();
                 }
             }
 

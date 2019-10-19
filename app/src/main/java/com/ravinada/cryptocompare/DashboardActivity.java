@@ -4,33 +4,36 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.AttributeSet;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.bottomsheet.BottomSheetBehavior;
-import com.google.android.material.tabs.TabLayout;
 import com.ravinada.cryptocompare.databinding.ActivityDashboardBinding;
 import com.ravinada.cryptocompare.ui.dashboard.MainListFragment;
 import com.ravinada.cryptocompare.ui.dashboard.NewsListFragment;
 import com.ravinada.cryptocompare.ui.dashboard.PortfolioFragment;
-import com.ravinada.cryptocompare.ui.dashboard.TopVolumeFragment;
+
 
 public class DashboardActivity extends AppCompatActivity {
     TextView currencySelector;
     ActivityDashboardBinding binding;
-
+    private int[] tabIcons = {
+            R.drawable.ic_home_black_16dp,
+            R.drawable.ic_dashboard_black_16dp,
+            R.drawable.ic_notifications_black_16dp
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,11 +45,11 @@ public class DashboardActivity extends AppCompatActivity {
         });
 
         binding.tabsBottom.setupWithViewPager(binding.viewPager);
+        setupTabIcons();
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this.getSupportFragmentManager());
         viewPagerAdapter.addFragment(MainListFragment.newInstance(),"Watchlist");
         viewPagerAdapter.addFragment(PortfolioFragment.newInstance(),"Portfolio");
         viewPagerAdapter.addFragment(NewsListFragment.newInstance(),"News");
-
         binding.viewPager.setAdapter(viewPagerAdapter);
 
         binding.viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -67,7 +70,11 @@ public class DashboardActivity extends AppCompatActivity {
         });
 
     }
-
+    private void setupTabIcons() {
+        binding.tabsBottom.getTabAt(0).setIcon(tabIcons[0]);
+        binding.tabsBottom.getTabAt(1).setIcon(tabIcons[1]);
+        binding.tabsBottom.getTabAt(2).setIcon(tabIcons[2]);
+    }
     @Override
     protected void onResumeFragments() {
         super.onResumeFragments();

@@ -26,17 +26,11 @@ import com.ravinada.cryptocompare.adapters.NewsListAdapter;
 import com.ravinada.cryptocompare.databinding.FragmentPotfolioBinding;
 
 
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class PortfolioFragment extends Fragment {
     private final String TAG = PortfolioFragment.class.getSimpleName();
 
     FragmentPotfolioBinding binding;
     String BASE_URL = "https://min-api.cryptocompare.com";
-    private List<News> newsList = new ArrayList<>();
-    private NewsListAdapter newsListAdapter;
 
     public static PortfolioFragment newInstance() {
         return new PortfolioFragment();
@@ -48,7 +42,7 @@ public class PortfolioFragment extends Fragment {
         //  binding = DataBindingUtil.inflate(inflater, R.layout.portfolio_dialog, container, false);
         final View dialogView = inflater.inflate(R.layout.portfolio_dialog, null);
         final AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(new ContextThemeWrapper(getActivity(), R.style.Theme_AppCompat_Light_NoActionBar));
-
+        final AlertDialog alert = dialogBuilder.create();
         binding.btnAddPortfolio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
