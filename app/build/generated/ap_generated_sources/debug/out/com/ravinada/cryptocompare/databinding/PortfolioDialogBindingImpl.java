@@ -23,29 +23,8 @@ public class PortfolioDialogBindingImpl extends PortfolioDialogBinding  {
         sViewsWithIds.put(R.id.lbl_amount, 7);
         sViewsWithIds.put(R.id.select_coin, 8);
         sViewsWithIds.put(R.id.edit_amount, 9);
-        sViewsWithIds.put(R.id.horizontalScrollView, 10);
-        sViewsWithIds.put(R.id.btn_usd, 11);
-        sViewsWithIds.put(R.id.btn_eur, 12);
-        sViewsWithIds.put(R.id.btn, 13);
-        sViewsWithIds.put(R.id.btn_btc, 14);
-        sViewsWithIds.put(R.id.btn_eth, 15);
-        sViewsWithIds.put(R.id.btn_gold, 16);
-        sViewsWithIds.put(R.id.btn_aud, 17);
-        sViewsWithIds.put(R.id.btn_brl, 18);
-        sViewsWithIds.put(R.id.btn_cad, 19);
-        sViewsWithIds.put(R.id.btn_cny, 20);
-        sViewsWithIds.put(R.id.btn_hkd, 21);
-        sViewsWithIds.put(R.id.btn_inr, 22);
-        sViewsWithIds.put(R.id.btn_jpy, 23);
-        sViewsWithIds.put(R.id.btn_krw, 24);
-        sViewsWithIds.put(R.id.btn_nzd, 25);
-        sViewsWithIds.put(R.id.btn_php, 26);
-        sViewsWithIds.put(R.id.btn_pln, 27);
-        sViewsWithIds.put(R.id.btn_ron, 28);
-        sViewsWithIds.put(R.id.btn_rub, 29);
-        sViewsWithIds.put(R.id.btn_sgd, 30);
-        sViewsWithIds.put(R.id.btn_vef, 31);
-        sViewsWithIds.put(R.id.btn_submit, 32);
+        sViewsWithIds.put(R.id.selectCurencyPurchase, 10);
+        sViewsWithIds.put(R.id.btn_submit, 11);
     }
     // views
     @NonNull
@@ -56,40 +35,19 @@ public class PortfolioDialogBindingImpl extends PortfolioDialogBinding  {
     // Inverse Binding Event Handlers
 
     public PortfolioDialogBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 33, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 12, sIncludes, sViewsWithIds));
     }
     private PortfolioDialogBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.Button) bindings[13]
-            , (android.widget.Button) bindings[17]
-            , (android.widget.Button) bindings[18]
-            , (android.widget.Button) bindings[14]
-            , (android.widget.Button) bindings[19]
-            , (android.widget.Button) bindings[20]
-            , (android.widget.Button) bindings[15]
-            , (android.widget.Button) bindings[12]
-            , (android.widget.Button) bindings[16]
-            , (android.widget.Button) bindings[21]
-            , (android.widget.Button) bindings[22]
-            , (android.widget.Button) bindings[23]
-            , (android.widget.Button) bindings[24]
-            , (android.widget.Button) bindings[25]
-            , (android.widget.Button) bindings[26]
-            , (android.widget.Button) bindings[27]
-            , (android.widget.Button) bindings[28]
-            , (android.widget.Button) bindings[29]
-            , (android.widget.Button) bindings[30]
-            , (android.widget.Button) bindings[32]
             , (android.widget.Button) bindings[11]
-            , (android.widget.Button) bindings[31]
             , (android.widget.TextView) bindings[6]
             , (android.widget.ImageView) bindings[5]
             , (android.widget.EditText) bindings[9]
-            , (android.widget.HorizontalScrollView) bindings[10]
             , (android.widget.TextView) bindings[1]
             , (android.widget.TextView) bindings[7]
             , (android.widget.TextView) bindings[2]
             , (android.widget.EditText) bindings[8]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[10]
             , (android.widget.TextView) bindings[3]
             , (android.widget.TextView) bindings[4]
             );
