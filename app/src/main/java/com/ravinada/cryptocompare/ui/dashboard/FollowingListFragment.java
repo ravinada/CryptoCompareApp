@@ -21,10 +21,13 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.ravinada.cryptocompare.CoinViewModel;
 import com.ravinada.cryptocompare.Currency;
 import com.ravinada.cryptocompare.CurrencyAdapter;
+import com.ravinada.cryptocompare.FavouriteCurrencyAdapter;
 import com.ravinada.cryptocompare.R;
 import com.ravinada.cryptocompare.databinding.FragmentFollowingListBinding;
+import com.ravinada.cryptocompare.room.FavouriteCoin;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -35,13 +38,12 @@ import java.util.List;
 
 public class FollowingListFragment extends Fragment {
     private final String TAG = FollowingListFragment.class.getSimpleName();
-    String BASE_URL = "https://min-api.cryptocompare.com";
-    String IMAGE_URL = "https://www.cryptocompare.com";
-    FragmentFollowingListBinding binding;
-    String type;
-    private CurrencyAdapter adapter;
-    private List<Currency> currencyList = new ArrayList<>();
-    private MainListViewModel mViewModel;
+
+    private FragmentFollowingListBinding binding;
+    private String type;
+    private FavouriteCurrencyAdapter adapter;
+    private CoinViewModel coinViewModel;
+    private List<FavouriteCoin> favouriteCoins;
 
     public static FollowingListFragment newInstance() {
         return new FollowingListFragment();
@@ -49,6 +51,7 @@ public class FollowingListFragment extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        coinViewModel = ViewModelProviders.of(this).get(CoinViewModel.class);
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_following_list, container, false);
         return binding.getRoot();
     }
@@ -61,57 +64,10 @@ public class FollowingListFragment extends Fragment {
             type = currencyType.getText().toString();
         }
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(MainListViewModel.class);
-        // TODO: Use the ViewModel
-        binding.swipeRefresh.setColorSchemeResources(R.color.colorPrimary, R.color.colorAccent, R.color.colorPrimaryDark);
-        String url = BASE_URL + "/data/top/totalvolfull?limit=20&tsym=" + type;
-        prepareCurrencies(url);
-        binding.swipeRefresh.setOnRefreshListener(
-                () -> {
-                    String url1 = BASE_URL + "/data/top/totalvolfull?limit=20&tsym=" + type;
-                    prepareCurrencies(url1);
-                }
-        );
-    }
-
-    private void prepareCurrencies(String url) {
-        currencyList.clear();
-        RequestQueue queue = Volley.newRequestQueue(getActivity());
-        JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
-
-            @Override
-            public void onResponse(JSONObject response) {
-                try {
-                    JSONArray js = response.getJSONArray("Data");
-                    for (int i = 0; i < js.length(); i++) {
-                        JSONObject display = js.getJSONObject(i).getJSONObject("DISPLAY").getJSONObject(type);
-                        String image = IMAGE_URL + display.getString("IMAGEURL");
-                        JSONObject coinInfo = js.getJSONObject(i).getJSONObject("CoinInfo");
-
-                        Currency c = new Currency(coinInfo.getString("FullName"),
-                                coinInfo.getString("Name"),
-                                display.getString("PRICE"),
-                                display.getString("OPENDAY"), image);
-                        currencyList.add(c);
-                    }
-                    Log.d("MainListFrag", "log");
-                    adapter = new CurrencyAdapter(getActivity(), currencyList);
-                    binding.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-                    binding.setCurrencyAdapter(adapter);
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.i("******", "Error");
-            }
-        });
-
-        queue.add(jsObjRequest);
-
+        coinViewModel = ViewModelProviders.of(this).get(CoinViewModel.class);
+        favouriteCoins= coinViewModel.getFavouriteCoinLiveData();
+        adapter = new FavouriteCurrencyAdapter(getActivity(),favouriteCoins);
+        binding.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        binding.setFavouriteCurrencyAdapter(adapter);
     }
 }

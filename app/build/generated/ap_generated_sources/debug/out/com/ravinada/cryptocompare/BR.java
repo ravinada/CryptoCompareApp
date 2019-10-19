@@ -5,5 +5,7 @@ public class BR {
 
   public static final int currencyAdapter = 1;
 
-  public static final int newsAdapter = 2;
+  public static final int FavouriteCurrencyAdapter = 2;
+
+  public static final int newsAdapter = 3;
 }

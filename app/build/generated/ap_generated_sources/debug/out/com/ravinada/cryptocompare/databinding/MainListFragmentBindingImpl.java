@@ -14,10 +14,9 @@ public class MainListFragmentBindingImpl extends MainListFragmentBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.tabs, 1);
-        sViewsWithIds.put(R.id.tabMenuFollowing, 2);
-        sViewsWithIds.put(R.id.tabMenuTopVolume, 3);
-        sViewsWithIds.put(R.id.llDashboardMain, 4);
+        sViewsWithIds.put(R.id.tvFollowing, 1);
+        sViewsWithIds.put(R.id.tvTopVolume, 2);
+        sViewsWithIds.put(R.id.llDashboardMain, 3);
     }
     // views
     @NonNull
@@ -28,14 +27,13 @@ public class MainListFragmentBindingImpl extends MainListFragmentBinding  {
     // Inverse Binding Event Handlers
 
     public MainListFragmentBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
     }
     private MainListFragmentBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.LinearLayout) bindings[4]
-            , (com.google.android.material.tabs.TabItem) bindings[2]
-            , (com.google.android.material.tabs.TabItem) bindings[3]
-            , (com.google.android.material.tabs.TabLayout) bindings[1]
+            , (android.widget.LinearLayout) bindings[3]
+            , (android.widget.TextView) bindings[1]
+            , (android.widget.TextView) bindings[2]
             );
         this.mboundView0 = (android.widget.LinearLayout) bindings[0];
         this.mboundView0.setTag(null);

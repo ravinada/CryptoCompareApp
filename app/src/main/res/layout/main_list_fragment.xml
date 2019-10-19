@@ -8,27 +8,35 @@
         android:background="@color/white"
         android:orientation="vertical">
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabs"
+        <LinearLayout
+            android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:tabIndicatorColor="@color/colorBlack"
-            app:tabSelectedTextColor="@color/colorBlack"
-            app:tabTextAppearance="@style/TextAppearance.AppCompat.Medium">
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabMenuFollowing"
-                android:layout_width="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tvFollowing"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Following" />
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabMenuTopVolume"
-                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/following"
+                android:background="@drawable/topvolume_bg_green"
+                android:textColor="@color/white"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/tvTopVolume"
+                android:layout_width="0dp"
+                android:background="@drawable/topvolumebg"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
                 android:layout_height="wrap_content"
-                android:text="Top Volume" />
-
-        </com.google.android.material.tabs.TabLayout>
+                android:text="@string/top_volume"
+                android:layout_weight="1"/>
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/llDashboardMain"

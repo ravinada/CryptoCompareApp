@@ -13,9 +13,7 @@ public class FragmentFollowingListBindingImpl extends FragmentFollowingListBindi
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
         sIncludes = null;
-        sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.viewline, 2);
-        sViewsWithIds.put(R.id.swipe_refresh, 3);
+        sViewsWithIds = null;
     }
     // views
     @NonNull
@@ -26,13 +24,11 @@ public class FragmentFollowingListBindingImpl extends FragmentFollowingListBindi
     // Inverse Binding Event Handlers
 
     public FragmentFollowingListBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 2, sIncludes, sViewsWithIds));
     }
     private FragmentFollowingListBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
             , (androidx.recyclerview.widget.RecyclerView) bindings[1]
-            , (androidx.swiperefreshlayout.widget.SwipeRefreshLayout) bindings[3]
-            , (android.view.View) bindings[2]
             );
         this.mboundView0 = (android.widget.LinearLayout) bindings[0];
         this.mboundView0.setTag(null);
@@ -63,8 +59,8 @@ public class FragmentFollowingListBindingImpl extends FragmentFollowingListBindi
     @Override
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
-        if (BR.currencyAdapter == variableId) {
-            setCurrencyAdapter((com.ravinada.cryptocompare.CurrencyAdapter) variable);
+        if (BR.FavouriteCurrencyAdapter == variableId) {
+            setFavouriteCurrencyAdapter((com.ravinada.cryptocompare.FavouriteCurrencyAdapter) variable);
         }
         else {
             variableSet = false;
@@ -72,12 +68,12 @@ public class FragmentFollowingListBindingImpl extends FragmentFollowingListBindi
             return variableSet;
     }
 
-    public void setCurrencyAdapter(@Nullable com.ravinada.cryptocompare.CurrencyAdapter CurrencyAdapter) {
-        this.mCurrencyAdapter = CurrencyAdapter;
+    public void setFavouriteCurrencyAdapter(@Nullable com.ravinada.cryptocompare.FavouriteCurrencyAdapter FavouriteCurrencyAdapter) {
+        this.mFavouriteCurrencyAdapter = FavouriteCurrencyAdapter;
         synchronized(this) {
             mDirtyFlags |= 0x1L;
         }
-        notifyPropertyChanged(BR.currencyAdapter);
+        notifyPropertyChanged(BR.FavouriteCurrencyAdapter);
         super.requestRebind();
     }
 
@@ -95,7 +91,7 @@ public class FragmentFollowingListBindingImpl extends FragmentFollowingListBindi
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        com.ravinada.cryptocompare.CurrencyAdapter currencyAdapter = mCurrencyAdapter;
+        com.ravinada.cryptocompare.FavouriteCurrencyAdapter favouriteCurrencyAdapter = mFavouriteCurrencyAdapter;
 
         if ((dirtyFlags & 0x3L) != 0) {
         }
@@ -103,7 +99,7 @@ public class FragmentFollowingListBindingImpl extends FragmentFollowingListBindi
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
 
-            this.recyclerView.setAdapter(currencyAdapter);
+            this.recyclerView.setAdapter(favouriteCurrencyAdapter);
         }
     }
     // Listener Stub Implementations
@@ -111,7 +107,7 @@ public class FragmentFollowingListBindingImpl extends FragmentFollowingListBindi
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): currencyAdapter
+        flag 0 (0x1L): FavouriteCurrencyAdapter
         flag 1 (0x2L): null
     flag mapping end*/
     //end

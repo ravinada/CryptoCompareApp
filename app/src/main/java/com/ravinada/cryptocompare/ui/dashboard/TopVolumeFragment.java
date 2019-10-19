@@ -41,7 +41,6 @@ public class TopVolumeFragment extends Fragment {
     String type;
     private CurrencyAdapter adapter;
     private List<Currency> currencyList = new ArrayList<>();
-    private MainListViewModel mViewModel;
 
     public static TopVolumeFragment newInstance() {
         return new TopVolumeFragment();
@@ -61,8 +60,6 @@ public class TopVolumeFragment extends Fragment {
             type = currencyType.getText().toString();
         }
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(MainListViewModel.class);
-        // TODO: Use the ViewModel
         binding.swipeRefresh.setColorSchemeResources(R.color.colorPrimary, R.color.colorAccent, R.color.colorPrimaryDark);
         String url = BASE_URL + "/data/top/totalvolfull?limit=20&tsym=" + type;
         prepareCurrencies(url);

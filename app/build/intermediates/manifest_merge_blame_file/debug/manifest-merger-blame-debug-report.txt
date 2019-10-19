@@ -6,101 +6,101 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="27"
-8-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml
+8-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml
+9-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:6:5-67
-11-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:6:22-64
+11-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:6:5-67
+11-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:6:22-64
 12
 13    <application
-13-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:8:5-50:19
+13-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:8:5-50:19
 14        android:name="com.ravinada.cryptocompare.CryptoCompareApp"
-14-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:9:9-41
+14-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:9:9-41
 15        android:allowBackup="true"
-15-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:10:9-35
+15-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:10:9-35
 16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 16-->[androidx.core:core:1.1.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\7f6c41cc2a14c0fbaa8d0166c17dc544\core-1.1.0\AndroidManifest.xml:24:18-86
 17        android:debuggable="true"
 18        android:icon="@mipmap/ic_launcher"
-18-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:11:9-43
+18-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:11:9-43
 19        android:label="@string/app_name"
-19-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:12:9-41
+19-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:12:9-41
 20        android:roundIcon="@mipmap/ic_launcher_round"
-20-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:13:9-54
+20-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:13:9-54
 21        android:supportsRtl="true"
-21-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:14:9-35
+21-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:14:9-35
 22        android:testOnly="true"
 23        android:theme="@style/AppTheme"
-23-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:15:9-40
+23-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:15:9-40
 24        android:usesCleartextTraffic="true" >
-24-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:16:9-44
+24-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:16:9-44
 25        <activity
-25-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:18:9-20:46
+25-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:18:9-20:46
 26            android:name="com.ravinada.cryptocompare.DashboardActivity"
-26-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:19:13-46
+26-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:19:13-46
 27            android:theme="@style/MyTheme" />
-27-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:20:13-43
+27-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:20:13-43
 28        <activity
-28-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:21:9-23:71
+28-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:21:9-23:71
 29            android:name="com.ravinada.cryptocompare.Main2Activity"
-29-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:22:13-42
+29-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:22:13-42
 30            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-30-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:23:13-69
+30-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:23:13-69
 31        <activity
-31-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:24:9-26:72
+31-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:24:9-26:72
 32            android:name="com.ravinada.cryptocompare.ForgotPasswordActivity"
-32-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:25:13-51
+32-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:25:13-51
 33            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-33-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:26:13-69
+33-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:26:13-69
 34        <activity
-34-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:27:9-35:20
+34-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:27:9-35:20
 35            android:name="com.ravinada.cryptocompare.SplashActivity"
-35-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:28:13-43
+35-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:28:13-43
 36            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-36-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:29:13-69
+36-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:29:13-69
 37            <intent-filter>
-37-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:30:13-34:29
+37-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:30:13-34:29
 38                <action android:name="android.intent.action.MAIN" />
-38-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:31:17-69
-38-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:31:25-66
+38-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:31:17-69
+38-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:31:25-66
 39
 40                <category android:name="android.intent.category.LAUNCHER" />
-40-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:33:17-77
-40-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:33:27-74
+40-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:33:17-77
+40-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:33:27-74
 41            </intent-filter>
 42        </activity>
 43        <activity
-43-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:36:9-38:72
+43-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:36:9-38:72
 44            android:name="com.ravinada.cryptocompare.LoginActivity"
-44-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:37:13-42
+44-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:37:13-42
 45            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-45-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:38:13-69
+45-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:38:13-69
 46        <activity
-46-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:39:9-41:72
+46-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:39:9-41:72
 47            android:name="com.ravinada.cryptocompare.SignupActivity"
-47-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:40:13-43
+47-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:40:13-43
 48            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-48-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:41:13-69
+48-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:41:13-69
 49        <activity
-49-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:42:9-44:71
+49-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:42:9-44:71
 50            android:name="com.ravinada.cryptocompare.NewsDetailsActivity"
-50-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:43:13-48
+50-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:43:13-48
 51            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-51-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:44:13-69
+51-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:44:13-69
 52        <activity
-52-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:45:9-46:55
+52-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:45:9-46:55
 53            android:name="com.ravinada.cryptocompare.CurrencySelector"
-53-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:45:19-51
+53-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:45:19-51
 54            android:theme="@style/Theme.Transparent" />
-54-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:46:13-53
+54-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:46:13-53
 55        <activity
-55-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:47:9-48:71
+55-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:47:9-48:71
 56            android:name="com.ravinada.cryptocompare.CurrencyDetailActivity"
-56-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:47:19-57
+56-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:47:19-57
 57            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-57-->C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:48:13-69
+57-->C:\Users\muthr\OneDrive\Desktop\New folder (7)\app\src\main\AndroidManifest.xml:48:13-69
 58
 59        <service
 59-->[androidx.room:room-runtime:2.2.0-rc01] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\1db915c361236921d1fb04cd8bec5b57\room-runtime-2.2.0-rc01\AndroidManifest.xml:25:9-27:40

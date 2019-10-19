@@ -1246,6 +1246,8 @@ drawable rounded_rect_green
 drawable rounded_rect_grey
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable topvolume_bg_green
+drawable topvolumebg
 id ALT
 id CTRL
 id FUNCTION
@@ -1547,13 +1549,10 @@ id submenuarrow
 id submit_area
 id swipe_refresh
 id switchPass
-id tabMenuFollowing
 id tabMenuNews
 id tabMenuPortfolio
-id tabMenuTopVolume
 id tabMenuWatchList
 id tabMode
-id tabs
 id tabsBottom
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -1593,6 +1592,8 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id tvContent
+id tvFollowing
+id tvTopVolume
 id txtOr
 id txt_private
 id txt_public
@@ -1604,7 +1605,6 @@ id useLogo
 id user_menu
 id viewPager
 id view_offset_helper
-id viewline
 id visible
 id watch_list_bar
 id webView

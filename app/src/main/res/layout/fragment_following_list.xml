@@ -6,8 +6,8 @@
     <data>
 
         <variable
-            name="currencyAdapter"
-            type="com.ravinada.cryptocompare.CurrencyAdapter" />
+            name="FavouriteCurrencyAdapter"
+            type="com.ravinada.cryptocompare.FavouriteCurrencyAdapter" />
 
     </data>
 
@@ -17,35 +17,14 @@
         android:background="@color/white"
         android:orientation="vertical">
 
-        <View
-            android:id="@+id/viewline"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/colorLightGrey"
-            android:visibility="visible"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-            android:id="@+id/swipe_refresh"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:background="@color/dark_transparent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            tools:ignore="MissingConstraints">
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:adapter="@{currencyAdapter}"
+                android:adapter="@{FavouriteCurrencyAdapter}"
                 android:background="@color/dark_transparent"
                 android:orientation="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
-
-        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-
     </LinearLayout>
 
 </layout>

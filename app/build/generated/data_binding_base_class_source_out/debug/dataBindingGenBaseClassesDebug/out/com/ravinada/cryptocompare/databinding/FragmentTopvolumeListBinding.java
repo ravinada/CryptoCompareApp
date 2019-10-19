@@ -23,18 +23,14 @@ public abstract class FragmentTopvolumeListBinding extends ViewDataBinding {
   @NonNull
   public final SwipeRefreshLayout swipeRefresh;
 
-  @NonNull
-  public final View viewline;
-
   @Bindable
   protected CurrencyAdapter mCurrencyAdapter;
 
   protected FragmentTopvolumeListBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      RecyclerView recyclerView, SwipeRefreshLayout swipeRefresh, View viewline) {
+      RecyclerView recyclerView, SwipeRefreshLayout swipeRefresh) {
     super(_bindingComponent, _root, _localFieldCount);
     this.recyclerView = recyclerView;
     this.swipeRefresh = swipeRefresh;
-    this.viewline = viewline;
   }
 
   public abstract void setCurrencyAdapter(@Nullable CurrencyAdapter currencyAdapter);

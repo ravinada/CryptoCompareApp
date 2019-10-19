@@ -40,7 +40,7 @@ public class PortfolioFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_potfolio, container, false);
         //  binding = DataBindingUtil.inflate(inflater, R.layout.portfolio_dialog, container, false);
-        final View dialogView = inflater.inflate(R.layout.coin_portfolio_dialog, null);
+        final View dialogView = inflater.inflate(R.layout.portfolio_dialog, null);
         final AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(new ContextThemeWrapper(getActivity(), R.style.Theme_AppCompat_Light_NoActionBar));
         final AlertDialog alert = dialogBuilder.create();
         binding.btnAddPortfolio.setOnClickListener(new View.OnClickListener() {

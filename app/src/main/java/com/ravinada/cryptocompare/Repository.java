@@ -49,7 +49,7 @@ public class Repository {
         return favouriteCoinDao.getCoinExistance(tag);
     }
 
-    public LiveData<List<FavouriteCoin>> getFavouriteCoins() {
+    public List<FavouriteCoin> getFavouriteCoins() {
         return favouriteCoinDao.getFavouriteCoins();
     }
 }

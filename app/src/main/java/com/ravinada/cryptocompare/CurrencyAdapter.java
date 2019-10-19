@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
@@ -25,11 +24,6 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.MyView
         this.mContext = mContext;
         this.currencyList = currencyList;
     }
-
-    public CurrencyAdapter(FragmentActivity activity) {
-    }
-
-
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -44,7 +38,7 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.MyView
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         Currency currency = currencyList.get(position);
         String name = currency.getFullName();
-        holder.coinTag.setText("( " + currency.getCode() + ")");
+        holder.coinTag.setText(currency.getCode());
         holder.coinName.setText(name);
         holder.coinPrice.setText(currency.getCurrentRate());
         holder.openDay.setText(currency.getOpenDay());
@@ -59,7 +53,6 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.MyView
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView coinName, coinPrice,coinTag, openDay;
         public de.hdodenhof.circleimageview.CircleImageView coinImage;
-
 
         public MyViewHolder(View view) {
             super(view);
