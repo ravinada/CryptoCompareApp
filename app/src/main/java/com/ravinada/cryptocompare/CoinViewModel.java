@@ -39,7 +39,7 @@ public class CoinViewModel extends AndroidViewModel {
         return repository.getCoinExistance(tag);
     }
 
-    public LiveData<List<FavouriteCoin>> getFavouriteCoinLiveData() {
+    public List<FavouriteCoin> getFavouriteCoinLiveData() {
         return repository.getFavouriteCoins();
     }
 

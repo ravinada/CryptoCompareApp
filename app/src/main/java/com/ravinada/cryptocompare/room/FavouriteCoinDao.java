@@ -16,8 +16,8 @@ public interface FavouriteCoinDao {
     @Delete
     void delete(FavouriteCoin coin);
 
-    @Query("SELECT * FROM favourite_coins")
-    LiveData<List<FavouriteCoin>> getFavouriteCoins();
+    @Query("SELECT * FROM favourite_coins ")
+    List<FavouriteCoin> getFavouriteCoins();
 
     @Query("SELECT `check` FROM favourite_coins WHERE tag = :tag ")
     Boolean getCoinExistance(String tag);

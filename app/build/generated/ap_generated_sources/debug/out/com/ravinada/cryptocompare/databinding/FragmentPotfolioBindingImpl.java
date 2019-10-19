@@ -15,11 +15,11 @@ public class FragmentPotfolioBindingImpl extends FragmentPotfolioBinding  {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.btn_add_portfolio, 2);
-        sViewsWithIds.put(R.id.textView, 3);
-        sViewsWithIds.put(R.id.textView2, 4);
-        sViewsWithIds.put(R.id.textView3, 5);
-        sViewsWithIds.put(R.id.textView4, 6);
-        sViewsWithIds.put(R.id.my_button, 7);
+        sViewsWithIds.put(R.id.lbl_holding, 3);
+        sViewsWithIds.put(R.id.txt_profit_loss, 4);
+        sViewsWithIds.put(R.id.txt_holding, 5);
+        sViewsWithIds.put(R.id.lbl_pro_loss, 6);
+        sViewsWithIds.put(R.id.btn_add_coin, 7);
     }
     // views
     // variables
@@ -33,13 +33,13 @@ public class FragmentPotfolioBindingImpl extends FragmentPotfolioBinding  {
     private FragmentPotfolioBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
             , (androidx.coordinatorlayout.widget.CoordinatorLayout) bindings[0]
-            , (android.widget.Button) bindings[2]
             , (android.widget.Button) bindings[7]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[1]
+            , (android.widget.Button) bindings[2]
             , (android.widget.TextView) bindings[3]
-            , (android.widget.TextView) bindings[4]
-            , (android.widget.TextView) bindings[5]
             , (android.widget.TextView) bindings[6]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[1]
+            , (android.widget.TextView) bindings[5]
+            , (android.widget.TextView) bindings[4]
             );
         this.activityMain.setTag(null);
         this.recyclerView.setTag(null);

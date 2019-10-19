@@ -5,12 +5,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import com.google.android.material.tabs.TabItem;
-import com.google.android.material.tabs.TabLayout;
 import com.ravinada.cryptocompare.R;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -20,22 +19,17 @@ public abstract class MainListFragmentBinding extends ViewDataBinding {
   public final LinearLayout llDashboardMain;
 
   @NonNull
-  public final TabItem tabMenuFollowing;
+  public final TextView tvFollowing;
 
   @NonNull
-  public final TabItem tabMenuTopVolume;
-
-  @NonNull
-  public final TabLayout tabs;
+  public final TextView tvTopVolume;
 
   protected MainListFragmentBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      LinearLayout llDashboardMain, TabItem tabMenuFollowing, TabItem tabMenuTopVolume,
-      TabLayout tabs) {
+      LinearLayout llDashboardMain, TextView tvFollowing, TextView tvTopVolume) {
     super(_bindingComponent, _root, _localFieldCount);
     this.llDashboardMain = llDashboardMain;
-    this.tabMenuFollowing = tabMenuFollowing;
-    this.tabMenuTopVolume = tabMenuTopVolume;
-    this.tabs = tabs;
+    this.tvFollowing = tvFollowing;
+    this.tvTopVolume = tvTopVolume;
   }
 
   @NonNull

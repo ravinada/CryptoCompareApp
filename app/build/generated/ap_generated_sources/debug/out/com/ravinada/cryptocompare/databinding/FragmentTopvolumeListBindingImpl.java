@@ -14,8 +14,7 @@ public class FragmentTopvolumeListBindingImpl extends FragmentTopvolumeListBindi
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.viewline, 2);
-        sViewsWithIds.put(R.id.swipe_refresh, 3);
+        sViewsWithIds.put(R.id.swipe_refresh, 2);
     }
     // views
     @NonNull
@@ -26,13 +25,12 @@ public class FragmentTopvolumeListBindingImpl extends FragmentTopvolumeListBindi
     // Inverse Binding Event Handlers
 
     public FragmentTopvolumeListBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
     }
     private FragmentTopvolumeListBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
             , (androidx.recyclerview.widget.RecyclerView) bindings[1]
-            , (androidx.swiperefreshlayout.widget.SwipeRefreshLayout) bindings[3]
-            , (android.view.View) bindings[2]
+            , (androidx.swiperefreshlayout.widget.SwipeRefreshLayout) bindings[2]
             );
         this.mboundView0 = (android.widget.LinearLayout) bindings[0];
         this.mboundView0.setTag(null);

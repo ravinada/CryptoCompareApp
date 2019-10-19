@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,10 +26,12 @@ public class MainListFragment extends Fragment {
     public static MainListFragment newInstance() {
         return new MainListFragment();
     }
-
+    TextView following,topVolume;
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.main_list_fragment, container, false);
+        following = binding.getRoot().findViewById(R.id.tvFollowing);
+        topVolume = binding.getRoot().findViewById(R.id.tvTopVolume);
         return binding.getRoot();
     }
 
@@ -39,28 +42,21 @@ public class MainListFragment extends Fragment {
         fragmentManager = getActivity().getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.llDashboardMain, FollowingListFragment.newInstance()).commit();
-
-        binding.tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                if (tab.getText().toString().equalsIgnoreCase("Following")){
-                    fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.llDashboardMain, FollowingListFragment.newInstance()).commit();
-                }else{
-                    fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.llDashboardMain, TopVolumeFragment.newInstance()).commit();
-                }
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
+        following.setOnClickListener(view -> {
+            following.setBackground(getActivity().getDrawable(R.drawable.topvolume_bg_green));
+            topVolume.setBackground(getActivity().getDrawable(R.drawable.topvolumebg));
+            following.setTextColor(getActivity().getColor(R.color.white));
+            topVolume.setTextColor(getActivity().getColor(R.color.colorBlack));
+            fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.llDashboardMain, FollowingListFragment.newInstance()).commit();
+        });
+        topVolume.setOnClickListener(view -> {
+            topVolume.setBackground(getActivity().getDrawable(R.drawable.topvolume_bg_green));
+            following.setBackground(getActivity().getDrawable(R.drawable.topvolumebg));
+            following.setTextColor(getActivity().getColor(R.color.colorBlack));
+            topVolume.setTextColor(getActivity().getColor(R.color.white));
+            fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.llDashboardMain, TopVolumeFragment.newInstance()).commit();
         });
 
     }
