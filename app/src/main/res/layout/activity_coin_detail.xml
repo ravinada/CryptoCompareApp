@@ -121,9 +121,9 @@
         app:layout_constraintTop_toTopOf="@+id/detail_coin_symbol_image"
         tools:ignore="MissingConstraints" />
 
-    <com.github.mikephil.charting.charts.LineChart
-        android:id="@+id/line_chart"
-        android:layout_width="413dp"
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph"
+        android:layout_width="match_parent"
         android:layout_height="247dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -291,12 +291,11 @@
         android:layout_width="0dp"
         android:layout_height="32dp"
         android:background="@color/white"
-        android:onClick="onClick"
         android:text="1 H"
         android:textAlignment="center"
         android:textColor="@color/colorBlack"
         android:textSize="13sp"
-        app:layout_constraintTop_toBottomOf="@+id/line_chart"
+        app:layout_constraintTop_toBottomOf="@+id/graph"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -304,14 +303,13 @@
         android:layout_width="0dp"
         android:layout_height="32dp"
         android:background="@color/colorGreen"
-        android:onClick="onClick"
         android:text="1 D"
         android:textAlignment="center"
         android:textColor="@color/colorBlack"
         android:textSize="13sp"
         app:layout_constraintEnd_toStartOf="@+id/one_week"
         app:layout_constraintStart_toEndOf="@+id/one_hour"
-        app:layout_constraintTop_toBottomOf="@+id/line_chart"
+        app:layout_constraintTop_toBottomOf="@+id/graph"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -319,14 +317,13 @@
         android:layout_width="0dp"
         android:layout_height="32dp"
         android:background="@color/colorWhite"
-        android:onClick="onClick"
         android:text="1 W"
         android:textAlignment="center"
         android:textColor="@color/colorBlack"
         android:textSize="13sp"
         app:layout_constraintEnd_toStartOf="@+id/one_month"
         app:layout_constraintStart_toEndOf="@+id/one_day"
-        app:layout_constraintTop_toBottomOf="@+id/line_chart"
+        app:layout_constraintTop_toBottomOf="@+id/graph"
         tools:ignore="MissingConstraints" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -347,7 +344,7 @@
         android:textSize="13sp"
         app:layout_constraintEnd_toStartOf="@+id/six_month"
         app:layout_constraintStart_toEndOf="@+id/one_week"
-        app:layout_constraintTop_toBottomOf="@+id/line_chart"
+        app:layout_constraintTop_toBottomOf="@+id/graph"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -361,7 +358,7 @@
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/one_month"
-        app:layout_constraintTop_toBottomOf="@+id/line_chart"
+        app:layout_constraintTop_toBottomOf="@+id/graph"
         tools:ignore="MissingConstraints" />
 
 

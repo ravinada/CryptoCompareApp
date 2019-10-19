@@ -30,13 +30,13 @@
                 android:paddingEnd="24dp"
                 android:paddingStart="24dp"
                 android:textColor="@color/colorGreen"
-                app:layout_constraintBottom_toTopOf="@+id/my_button"
-                app:layout_constraintEnd_toEndOf="@+id/my_button"
-                app:layout_constraintStart_toStartOf="@+id/my_button"
+                app:layout_constraintBottom_toTopOf="@+id/btn_add_coin"
+                app:layout_constraintEnd_toEndOf="@+id/btn_add_coin"
+                app:layout_constraintStart_toStartOf="@+id/btn_add_coin"
                 tools:ignore="MissingConstraints" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/lbl_holding"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -46,29 +46,29 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/txt_profit_loss"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="$ 163.48"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/colorGreen"
                 android:textSize="24sp"
-                app:layout_constraintStart_toStartOf="@+id/textView4"
-                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                app:layout_constraintStart_toStartOf="@+id/lbl_pro_loss"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_pro_loss" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/txt_holding"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="$ 173.48"
                 android:textColor="@color/colorBlack"
                 android:textSize="24sp"
-                app:layout_constraintStart_toStartOf="@+id/textView"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
+                app:layout_constraintStart_toStartOf="@+id/lbl_holding"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_holding" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/lbl_pro_loss"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -88,11 +88,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="119dp"
-                tools:ignore="MissingConstraints" />
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="120dp" />
 
             <Button
-                android:id="@+id/my_button"
+                android:id="@+id/btn_add_coin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"

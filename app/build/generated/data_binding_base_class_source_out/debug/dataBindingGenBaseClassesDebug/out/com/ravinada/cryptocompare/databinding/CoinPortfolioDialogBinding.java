@@ -6,89 +6,26 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
 import com.ravinada.cryptocompare.R;
 import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class CoinPortfolioDialogBinding extends ViewDataBinding {
   @NonNull
-  public final Button btnAud;
-
-  @NonNull
-  public final Button btnBrl;
-
-  @NonNull
-  public final Button btnBtc;
-
-  @NonNull
-  public final Button btnCad;
-
-  @NonNull
-  public final Button btnCny;
-
-  @NonNull
-  public final Button btnEth;
-
-  @NonNull
-  public final Button btnEur;
-
-  @NonNull
-  public final Button btnGbp;
-
-  @NonNull
-  public final Button btnGold;
-
-  @NonNull
-  public final Button btnHkd;
-
-  @NonNull
-  public final Button btnInr;
-
-  @NonNull
-  public final Button btnJpy;
-
-  @NonNull
-  public final Button btnKrw;
-
-  @NonNull
-  public final Button btnNzd;
-
-  @NonNull
-  public final Button btnPhp;
-
-  @NonNull
-  public final Button btnPln;
-
-  @NonNull
-  public final Button btnRon;
-
-  @NonNull
-  public final Button btnRub;
-
-  @NonNull
-  public final Button btnSgd;
-
-  @NonNull
   public final Button btnSubmit;
-
-  @NonNull
-  public final Button btnUsd;
-
-  @NonNull
-  public final Button btnVef;
 
   @NonNull
   public final TextView buyPrice;
 
   @NonNull
-  public final ImageView cancel;
+  public final ImageView coinDialCancel;
 
   @NonNull
   public final EditText editAmount;
@@ -101,9 +38,6 @@ public abstract class CoinPortfolioDialogBinding extends ViewDataBinding {
 
   @NonNull
   public final EditText editDescription;
-
-  @NonNull
-  public final HorizontalScrollView horizontalScrollView;
 
   @NonNull
   public final TextView lblAddCoin;
@@ -126,45 +60,23 @@ public abstract class CoinPortfolioDialogBinding extends ViewDataBinding {
   @NonNull
   public final EditText selectCoin;
 
+  @NonNull
+  public final RecyclerView selectCurrencyPurchaseCoin;
+
   protected CoinPortfolioDialogBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      Button btnAud, Button btnBrl, Button btnBtc, Button btnCad, Button btnCny, Button btnEth,
-      Button btnEur, Button btnGbp, Button btnGold, Button btnHkd, Button btnInr, Button btnJpy,
-      Button btnKrw, Button btnNzd, Button btnPhp, Button btnPln, Button btnRon, Button btnRub,
-      Button btnSgd, Button btnSubmit, Button btnUsd, Button btnVef, TextView buyPrice,
-      ImageView cancel, EditText editAmount, EditText editBuyInsertAmount, EditText editDate,
-      EditText editDescription, HorizontalScrollView horizontalScrollView, TextView lblAddCoin,
-      TextView lblAmount, TextView lblBoughton, TextView lblCoin, TextView lblCurrency,
-      TextView lblDescription, EditText selectCoin) {
+      Button btnSubmit, TextView buyPrice, ImageView coinDialCancel, EditText editAmount,
+      EditText editBuyInsertAmount, EditText editDate, EditText editDescription,
+      TextView lblAddCoin, TextView lblAmount, TextView lblBoughton, TextView lblCoin,
+      TextView lblCurrency, TextView lblDescription, EditText selectCoin,
+      RecyclerView selectCurrencyPurchaseCoin) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.btnAud = btnAud;
-    this.btnBrl = btnBrl;
-    this.btnBtc = btnBtc;
-    this.btnCad = btnCad;
-    this.btnCny = btnCny;
-    this.btnEth = btnEth;
-    this.btnEur = btnEur;
-    this.btnGbp = btnGbp;
-    this.btnGold = btnGold;
-    this.btnHkd = btnHkd;
-    this.btnInr = btnInr;
-    this.btnJpy = btnJpy;
-    this.btnKrw = btnKrw;
-    this.btnNzd = btnNzd;
-    this.btnPhp = btnPhp;
-    this.btnPln = btnPln;
-    this.btnRon = btnRon;
-    this.btnRub = btnRub;
-    this.btnSgd = btnSgd;
     this.btnSubmit = btnSubmit;
-    this.btnUsd = btnUsd;
-    this.btnVef = btnVef;
     this.buyPrice = buyPrice;
-    this.cancel = cancel;
+    this.coinDialCancel = coinDialCancel;
     this.editAmount = editAmount;
     this.editBuyInsertAmount = editBuyInsertAmount;
     this.editDate = editDate;
     this.editDescription = editDescription;
-    this.horizontalScrollView = horizontalScrollView;
     this.lblAddCoin = lblAddCoin;
     this.lblAmount = lblAmount;
     this.lblBoughton = lblBoughton;
@@ -172,6 +84,7 @@ public abstract class CoinPortfolioDialogBinding extends ViewDataBinding {
     this.lblCurrency = lblCurrency;
     this.lblDescription = lblDescription;
     this.selectCoin = selectCoin;
+    this.selectCurrencyPurchaseCoin = selectCurrencyPurchaseCoin;
   }
 
   @NonNull

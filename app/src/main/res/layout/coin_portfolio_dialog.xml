@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -10,14 +11,12 @@
             android:id="@+id/lbl_add_coin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="157dp"
-            android:layout_marginEnd="140dp"
             android:gravity="center"
             android:padding="@dimen/space_8"
             android:text="Add Coin"
             android:textColor="@color/colorBlack"
             android:textSize="20sp"
-            app:layout_constraintEnd_toStartOf="@+id/cancel"
+            app:layout_constraintEnd_toEndOf="@+id/coin_dial_cancel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,7 +35,7 @@
             app:layout_constraintTop_toBottomOf="@+id/lbl_add_coin" />
 
         <ImageView
-            android:id="@+id/cancel"
+            android:id="@+id/coin_dial_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -73,7 +72,7 @@
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+            app:layout_constraintTop_toBottomOf="@+id/selectCurrencyPurchaseCoin" />
 
         <TextView
             android:id="@+id/lbl_description"
@@ -202,151 +201,22 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lbl_boughton" />
 
-        <HorizontalScrollView
-            android:id="@+id/horizontalScrollView"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/selectCurrencyPurchaseCoin"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginStart="8dp"
+            android:orientation="horizontal"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
+            tools:listitem="@layout/select_currency_purchase_item"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lbl_currency">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/btn_usd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/usd" />
-
-                <Button
-                    android:id="@+id/btn_eur"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="EUR" />
-
-                <Button
-                    android:id="@+id/btn_gbp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="GBP" />
-
-                <Button
-                    android:id="@+id/btn_btc"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="BTC" />
-
-                <Button
-                    android:id="@+id/btn_eth"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ETH" />
-
-                <Button
-                    android:id="@+id/btn_gold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="GOLD" />
-
-                <Button
-                    android:id="@+id/btn_aud"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="AUD" />
-
-                <Button
-                    android:id="@+id/btn_brl"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="BRL" />
-
-                <Button
-                    android:id="@+id/btn_cad"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="CAD" />
-
-                <Button
-                    android:id="@+id/btn_cny"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="CNY" />
-
-                <Button
-                    android:id="@+id/btn_hkd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="HKD" />
-
-                <Button
-                    android:id="@+id/btn_inr"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="INR" />
-
-                <Button
-                    android:id="@+id/btn_jpy"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="JPY" />
-
-                <Button
-                    android:id="@+id/btn_krw"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="KRW" />
-
-                <Button
-                    android:id="@+id/btn_nzd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="NZD" />
-
-                <Button
-                    android:id="@+id/btn_php"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="PHP" />
-
-                <Button
-                    android:id="@+id/btn_pln"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="PLN" />
-
-                <Button
-                    android:id="@+id/btn_ron"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="RON" />
-
-                <Button
-                    android:id="@+id/btn_rub"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="RUB" />
-
-                <Button
-                    android:id="@+id/btn_sgd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="SGD" />
-
-                <Button
-                    android:id="@+id/btn_vef"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="VEF" />
-
-            </LinearLayout>
-
-        </HorizontalScrollView>
+        </androidx.recyclerview.widget.RecyclerView>
 
         <Button
             android:id="@+id/btn_submit"

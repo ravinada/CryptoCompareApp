@@ -23,42 +23,42 @@ public abstract class FragmentPotfolioBinding extends ViewDataBinding {
   public final CoordinatorLayout activityMain;
 
   @NonNull
+  public final Button btnAddCoin;
+
+  @NonNull
   public final Button btnAddPortfolio;
 
   @NonNull
-  public final Button myButton;
+  public final TextView lblHolding;
+
+  @NonNull
+  public final TextView lblProLoss;
 
   @NonNull
   public final RecyclerView recyclerView;
 
   @NonNull
-  public final TextView textView;
+  public final TextView txtHolding;
 
   @NonNull
-  public final TextView textView2;
-
-  @NonNull
-  public final TextView textView3;
-
-  @NonNull
-  public final TextView textView4;
+  public final TextView txtProfitLoss;
 
   @Bindable
   protected CurrencyAdapter mCurrencyAdapter;
 
   protected FragmentPotfolioBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CoordinatorLayout activityMain, Button btnAddPortfolio, Button myButton,
-      RecyclerView recyclerView, TextView textView, TextView textView2, TextView textView3,
-      TextView textView4) {
+      CoordinatorLayout activityMain, Button btnAddCoin, Button btnAddPortfolio,
+      TextView lblHolding, TextView lblProLoss, RecyclerView recyclerView, TextView txtHolding,
+      TextView txtProfitLoss) {
     super(_bindingComponent, _root, _localFieldCount);
     this.activityMain = activityMain;
+    this.btnAddCoin = btnAddCoin;
     this.btnAddPortfolio = btnAddPortfolio;
-    this.myButton = myButton;
+    this.lblHolding = lblHolding;
+    this.lblProLoss = lblProLoss;
     this.recyclerView = recyclerView;
-    this.textView = textView;
-    this.textView2 = textView2;
-    this.textView3 = textView3;
-    this.textView4 = textView4;
+    this.txtHolding = txtHolding;
+    this.txtProfitLoss = txtProfitLoss;
   }
 
   public abstract void setCurrencyAdapter(@Nullable CurrencyAdapter currencyAdapter);
