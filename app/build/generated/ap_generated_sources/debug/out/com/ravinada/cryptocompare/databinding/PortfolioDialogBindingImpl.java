@@ -23,7 +23,7 @@ public class PortfolioDialogBindingImpl extends PortfolioDialogBinding  {
         sViewsWithIds.put(R.id.lbl_amount, 7);
         sViewsWithIds.put(R.id.select_coin, 8);
         sViewsWithIds.put(R.id.edit_amount, 9);
-        sViewsWithIds.put(R.id.selectCurencyPurchase, 10);
+        sViewsWithIds.put(R.id.selectCurrencyPurchaseCoin, 10);
         sViewsWithIds.put(R.id.btn_submit, 11);
     }
     // views
@@ -61,7 +61,7 @@ public class PortfolioDialogBindingImpl extends PortfolioDialogBinding  {
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x1L;
+                mDirtyFlags = 0x2L;
         }
         requestRebind();
     }
@@ -79,7 +79,17 @@ public class PortfolioDialogBindingImpl extends PortfolioDialogBinding  {
     @Override
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
+        if (BR.CurrencyTypePurchaseAdapter == variableId) {
+            setCurrencyTypePurchaseAdapter((com.ravinada.cryptocompare.CurrencyTypePurchaseAdapter) variable);
+        }
+        else {
+            variableSet = false;
+        }
             return variableSet;
+    }
+
+    public void setCurrencyTypePurchaseAdapter(@Nullable com.ravinada.cryptocompare.CurrencyTypePurchaseAdapter CurrencyTypePurchaseAdapter) {
+        this.mCurrencyTypePurchaseAdapter = CurrencyTypePurchaseAdapter;
     }
 
     @Override
@@ -103,7 +113,8 @@ public class PortfolioDialogBindingImpl extends PortfolioDialogBinding  {
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): null
+        flag 0 (0x1L): CurrencyTypePurchaseAdapter
+        flag 1 (0x2L): null
     flag mapping end*/
     //end
 }

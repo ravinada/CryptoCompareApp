@@ -16,7 +16,7 @@ public class CoinPortfolioDialogBindingImpl extends CoinPortfolioDialogBinding  
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.lbl_add_coin, 1);
         sViewsWithIds.put(R.id.lbl_coin, 2);
-        sViewsWithIds.put(R.id.cancel, 3);
+        sViewsWithIds.put(R.id.coin_dial_cancel, 3);
         sViewsWithIds.put(R.id.buy_price, 4);
         sViewsWithIds.put(R.id.lbl_boughton, 5);
         sViewsWithIds.put(R.id.lbl_description, 6);
