@@ -11,14 +11,12 @@
             android:id="@+id/lbl_add_coin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="157dp"
-            android:layout_marginEnd="140dp"
             android:gravity="center"
             android:padding="@dimen/space_8"
             android:text="Add Coin"
             android:textColor="@color/colorBlack"
             android:textSize="20sp"
-            app:layout_constraintEnd_toStartOf="@+id/cancel"
+            app:layout_constraintEnd_toEndOf="@+id/coin_dial_cancel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,7 +35,7 @@
             app:layout_constraintTop_toBottomOf="@+id/lbl_add_coin" />
 
         <ImageView
-            android:id="@+id/cancel"
+            android:id="@+id/coin_dial_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -74,7 +72,7 @@
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_submit" />
+            app:layout_constraintTop_toBottomOf="@+id/selectCurrencyPurchaseCoin" />
 
         <TextView
             android:id="@+id/lbl_description"
@@ -146,7 +144,8 @@
             android:layout_marginEnd="8dp"
             android:background="@drawable/rounded_rect_grey"
             android:hint="Insert Amount"
-            android:inputType="number"
+            android:inputType="textMultiLine|text"
+
             android:padding="@dimen/space_8"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -162,7 +161,7 @@
             android:layout_marginEnd="8dp"
             android:background="@drawable/rounded_rect_grey"
             android:hint="Insert Amount"
-            android:inputType="number"
+            android:inputType="textMultiLine|text"
             android:padding="@dimen/space_8"
 
             android:textSize="14sp"
@@ -194,9 +193,10 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:background="@drawable/rounded_rect_grey"
-            android:inputType="date"
+            android:inputType="date|textMultiLine|text"
             android:padding="@dimen/space_8"
             android:textSize="14sp"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lbl_boughton" />
@@ -204,17 +204,19 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/selectCurrencyPurchaseCoin"
             android:layout_width="match_parent"
-            android:orientation="horizontal"
             android:layout_height="60dp"
             android:layout_marginStart="8dp"
+            android:orientation="horizontal"
             android:layout_marginTop="8dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:layout_marginEnd="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
+            tools:listitem="@layout/select_currency_purchase_item"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lbl_currency"
-            tools:listitem="@layout/select_currency_purchase_item"/>
+            app:layout_constraintTop_toBottomOf="@+id/lbl_currency">
 
+
+        </androidx.recyclerview.widget.RecyclerView>
 
         <Button
             android:id="@+id/btn_submit"

@@ -4,10 +4,13 @@ import android.content.Intent;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
@@ -22,11 +25,21 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
 import com.github.mikephil.charting.charts.LineChart;
+import com.jjoe64.graphview.DefaultLabelFormatter;
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
 import com.ravinada.cryptocompare.room.FavouriteCoin;
 import com.squareup.picasso.Picasso;
+
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 import java.util.Objects;
 
 @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
@@ -42,6 +55,8 @@ public class CurrencyDetailActivity extends AppCompatActivity  {
     CoinViewModel coinViewModel;
     public static String time="histominute";
     public static final String DATA_SET = "dataSet";
+    GraphView graph;
+    ArrayList<String> data = new ArrayList<>();
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -56,7 +71,7 @@ public class CurrencyDetailActivity extends AppCompatActivity  {
         coinName.setText(fullName);
         selectedCurrency = currencySelector.getText().toString();
         getCurrencyData(name,selectedCurrency);
-       // callGraphData();
+
 
         currencySelector.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,11 +128,12 @@ public class CurrencyDetailActivity extends AppCompatActivity  {
             String currencyType = data.getStringExtra("CURRENCY_TYPE");
             currencySelector.setText(currencyType);
         }
+        plotGraph();
     }
     public void inflateViews(){
         coinImage = findViewById(R.id.detail_coin_symbol_image);
         detailBackSign =findViewById(R.id.detail_backSign);
-        lineChart = findViewById(R.id.line_chart);
+        graph = findViewById(R.id.graph);
         oneMonth=findViewById(R.id.one_month);
         oneHour=findViewById(R.id.one_hour);
         oneDay=findViewById(R.id.one_day);
@@ -138,35 +154,32 @@ public class CurrencyDetailActivity extends AppCompatActivity  {
     private void getCurrencyData(final String fsym, final String tsym){
             String url = BASE_URL + "fsyms="+fsym+"&tsyms="+tsym;
         RequestQueue queue = Volley.newRequestQueue(this);
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
-            @Override
-            public void onResponse(JSONObject response) {
-                try {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, response -> {
+            try {
 
-                    JSONObject details = response.getJSONObject("DISPLAY");
-                    JSONObject coin = details.getJSONObject(fsym);
-                    JSONObject currency = coin.getJSONObject(tsym);
-                    result = new CurrencyDetailPOJO(currency.getString("PRICE"),
-                            currency.getString("CHANGEPCT24HOUR"),
-                            currency.getString("MKTCAP"),
-                            currency.getString("TOTALVOLUME24H"),
-                            currency.getString("VOLUME24HOUR"),
-                            currency.getString("OPEN24HOUR"),
-                            currency.getString("VOLUME24HOURTO"),
-                            currency.getString("LOWHOUR"),
-                            currency.getString("HIGHHOUR")
-                            );
-                    currentCoinPrice.setText(result.getCurrentCoinPrice());
-                    rateChg.setText(result.getRateChg());
-                    marketCap.setText(result.getMarketCap());
-                    totalVolume24h.setText(result.getTotalVolume24h());
-                    directVolume24h.setText(result.getDirectVolume24h());
-                    open24h.setText(result.getOpen24h());
-                    directVolumeSigned.setText(result.getDirectVolumeSigned());
-                    lowHigh.setText(String.format("%s/%s", result.getLow(), result.getHigh()));
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
+                JSONObject details = response.getJSONObject("DISPLAY");
+                JSONObject coin = details.getJSONObject(fsym);
+                JSONObject currency = coin.getJSONObject(tsym);
+                result = new CurrencyDetailPOJO(currency.getString("PRICE"),
+                        currency.getString("CHANGEPCT24HOUR"),
+                        currency.getString("MKTCAP"),
+                        currency.getString("TOTALVOLUME24H"),
+                        currency.getString("VOLUME24HOUR"),
+                        currency.getString("OPEN24HOUR"),
+                        currency.getString("VOLUME24HOURTO"),
+                        currency.getString("LOWHOUR"),
+                        currency.getString("HIGHHOUR")
+                        );
+                currentCoinPrice.setText(result.getCurrentCoinPrice());
+                rateChg.setText(result.getRateChg());
+                marketCap.setText(result.getMarketCap());
+                totalVolume24h.setText(result.getTotalVolume24h());
+                directVolume24h.setText(result.getDirectVolume24h());
+                open24h.setText(result.getOpen24h());
+                directVolumeSigned.setText(result.getDirectVolumeSigned());
+                lowHigh.setText(String.format("%s/%s", result.getLow(), result.getHigh()));
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
         }, new Response.ErrorListener() {
             @Override
@@ -199,6 +212,65 @@ public class CurrencyDetailActivity extends AppCompatActivity  {
             return false;
         }
         return coinViewModel.existance(tag);
+    }
+    private void plotGraph() {
+        String GRAPH_BASE_URL = "https://min-api.cryptocompare.com";
+//        String graphURL = GRAPH_BASE_URL + "/data/histoday?fsym="+ data.get(1) + "&tsym=USD&limit=7";
+        String graphURL = BASE_URL + "/data/top/histoday?limit=20&tsym=USD";
+
+        RequestQueue queue = Volley.newRequestQueue(CurrencyDetailActivity.this);
+        JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.GET, graphURL, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    Log.i("****dfsfds**", "Error");
+
+                    JSONArray js = response.getJSONArray("Data");
+                    ArrayList<String> date = new ArrayList<>();
+                    ArrayList<Double> price = new ArrayList<>();
+                    DataPoint[] values = new DataPoint[js.length()];
+                    for (int i = 0; i < js.length(); i++) {
+                        JSONObject data = js.getJSONObject(i);
+                        date.add(getDate(data.getLong("time")));
+                        price.add(data.getDouble("close"));
+                        DataPoint v = new DataPoint(new Date(data.getLong("time")).getTime(), price.get(i));
+                        values[i] = v;
+                    }
+                    LineGraphSeries<DataPoint> series = new LineGraphSeries<>(values);
+                    Log.i("***sdf***", "Error");
+
+                    graph.getGridLabelRenderer().setLabelFormatter(new DefaultLabelFormatter() {
+                        @Override
+                        public String formatLabel(double value, boolean isValueX) {
+                            if (isValueX) {
+                                // show normal x values
+                                return getDate(new Double(value).longValue());
+                            } else {
+
+                                // show currency for y values
+                                return super.formatLabel(value, isValueX);
+                            }
+
+                        }
+                    });
+                    Log.i("****fd**", "Error");
+
+                    graph.addSeries(series);
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, error -> Log.i("******", "Error"));
+
+        queue.add(jsObjRequest);
+
+    }
+    private String getDate(long time) {
+        Calendar cal = Calendar.getInstance(Locale.ENGLISH);
+        cal.setTimeInMillis(time * 1000);
+        String date = DateFormat.format("dd-MM", cal).toString();
+        return date;
     }
 
 }

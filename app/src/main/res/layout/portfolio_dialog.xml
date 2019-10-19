@@ -2,7 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+    <data>
 
+        <variable
+            name="CurrencyTypePurchaseAdapter"
+            type="com.ravinada.cryptocompare.CurrencyTypePurchaseAdapter" />
+
+    </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,7 +26,7 @@
             android:padding="@dimen/space_8"
             android:text="@string/label_portfolio"
             android:textColor="@color/colorBlack"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/select_coin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -48,10 +54,13 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:background="@color/colorGreen"
-            android:padding="@dimen/space_8"
+            android:background="@drawable/rounded_rect_green"
+            android:paddingStart="16dp"
+            android:paddingTop="@dimen/space_8"
+            android:paddingEnd="16dp"
+            android:paddingBottom="@dimen/space_8"
             android:text="@string/Private"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/white"
             android:textSize="16sp"
             app:layout_constraintEnd_toStartOf="@+id/txt_public"
             app:layout_constraintStart_toStartOf="parent"
@@ -115,7 +124,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/selectCurencyPurchase" />
+            app:layout_constraintTop_toBottomOf="@+id/selectCurrencyPurchaseCoin" />
 
         <EditText
             android:id="@+id/select_coin"
@@ -148,19 +157,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lbl_amount" />
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/selectCurencyPurchase"
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="60dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                android:layout_marginEnd="8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lbl_coin"
-                tools:listitem="@layout/select_currency_purchase_item"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/selectCurrencyPurchaseCoin"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            tools:listitem="@layout/select_currency_purchase_item"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_coin">
+
+        </androidx.recyclerview.widget.RecyclerView>
 
         <Button
             android:id="@+id/btn_submit"
@@ -170,17 +180,16 @@
             android:layout_marginTop="271dp"
             android:layout_marginEnd="155dp"
             android:layout_marginBottom="32dp"
+            android:background="@drawable/rounded_drawable_symbol"
             android:paddingStart="112dp"
             android:paddingEnd="112dp"
             android:text="@string/label_submit"
-            android:textSize="16sp"
             android:textColor="@color/white"
-            android:background="@drawable/rounded_drawable_submit_grey"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_public" />
-
+            app:layout_constraintTop_toBottomOf="@+id/buy_price" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

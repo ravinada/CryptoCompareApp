@@ -3,22 +3,15 @@ package com.ravinada.cryptocompare;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.AttributeSet;
-import android.view.LayoutInflater;
-import android.view.MenuItem;
-import android.view.MotionEvent;
-import android.view.View;
-import android.widget.ImageButton;
+
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
+
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.databinding.DataBindingUtil;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
+
 import androidx.viewpager.widget.ViewPager;
 import com.ravinada.cryptocompare.databinding.ActivityDashboardBinding;
 import com.ravinada.cryptocompare.ui.dashboard.MainListFragment;
@@ -44,14 +37,14 @@ public class DashboardActivity extends AppCompatActivity {
             startActivityForResult(intent,1);
         });
 
-        binding.tabsBottom.setupWithViewPager(binding.viewPager);
-        setupTabIcons();
+
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this.getSupportFragmentManager());
         viewPagerAdapter.addFragment(MainListFragment.newInstance(),"Watchlist");
         viewPagerAdapter.addFragment(PortfolioFragment.newInstance(),"Portfolio");
         viewPagerAdapter.addFragment(NewsListFragment.newInstance(),"News");
         binding.viewPager.setAdapter(viewPagerAdapter);
-
+        binding.tabsBottom.setupWithViewPager(binding.viewPager);
+        setupTabIcons();
         binding.viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {

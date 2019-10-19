@@ -29,7 +29,7 @@ public class PortfolioDialogue extends DialogFragment implements CurrencyTypePur
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view =  inflater.inflate(R.layout.portfolio_dialog,null);
-        currencyList = view.findViewById(R.id.selectCurencyPurchase);
+        currencyList = view.findViewById(R.id.currencyTag);
         setCancelable(false);
         try {
             JSONObject obj = new JSONObject(Objects.requireNonNull(loadJSONFromAsset()));

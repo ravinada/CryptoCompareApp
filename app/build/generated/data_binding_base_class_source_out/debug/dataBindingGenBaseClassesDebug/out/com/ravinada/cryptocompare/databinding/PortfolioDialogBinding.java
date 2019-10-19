@@ -10,9 +10,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
+import com.ravinada.cryptocompare.CurrencyTypePurchaseAdapter;
 import com.ravinada.cryptocompare.R;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -43,7 +45,7 @@ public abstract class PortfolioDialogBinding extends ViewDataBinding {
   public final EditText selectCoin;
 
   @NonNull
-  public final RecyclerView selectCurencyPurchase;
+  public final RecyclerView selectCurrencyPurchaseCoin;
 
   @NonNull
   public final TextView txtPrivate;
@@ -51,10 +53,13 @@ public abstract class PortfolioDialogBinding extends ViewDataBinding {
   @NonNull
   public final TextView txtPublic;
 
+  @Bindable
+  protected CurrencyTypePurchaseAdapter mCurrencyTypePurchaseAdapter;
+
   protected PortfolioDialogBinding(Object _bindingComponent, View _root, int _localFieldCount,
       Button btnSubmit, TextView buyPrice, ImageView cancel, EditText editAmount,
       TextView lblAddCoin, TextView lblAmount, TextView lblCoin, EditText selectCoin,
-      RecyclerView selectCurencyPurchase, TextView txtPrivate, TextView txtPublic) {
+      RecyclerView selectCurrencyPurchaseCoin, TextView txtPrivate, TextView txtPublic) {
     super(_bindingComponent, _root, _localFieldCount);
     this.btnSubmit = btnSubmit;
     this.buyPrice = buyPrice;
@@ -64,9 +69,16 @@ public abstract class PortfolioDialogBinding extends ViewDataBinding {
     this.lblAmount = lblAmount;
     this.lblCoin = lblCoin;
     this.selectCoin = selectCoin;
-    this.selectCurencyPurchase = selectCurencyPurchase;
+    this.selectCurrencyPurchaseCoin = selectCurrencyPurchaseCoin;
     this.txtPrivate = txtPrivate;
     this.txtPublic = txtPublic;
+  }
+
+  public abstract void setCurrencyTypePurchaseAdapter(@Nullable CurrencyTypePurchaseAdapter CurrencyTypePurchaseAdapter);
+
+  @Nullable
+  public CurrencyTypePurchaseAdapter getCurrencyTypePurchaseAdapter() {
+    return mCurrencyTypePurchaseAdapter;
   }
 
   @NonNull
