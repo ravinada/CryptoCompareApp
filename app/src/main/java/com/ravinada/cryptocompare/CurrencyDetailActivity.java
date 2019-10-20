@@ -129,7 +129,6 @@ public class CurrencyDetailActivity extends AppCompatActivity  {
             String currencyType = data.getStringExtra("CURRENCY_TYPE");
             currencySelector.setText(currencyType);
         }
-        plotGraph();
     }
     public void inflateViews(){
         coinImage = findViewById(R.id.detail_coin_symbol_image);
@@ -214,57 +213,8 @@ public class CurrencyDetailActivity extends AppCompatActivity  {
         }
         return coinDetailViewModel.existance(tag);
     }
-    private void plotGraph() {
-        String GRAPH_BASE_URL = "https://min-api.cryptocompare.com";
-//        String graphURL = GRAPH_BASE_URL + "/data/histoday?fsym="+ data.get(1) + "&tsym=USD&limit=7";
-        String graphURL = BASE_URL + "/data/top/histoday?limit=20&tsym=USD";
-
-        RequestQueue queue = Volley.newRequestQueue(CurrencyDetailActivity.this);
-        JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.GET, graphURL, null, new Response.Listener<JSONObject>() {
-            @Override
-            public void onResponse(JSONObject response) {
-                try {
-                    Log.i("****dfsfds**", "Error");
-
-                    JSONArray js = response.getJSONArray("Data");
-                    ArrayList<String> date = new ArrayList<>();
-                    ArrayList<Double> price = new ArrayList<>();
-                    DataPoint[] values = new DataPoint[js.length()];
-                    for (int i = 0; i < js.length(); i++) {
-                        JSONObject data = js.getJSONObject(i);
-                        date.add(getDate(data.getLong("time")));
-                        price.add(data.getDouble("close"));
-                        DataPoint v = new DataPoint(new Date(data.getLong("time")).getTime(), price.get(i));
-                        values[i] = v;
-                    }
-                    LineGraphSeries<DataPoint> series = new LineGraphSeries<>(values);
-                    Log.i("***sdf***", "Error");
-
-                    graph.getGridLabelRenderer().setLabelFormatter(new DefaultLabelFormatter() {
-                        @Override
-                        public String formatLabel(double value, boolean isValueX) {
-                            if (isValueX) {
-                                // show normal x values
-                                return getDate(new Double(value).longValue());
-                            } else {
-
-                                // show currency for y values
-                                return super.formatLabel(value, isValueX);
-                            }
-
-                        }
-                    });
-                    Log.i("****fd**", "Error");
-
-                    graph.addSeries(series);
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        }, error -> Log.i("******", "Error"));
-
-        queue.add(jsObjRequest);
+    private void plotGraphMonthly() {
+        coinDetailViewModel = ViewModelProviders.of(this).get(CoinDetailViewModel.class);
 
     }
     private String getDate(long time) {
