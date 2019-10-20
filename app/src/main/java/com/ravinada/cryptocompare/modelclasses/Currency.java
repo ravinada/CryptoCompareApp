@@ -1,4 +1,4 @@
-package com.ravinada.cryptocompare;
+package com.ravinada.cryptocompare.modelclasses;
 
 import android.os.Parcel;
 import android.os.Parcelable;

@@ -16,9 +16,11 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.ravinada.cryptocompare.R;
 import com.ravinada.cryptocompare.databinding.FragmentPotfolioBinding;
+import com.ravinada.cryptocompare.dialogues.PortfolioDialogue;
 
 
 public class PortfolioFragment extends Fragment {
@@ -34,16 +36,13 @@ public class PortfolioFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_potfolio, container, false);
-      //  binding = DataBindingUtil.inflate(inflater, R.layout.portfolio_dialog, container, false);
-        final View dialogView = inflater.inflate(R.layout.portfolio_dialog, null);
         final View dialogViewCoin = inflater.inflate(R.layout.coin_portfolio_dialog, null);
         final AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(new ContextThemeWrapper(getActivity(), R.style.Theme_AppCompat_Light_NoActionBar));
         final AlertDialog alert = dialogBuilder.create();
         binding.btnAddPortfolio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialogBuilder.setView(dialogView);
-                dialogBuilder.show();
+                showAddPortfolioDialog();
             }
         });
         binding.btnAddCoin.setOnClickListener(new View.OnClickListener() {
@@ -56,10 +55,15 @@ public class PortfolioFragment extends Fragment {
 
         return binding.getRoot();
     }
+      private void showAddPortfolioDialog(){
+        FragmentManager manager = getFragmentManager();
+        PortfolioDialogue portfolioDialogue = new PortfolioDialogue();
+          assert manager != null;
+          portfolioDialogue.show(manager,"PORTFOLIO_DIALOG");
+    }
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
 //        binding.swipeRefresh.setOnRefreshListener(
 //                new SwipeRefreshLayout.OnRefreshListener() {
 //                    @Override

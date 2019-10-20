@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
@@ -29,7 +28,9 @@ import com.jjoe64.graphview.DefaultLabelFormatter;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
+import com.ravinada.cryptocompare.modelclasses.CurrencyDetailPOJO;
 import com.ravinada.cryptocompare.room.FavouriteCoin;
+import com.ravinada.cryptocompare.viewmodels.CoinDetailViewModel;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -52,7 +53,7 @@ public class CurrencyDetailActivity extends AppCompatActivity  {
     String name,imageURL,selectedCurrency,fullName;
     String BASE_URL ="https://min-api.cryptocompare.com/data/pricemultifull?";
     LineChart lineChart;
-    CoinViewModel coinViewModel;
+    CoinDetailViewModel coinDetailViewModel;
     public static String time="histominute";
     public static final String DATA_SET = "dataSet";
     GraphView graph;
@@ -189,29 +190,29 @@ public class CurrencyDetailActivity extends AppCompatActivity  {
         queue.add(jsonObjectRequest);
     }
     private void saveCoin() {
-        coinViewModel = ViewModelProviders.of(this).get(CoinViewModel.class);
+        coinDetailViewModel = ViewModelProviders.of(this).get(CoinDetailViewModel.class);
         FavouriteCoin favouriteCoin = new FavouriteCoin(name,fullName,imageURL,
                 currentCoinPrice.getText().toString(),rateChg.getText().toString()
                 ,marketCap.getText().toString(),totalVolume24h.getText().toString(),
                 directVolume24h.getText().toString(),open24h.getText().toString(),
                 directVolumeSigned.getText().toString(),lowHigh.getText().toString(),true);
-        coinViewModel.insert(favouriteCoin);
+        coinDetailViewModel.insert(favouriteCoin);
     }
     private void deleteCoin(){
-        coinViewModel = ViewModelProviders.of(this).get(CoinViewModel.class);
+        coinDetailViewModel = ViewModelProviders.of(this).get(CoinDetailViewModel.class);
         FavouriteCoin favouriteCoin = new FavouriteCoin(name,fullName,imageURL,
                 currentCoinPrice.getText().toString(),rateChg.getText().toString()
                 ,marketCap.getText().toString(),totalVolume24h.getText().toString(),
                 directVolume24h.getText().toString(),open24h.getText().toString(),
                 directVolumeSigned.getText().toString(),lowHigh.getText().toString(),true);
-        coinViewModel.delete(favouriteCoin);
+        coinDetailViewModel.delete(favouriteCoin);
     }
     private Boolean checkExistance(String tag){
-        coinViewModel = ViewModelProviders.of(this).get(CoinViewModel.class);
-        if(coinViewModel.existance(tag)==null){
+        coinDetailViewModel = ViewModelProviders.of(this).get(CoinDetailViewModel.class);
+        if(coinDetailViewModel.existance(tag)==null){
             return false;
         }
-        return coinViewModel.existance(tag);
+        return coinDetailViewModel.existance(tag);
     }
     private void plotGraph() {
         String GRAPH_BASE_URL = "https://min-api.cryptocompare.com";

@@ -1,4 +1,4 @@
-package com.ravinada.cryptocompare;
+package com.ravinada.cryptocompare.modelclasses;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

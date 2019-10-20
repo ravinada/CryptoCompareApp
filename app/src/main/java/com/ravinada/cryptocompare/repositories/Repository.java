@@ -1,8 +1,6 @@
-package com.ravinada.cryptocompare;
+package com.ravinada.cryptocompare.repositories;
 
 import android.app.Application;
-
-import androidx.lifecycle.LiveData;
 
 import com.ravinada.cryptocompare.room.FavouriteCoin;
 import com.ravinada.cryptocompare.room.FavouriteCoinDao;
@@ -52,4 +50,5 @@ public class Repository {
     public List<FavouriteCoin> getFavouriteCoins() {
         return favouriteCoinDao.getFavouriteCoins();
     }
+
 }

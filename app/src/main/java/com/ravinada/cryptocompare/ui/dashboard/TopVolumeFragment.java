@@ -11,18 +11,16 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.ravinada.cryptocompare.Currency;
-import com.ravinada.cryptocompare.CurrencyAdapter;
+import com.ravinada.cryptocompare.modelclasses.Currency;
+import com.ravinada.cryptocompare.adapters.CurrencyAdapter;
 import com.ravinada.cryptocompare.R;
 import com.ravinada.cryptocompare.databinding.FragmentTopvolumeListBinding;
 

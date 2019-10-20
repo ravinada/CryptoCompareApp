@@ -1,4 +1,4 @@
-package com.ravinada.cryptocompare;
+package com.ravinada.cryptocompare.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.ravinada.cryptocompare.R;
+import com.ravinada.cryptocompare.modelclasses.News;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

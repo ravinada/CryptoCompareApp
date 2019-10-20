@@ -70,7 +70,7 @@ public class FragmentPotfolioBindingImpl extends FragmentPotfolioBinding  {
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.currencyAdapter == variableId) {
-            setCurrencyAdapter((com.ravinada.cryptocompare.CurrencyAdapter) variable);
+            setCurrencyAdapter((com.ravinada.cryptocompare.adapters.CurrencyAdapter) variable);
         }
         else {
             variableSet = false;
@@ -78,7 +78,7 @@ public class FragmentPotfolioBindingImpl extends FragmentPotfolioBinding  {
             return variableSet;
     }
 
-    public void setCurrencyAdapter(@Nullable com.ravinada.cryptocompare.CurrencyAdapter CurrencyAdapter) {
+    public void setCurrencyAdapter(@Nullable com.ravinada.cryptocompare.adapters.CurrencyAdapter CurrencyAdapter) {
         this.mCurrencyAdapter = CurrencyAdapter;
         synchronized(this) {
             mDirtyFlags |= 0x1L;
@@ -101,7 +101,7 @@ public class FragmentPotfolioBindingImpl extends FragmentPotfolioBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        com.ravinada.cryptocompare.CurrencyAdapter currencyAdapter = mCurrencyAdapter;
+        com.ravinada.cryptocompare.adapters.CurrencyAdapter currencyAdapter = mCurrencyAdapter;
 
         if ((dirtyFlags & 0x3L) != 0) {
         }

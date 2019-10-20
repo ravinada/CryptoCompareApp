@@ -1,4 +1,4 @@
-package com.ravinada.cryptocompare;
+package com.ravinada.cryptocompare.modelclasses;
 
 public class News {
 

@@ -6,7 +6,7 @@
 
         <variable
             name="currencyAdapter"
-            type="com.ravinada.cryptocompare.CurrencyAdapter" />
+            type="com.ravinada.cryptocompare.adapters.CurrencyAdapter" />
 
     </data>
     <androidx.coordinatorlayout.widget.CoordinatorLayout

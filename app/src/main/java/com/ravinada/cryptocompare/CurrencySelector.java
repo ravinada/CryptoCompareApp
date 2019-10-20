@@ -10,6 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.ravinada.cryptocompare.adapters.CurrencyChoiceAdapter;
+import com.ravinada.cryptocompare.modelclasses.CurrencyType;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

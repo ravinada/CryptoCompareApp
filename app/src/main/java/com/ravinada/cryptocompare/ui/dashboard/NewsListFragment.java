@@ -18,7 +18,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.ravinada.cryptocompare.News;
+import com.ravinada.cryptocompare.modelclasses.News;
 import com.ravinada.cryptocompare.R;
 import com.ravinada.cryptocompare.adapters.NewsListAdapter;
 import com.ravinada.cryptocompare.databinding.FragmentNewsListBinding;

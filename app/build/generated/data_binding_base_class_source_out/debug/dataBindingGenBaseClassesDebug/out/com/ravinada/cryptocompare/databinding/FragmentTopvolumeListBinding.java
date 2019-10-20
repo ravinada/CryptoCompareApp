@@ -11,8 +11,8 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-import com.ravinada.cryptocompare.CurrencyAdapter;
 import com.ravinada.cryptocompare.R;
+import com.ravinada.cryptocompare.adapters.CurrencyAdapter;
 import java.lang.Deprecated;
 import java.lang.Object;
 

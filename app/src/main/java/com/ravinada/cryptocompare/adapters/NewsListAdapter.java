@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.ravinada.cryptocompare.News;
+import com.ravinada.cryptocompare.modelclasses.News;
 import com.ravinada.cryptocompare.NewsDetailsActivity;
 import com.ravinada.cryptocompare.R;
 import com.squareup.picasso.Picasso;

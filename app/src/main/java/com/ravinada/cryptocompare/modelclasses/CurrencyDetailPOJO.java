@@ -1,4 +1,4 @@
-package com.ravinada.cryptocompare;
+package com.ravinada.cryptocompare.modelclasses;
 
 public class CurrencyDetailPOJO {
     private String currentCoinPrice,rateChg,marketCap,totalVolume24h,directVolume24h,open24h,

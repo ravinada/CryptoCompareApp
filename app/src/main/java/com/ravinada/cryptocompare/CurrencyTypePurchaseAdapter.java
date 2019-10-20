@@ -8,6 +8,8 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.ravinada.cryptocompare.modelclasses.CurrencyType;
+
 import java.util.ArrayList;
 
 public class CurrencyTypePurchaseAdapter extends RecyclerView.Adapter<CurrencyTypePurchaseAdapter.CurrencyTypeViewHolder> {

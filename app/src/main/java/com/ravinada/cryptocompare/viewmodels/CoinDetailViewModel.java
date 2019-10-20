@@ -1,20 +1,19 @@
-package com.ravinada.cryptocompare;
+package com.ravinada.cryptocompare.viewmodels;
 
 import android.app.Application;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
-import androidx.lifecycle.LiveData;
 
-import com.ravinada.cryptocompare.Repository;
+import com.ravinada.cryptocompare.repositories.Repository;
 import com.ravinada.cryptocompare.room.FavouriteCoin;
 
 import java.util.List;
 
-public class CoinViewModel extends AndroidViewModel {
+public class CoinDetailViewModel extends AndroidViewModel {
     private Repository repository;
 
-    public CoinViewModel(@NonNull Application application) {
+    public CoinDetailViewModel(@NonNull Application application) {
         super(application);
         repository = Repository.getInstance(application);
     }

@@ -1,4 +1,4 @@
-package com.ravinada.cryptocompare;
+package com.ravinada.cryptocompare.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -11,6 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.ravinada.cryptocompare.CurrencyDetailActivity;
+import com.ravinada.cryptocompare.R;
+import com.ravinada.cryptocompare.modelclasses.Currency;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
