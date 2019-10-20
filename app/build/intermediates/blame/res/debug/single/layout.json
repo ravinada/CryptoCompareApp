@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_forgot_password.xml",
+        "source": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\src\\main\\res\\layout\\activity_forgot_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_dashboard.xml",
+        "source": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\src\\main\\res\\layout\\activity_dashboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_potfolio.xml",
+        "source": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\src\\main\\res\\layout\\fragment_potfolio.xml"
+    },
+    {
+        "merged": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\main_list_fragment.xml",
+        "source": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\src\\main\\res\\layout\\main_list_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_coin.xml",
+        "source": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\src\\main\\res\\layout\\fragment_coin.xml"
+    },
+    {
+        "merged": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\coin_portfolio_dialog.xml",
+        "source": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\src\\main\\res\\layout\\coin_portfolio_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_news_details.xml",
+        "source": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\src\\main\\res\\layout\\activity_news_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_following_list.xml",
+        "source": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\src\\main\\res\\layout\\fragment_following_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\portfolio_dialog5435.xml",
+        "source": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\src\\main\\res\\layout\\portfolio_dialog5435.xml"
+    },
+    {
+        "merged": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_signup.xml",
+        "source": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\src\\main\\res\\layout\\activity_signup.xml"
+    },
+    {
+        "merged": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_topvolume_list.xml",
+        "source": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\src\\main\\res\\layout\\fragment_topvolume_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_expandable.xml",
+        "source": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\src\\main\\res\\layout\\item_expandable.xml"
+    },
+    {
+        "merged": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\portfolio_dialog.xml",
+        "source": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\src\\main\\res\\layout\\portfolio_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
+        "source": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_news_list.xml",
+        "source": "C:\\Users\\ravin\\Downloads\\Final_Update\\cryptocompareapp-shubham\\app\\src\\main\\res\\layout\\fragment_news_list.xml"
+    }
+]
