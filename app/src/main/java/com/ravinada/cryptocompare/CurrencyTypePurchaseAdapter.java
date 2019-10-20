@@ -1,5 +1,7 @@
 package com.ravinada.cryptocompare;
 
+import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,9 +18,11 @@ import java.util.ArrayList;
 public class CurrencyTypePurchaseAdapter extends RecyclerView.Adapter<CurrencyTypePurchaseAdapter.CurrencyTypeViewHolder> {
     private ArrayList<CurrencyType> currencyTypes;
     private CurrencyPurchaseType currencyTypeClick;
+    Context context;
 
-    public CurrencyTypePurchaseAdapter (CurrencyPurchaseType currencyTypeClick){
+    public CurrencyTypePurchaseAdapter (CurrencyPurchaseType currencyTypeClick,Context context){
         this.currencyTypeClick = currencyTypeClick;
+        this.context = context;
     }
     public void setCurrencies(ArrayList<CurrencyType> currencyTypes){
         this.currencyTypes = currencyTypes;
@@ -49,6 +53,12 @@ public class CurrencyTypePurchaseAdapter extends RecyclerView.Adapter<CurrencyTy
         }
         void bind(CurrencyType currencyType){
             currency.setText(currencyType.getAbr());
+            if(currencyType.getChecked()){
+                currency.setBackground(context.getDrawable(R.drawable.rounded_rect_green));
+                currencyType.setChecked(false);
+            }else {
+                currency.setBackground(context.getDrawable(R.drawable.rounded_rect_grey));
+            }
         }
 
         @Override
@@ -56,6 +66,8 @@ public class CurrencyTypePurchaseAdapter extends RecyclerView.Adapter<CurrencyTy
              int position = getAdapterPosition();
              if(position!=RecyclerView.NO_POSITION){
                  CurrencyType type = currencyTypes.get(position);
+                 type.setChecked(true);
+                 notifyDataSetChanged();
                  currencyTypeClick.onCurrencyClick(type);
              }
         }

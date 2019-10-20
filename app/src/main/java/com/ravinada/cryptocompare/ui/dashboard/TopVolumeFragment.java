@@ -109,7 +109,6 @@ public class TopVolumeFragment extends Fragment {
                     binding.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
                     binding.setCurrencyAdapter(adapter);
 
-
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
