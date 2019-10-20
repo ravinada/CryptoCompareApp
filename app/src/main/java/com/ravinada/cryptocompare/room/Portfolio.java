@@ -13,16 +13,16 @@ public class Portfolio  {
 
     @PrimaryKey(autoGenerate = true)
     private int id;
+    private String name;
     private String currency;
     private String description;
     private int access;
-    //private ArrayList<PortfolioCoin> coins;
 
-    public Portfolio(String currency, String description, int access) {
+    public Portfolio(String name, String currency, String description, int access) {
+        this.name = name;
         this.currency = currency;
         this.description = description;
         this.access = access;
-      //  this.coins = coins;
     }
 
     public int getId() {
@@ -31,6 +31,14 @@ public class Portfolio  {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getCurrency() {
@@ -57,11 +65,4 @@ public class Portfolio  {
         this.access = access;
     }
 
-//    public ArrayList<PortfolioCoin> getCoins() {
-//        return coins;
-//    }
-//
-//    public void setCoins(ArrayList<PortfolioCoin> coins) {
-//        this.coins = coins;
-//    }
 }

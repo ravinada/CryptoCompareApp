@@ -41,4 +41,5 @@
     <string name="Public">Public</string>
     <string name="Private">Private</string>
     <string name="btn_first_portfolio">+ Add your first portfolio</string>
+    <string name="name">Name</string>
 </resources>

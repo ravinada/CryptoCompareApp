@@ -30,19 +30,22 @@ public abstract class PortfolioDialogBinding extends ViewDataBinding {
   public final ImageView cancel;
 
   @NonNull
-  public final EditText editAmount;
+  public final EditText etDescription;
 
   @NonNull
-  public final TextView lblAddCoin;
+  public final EditText etPortfolioName;
 
   @NonNull
-  public final TextView lblAmount;
+  public final TextView lblAddPortfolio;
 
   @NonNull
-  public final TextView lblCoin;
+  public final TextView lblCurrency;
 
   @NonNull
-  public final EditText selectCoin;
+  public final TextView lblDescriptionPortfolio;
+
+  @NonNull
+  public final TextView lblName;
 
   @NonNull
   public final RecyclerView selectCurrencyPurchaseCoin;
@@ -57,18 +60,20 @@ public abstract class PortfolioDialogBinding extends ViewDataBinding {
   protected CurrencyTypePurchaseAdapter mCurrencyTypePurchaseAdapter;
 
   protected PortfolioDialogBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      Button btnSubmit, TextView buyPrice, ImageView cancel, EditText editAmount,
-      TextView lblAddCoin, TextView lblAmount, TextView lblCoin, EditText selectCoin,
-      RecyclerView selectCurrencyPurchaseCoin, TextView txtPrivate, TextView txtPublic) {
+      Button btnSubmit, TextView buyPrice, ImageView cancel, EditText etDescription,
+      EditText etPortfolioName, TextView lblAddPortfolio, TextView lblCurrency,
+      TextView lblDescriptionPortfolio, TextView lblName, RecyclerView selectCurrencyPurchaseCoin,
+      TextView txtPrivate, TextView txtPublic) {
     super(_bindingComponent, _root, _localFieldCount);
     this.btnSubmit = btnSubmit;
     this.buyPrice = buyPrice;
     this.cancel = cancel;
-    this.editAmount = editAmount;
-    this.lblAddCoin = lblAddCoin;
-    this.lblAmount = lblAmount;
-    this.lblCoin = lblCoin;
-    this.selectCoin = selectCoin;
+    this.etDescription = etDescription;
+    this.etPortfolioName = etPortfolioName;
+    this.lblAddPortfolio = lblAddPortfolio;
+    this.lblCurrency = lblCurrency;
+    this.lblDescriptionPortfolio = lblDescriptionPortfolio;
+    this.lblName = lblName;
     this.selectCurrencyPurchaseCoin = selectCurrencyPurchaseCoin;
     this.txtPrivate = txtPrivate;
     this.txtPublic = txtPublic;

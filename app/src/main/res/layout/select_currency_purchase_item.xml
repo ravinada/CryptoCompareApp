@@ -2,11 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:layout_margin="5dp"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
-    <Button
+    <TextView
         android:id="@+id/btn_currency"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:gravity="center"
+        android:padding="3dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        android:background="@drawable/rounded_rect_grey"
+        android:layout_height="30dp"
        tools:text="USD" />
 </LinearLayout>

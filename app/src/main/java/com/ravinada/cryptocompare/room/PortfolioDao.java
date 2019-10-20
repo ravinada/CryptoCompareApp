@@ -20,7 +20,4 @@ public interface PortfolioDao {
     @Query("SELECT * FROM portfolios")
     LiveData<List<Portfolio>> getPortfolios();
 
-//    @Query("UPDATE portfolios SET coins = :newCoins WHERE id=:id")
-//    void updatePortfolios(int id, ArrayList<PortfolioCoin> newCoins);
-
 }

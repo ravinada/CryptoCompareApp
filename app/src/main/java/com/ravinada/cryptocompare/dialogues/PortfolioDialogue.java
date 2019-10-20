@@ -1,9 +1,13 @@
 package com.ravinada.cryptocompare.dialogues;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -30,6 +34,7 @@ import java.util.Objects;
 public class PortfolioDialogue extends DialogFragment implements CurrencyTypePurchaseAdapter.CurrencyPurchaseType {
     private CurrencyTypePurchaseAdapter currencyChoiceAdapter;
     PortfolioDialogBinding binding;
+    String currencySelection = "";
     private ArrayList<CurrencyType> currencyType = new ArrayList<>();
     @Nullable
     @Override
@@ -37,6 +42,12 @@ public class PortfolioDialogue extends DialogFragment implements CurrencyTypePur
         binding = DataBindingUtil.inflate(inflater, R.layout.portfolio_dialog,container,false);
         setCancelable(false);
         setCurrencySelector();
+        binding.btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                validator();
+            }
+        });
         return binding.getRoot();
     }
 
@@ -57,18 +68,14 @@ public class PortfolioDialogue extends DialogFragment implements CurrencyTypePur
     }
     private void setCurrencySelector(){
         try {
-            JSONObject obj = new JSONObject(Objects.requireNonNull(loadJSONFromAsset()));
-            JSONArray m_jArry = obj.getJSONArray("currency_types");
+            JSONObject currencies = new JSONObject(Objects.requireNonNull(loadJSONFromAsset()));
+            JSONArray currencyArray = currencies.getJSONArray("currency_types");
 
-            for (int i = 0; i < m_jArry.length(); i++) {
+            for (int i = 0; i < currencyArray.length(); i++) {
                 CurrencyType currency = new CurrencyType();
-                JSONObject jo_inside = m_jArry.getJSONObject(i);
-                String symbol = jo_inside.getString("symbol");
-                String abr = jo_inside.getString("abr");
-                String name = jo_inside.getString("name");
-                currency.setSymbol(symbol);
+                JSONObject currencyJson = currencyArray.getJSONObject(i);
+                String abr = currencyJson.getString("abr");
                 currency.setAbr(abr);
-                currency.setName(name);
                 currency.setChecked(false);
                 currencyType.add(currency);
             }
@@ -81,8 +88,69 @@ public class PortfolioDialogue extends DialogFragment implements CurrencyTypePur
         binding.selectCurrencyPurchaseCoin.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
         binding.selectCurrencyPurchaseCoin.setAdapter(currencyChoiceAdapter);
     }
+    private void validator(){
+        if(currencySelection.equalsIgnoreCase("") &&
+                binding.etPortfolioName.getText().toString().equalsIgnoreCase("")){
+            binding.etPortfolioName.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                    if(charSequence.toString().equalsIgnoreCase("")){
+                        binding.lblName.setText("Name is required");
+                        binding.lblName.setTextColor(getActivity().getColor(R.color.colorRed));
+                    }else {
+                        binding.lblName.setText("Name");
+                        binding.lblName.setTextColor(getActivity().getColor(R.color.colorBlack));
+                    }
+                }
+
+                @Override
+                public void afterTextChanged(Editable editable) {
+
+                }
+            });
+            binding.lblName.setText("Name is required");
+            binding.lblName.setTextColor(getActivity().getColor(R.color.colorRed));
+            binding.lblCurrency.setText("Currency is required");
+            binding.lblCurrency.setTextColor(getActivity().getColor(R.color.colorRed));
+        }
+        else if (!currencySelection.equalsIgnoreCase("" )&&
+                binding.etPortfolioName.getText().toString().equalsIgnoreCase("")){
+            binding.lblName.setText("Name is required");
+            binding.lblName.setTextColor(getActivity().getColor(R.color.colorRed));
+            binding.etPortfolioName.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                    if(charSequence.toString().equalsIgnoreCase("")){
+                        binding.lblName.setText("Name is required");
+                        binding.lblName.setTextColor(getActivity().getColor(R.color.colorRed));
+                    }else {
+                        binding.lblName.setText("Name");
+                        binding.lblName.setTextColor(getActivity().getColor(R.color.colorBlack));
+                    }
+                }
+
+                @Override
+                public void afterTextChanged(Editable editable) {
+
+                }
+            });
+        }
+    }
+
     @Override
     public void onCurrencyClick(CurrencyType type) {
-
+        currencySelection = type.getAbr();
+        binding.lblCurrency.setText("Currency");
+        binding.lblCurrency.setTextColor(getActivity().getColor(R.color.colorBlack));
     }
 }

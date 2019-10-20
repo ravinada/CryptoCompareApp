@@ -17,16 +17,18 @@ import com.google.android.material.tabs.TabLayout;
 import com.ravinada.cryptocompare.R;
 import com.ravinada.cryptocompare.databinding.MainListFragmentBinding;
 
+import java.util.Objects;
+
 public class MainListFragment extends Fragment {
     private final String TAG = MainListFragment.class.getSimpleName();
-    MainListFragmentBinding binding;
-    FragmentManager fragmentManager;
-    FragmentTransaction fragmentTransaction;
+    private MainListFragmentBinding binding;
+    private FragmentManager fragmentManager;
+    private FragmentTransaction fragmentTransaction;
 
     public static MainListFragment newInstance() {
         return new MainListFragment();
     }
-    TextView following,topVolume;
+    private TextView following,topVolume;
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.main_list_fragment, container, false);
@@ -39,7 +41,7 @@ public class MainListFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        fragmentManager = getActivity().getSupportFragmentManager();
+        fragmentManager = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.llDashboardMain, FollowingListFragment.newInstance()).commit();
         following.setOnClickListener(view -> {

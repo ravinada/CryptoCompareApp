@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -40,7 +41,7 @@ public class CurrencyTypePurchaseAdapter extends RecyclerView.Adapter<CurrencyTy
     }
 
     public class CurrencyTypeViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        Button currency;
+        TextView currency;
         public CurrencyTypeViewHolder(@NonNull View itemView) {
             super(itemView);
             currency = itemView.findViewById(R.id.btn_currency);

@@ -14,17 +14,18 @@ public class PortfolioDialogBindingImpl extends PortfolioDialogBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.lbl_add_coin, 1);
-        sViewsWithIds.put(R.id.lbl_coin, 2);
-        sViewsWithIds.put(R.id.txt_private, 3);
-        sViewsWithIds.put(R.id.txt_public, 4);
-        sViewsWithIds.put(R.id.cancel, 5);
-        sViewsWithIds.put(R.id.buy_price, 6);
-        sViewsWithIds.put(R.id.lbl_amount, 7);
-        sViewsWithIds.put(R.id.select_coin, 8);
-        sViewsWithIds.put(R.id.edit_amount, 9);
-        sViewsWithIds.put(R.id.selectCurrencyPurchaseCoin, 10);
-        sViewsWithIds.put(R.id.btn_submit, 11);
+        sViewsWithIds.put(R.id.lbl_add_portfolio, 1);
+        sViewsWithIds.put(R.id.lbl_name, 2);
+        sViewsWithIds.put(R.id.lbl_currency, 3);
+        sViewsWithIds.put(R.id.txt_private, 4);
+        sViewsWithIds.put(R.id.txt_public, 5);
+        sViewsWithIds.put(R.id.cancel, 6);
+        sViewsWithIds.put(R.id.buy_price, 7);
+        sViewsWithIds.put(R.id.lbl_descriptionPortfolio, 8);
+        sViewsWithIds.put(R.id.et_portfolioName, 9);
+        sViewsWithIds.put(R.id.et_description, 10);
+        sViewsWithIds.put(R.id.selectCurrencyPurchaseCoin, 11);
+        sViewsWithIds.put(R.id.btn_submit, 12);
     }
     // views
     @NonNull
@@ -35,21 +36,22 @@ public class PortfolioDialogBindingImpl extends PortfolioDialogBinding  {
     // Inverse Binding Event Handlers
 
     public PortfolioDialogBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 12, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 13, sIncludes, sViewsWithIds));
     }
     private PortfolioDialogBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.Button) bindings[11]
-            , (android.widget.TextView) bindings[6]
-            , (android.widget.ImageView) bindings[5]
+            , (android.widget.Button) bindings[12]
+            , (android.widget.TextView) bindings[7]
+            , (android.widget.ImageView) bindings[6]
+            , (android.widget.EditText) bindings[10]
             , (android.widget.EditText) bindings[9]
             , (android.widget.TextView) bindings[1]
-            , (android.widget.TextView) bindings[7]
-            , (android.widget.TextView) bindings[2]
-            , (android.widget.EditText) bindings[8]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[10]
             , (android.widget.TextView) bindings[3]
+            , (android.widget.TextView) bindings[8]
+            , (android.widget.TextView) bindings[2]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[11]
             , (android.widget.TextView) bindings[4]
+            , (android.widget.TextView) bindings[5]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);

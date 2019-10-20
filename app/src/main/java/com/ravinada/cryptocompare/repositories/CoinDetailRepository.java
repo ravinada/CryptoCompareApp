@@ -24,7 +24,7 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 public class CoinDetailRepository {
-    public FavouriteCoinDao favouriteCoinDao;
+    private FavouriteCoinDao favouriteCoinDao;
     private Executor executor;
     private static CoinDetailRepository coinDetailRepository;
 
