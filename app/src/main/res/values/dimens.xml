@@ -112,5 +112,6 @@
 
     <dimen name="currency_news_image">75dp</dimen>
     <dimen name="space_8">8dp</dimen>
+    <dimen name="space_16">16dp</dimen>
 
 </resources>

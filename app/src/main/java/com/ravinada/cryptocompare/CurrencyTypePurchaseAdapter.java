@@ -55,9 +55,11 @@ public class CurrencyTypePurchaseAdapter extends RecyclerView.Adapter<CurrencyTy
             currency.setText(currencyType.getAbr());
             if(currencyType.getChecked()){
                 currency.setBackground(context.getDrawable(R.drawable.rounded_rect_green));
+                currency.setTextColor(context.getColor(R.color.white));
                 currencyType.setChecked(false);
             }else {
                 currency.setBackground(context.getDrawable(R.drawable.rounded_rect_grey));
+                currency.setTextColor(context.getColor(R.color.colorBlack));
             }
         }
 

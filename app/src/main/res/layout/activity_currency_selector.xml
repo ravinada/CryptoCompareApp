@@ -20,38 +20,39 @@
          android:layout_height="wrap_content">
 
          <TextView
-             android:layout_marginLeft="10dp"
-             android:layout_marginTop="10dp"
              android:id="@+id/pickCurrencyText"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             app:layout_constraintTop_toTopOf="parent"
-             app:layout_constraintStart_toStartOf="parent"
+             android:layout_marginLeft="8dp"
+             android:layout_marginTop="8dp"
+             android:layout_marginBottom="8dp"
              android:text="@string/pick_a_currency"
-             android:textSize="16sp"
              android:textColor="@color/colorBlack"
-             tools:layout_editor_absoluteX="0dp"
-             tools:layout_editor_absoluteY="2dp" />
+             android:textSize="14sp"
+             app:layout_constraintBottom_toTopOf="@+id/view"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent" />
 
          <ImageView
-             android:layout_marginLeft="10dp"
-             android:layout_marginTop="10dp"
              android:id="@+id/cancel"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:src="@drawable/ic_clear_black_24dp"
+             android:layout_width="32dp"
+             android:layout_height="24dp"
+             android:layout_margin="@dimen/space_8"
+             android:src="@drawable/ic_clear_black"
+             app:layout_constraintBottom_toTopOf="@+id/view"
              app:layout_constraintEnd_toEndOf="parent"
-             app:layout_constraintTop_toTopOf="parent"
              app:layout_constraintHorizontal_bias="0.985"
              app:layout_constraintStart_toEndOf="@id/pickCurrencyText"
-             tools:layout_editor_absoluteY="-2dp" />
+             app:layout_constraintTop_toTopOf="parent" />
+
          <View
+             android:id="@+id/view"
              android:layout_width="match_parent"
-             android:layout_marginTop="10dp"
              android:layout_height="1dp"
+             android:layout_marginTop="10dp"
              android:background="#9e9e9e"
              app:layout_constraintStart_toStartOf="parent"
-             app:layout_constraintTop_toBottomOf="@id/pickCurrencyText"/>
+             app:layout_constraintTop_toBottomOf="@id/pickCurrencyText" />
 
      </androidx.constraintlayout.widget.ConstraintLayout>
 

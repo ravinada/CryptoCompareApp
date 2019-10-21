@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+import android.view.View;
 import android.widget.TextView;
 
 
@@ -23,9 +24,9 @@ public class DashboardActivity extends AppCompatActivity {
     TextView currencySelector;
     ActivityDashboardBinding binding;
     private int[] tabIcons = {
-            R.drawable.ic_home_black_16dp,
-            R.drawable.ic_dashboard_black_16dp,
-            R.drawable.ic_notifications_black_16dp
+            R.drawable.database,
+            R.drawable.finances,
+            R.drawable.news
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +54,26 @@ public class DashboardActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
+                if (position == 1){
+                    binding.txtPortfolioName.setVisibility(View.VISIBLE);
+                    binding.txtPortfolioName.setText("Portfolio");
+                    binding.searchBar.setVisibility(View.GONE);
+                    binding.currencyTag.setVisibility(View.GONE);
+                    binding.portfolioEdit.setVisibility(View.VISIBLE);
+                }else if (position == 2){
+                    binding.searchBar.setVisibility(View.GONE);
+                    binding.txtPortfolioName.setVisibility(View.VISIBLE);
+                    binding.txtPortfolioName.setText("News");
+                    binding.currencyTag.setVisibility(View.GONE);
+                    binding.portfolioEdit.setVisibility(View.GONE);
 
+                }else {
+                    binding.searchBar.setVisibility(View.VISIBLE);
+                    binding.txtPortfolioName.setVisibility(View.GONE);
+                    binding.currencyTag.setVisibility(View.VISIBLE);
+                    binding.portfolioEdit.setVisibility(View.GONE);
+
+                }
             }
 
             @Override

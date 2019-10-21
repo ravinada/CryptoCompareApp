@@ -34,7 +34,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class PortfolioDialogue extends DialogFragment implements CurrencyTypePurchaseAdapter.CurrencyPurchaseType {
+public class AddPortfolioDialogue extends DialogFragment implements CurrencyTypePurchaseAdapter.CurrencyPurchaseType {
     private CurrencyTypePurchaseAdapter currencyChoiceAdapter;
     PortfolioDialogBinding binding;
     String currencySelection = "";

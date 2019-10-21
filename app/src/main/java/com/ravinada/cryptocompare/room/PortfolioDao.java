@@ -18,6 +18,6 @@ public interface PortfolioDao {
     void delete(Portfolio portfolio);
 
     @Query("SELECT * FROM portfolios")
-    LiveData<List<Portfolio>> getPortfolios();
+    List<Portfolio> getPortfolios();
 
 }

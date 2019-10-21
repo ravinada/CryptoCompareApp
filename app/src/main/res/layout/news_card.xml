@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_start_iage_news"
             android:layout_marginLeft="@dimen/marginLeft_image_newscard"
-            android:scaleType="centerInside"
+            android:background="@drawable/dialog_rounded_grey_box"
             android:src="@drawable/ic_launcher_foreground"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"

@@ -9,12 +9,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import androidx.recyclerview.widget.RecyclerView;
 import com.ravinada.cryptocompare.R;
-import com.ravinada.cryptocompare.adapters.CurrencyAdapter;
 import java.lang.Deprecated;
 import java.lang.Object;
 
@@ -23,49 +20,17 @@ public abstract class FragmentPotfolioBinding extends ViewDataBinding {
   public final CoordinatorLayout activityMain;
 
   @NonNull
-  public final Button btnAddCoin;
-
-  @NonNull
   public final Button btnAddPortfolio;
 
   @NonNull
-  public final TextView lblHolding;
-
-  @NonNull
-  public final TextView lblProLoss;
-
-  @NonNull
-  public final RecyclerView recyclerView;
-
-  @NonNull
-  public final TextView txtHolding;
-
-  @NonNull
-  public final TextView txtProfitLoss;
-
-  @Bindable
-  protected CurrencyAdapter mCurrencyAdapter;
+  public final TextView txtNoportfolio;
 
   protected FragmentPotfolioBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CoordinatorLayout activityMain, Button btnAddCoin, Button btnAddPortfolio,
-      TextView lblHolding, TextView lblProLoss, RecyclerView recyclerView, TextView txtHolding,
-      TextView txtProfitLoss) {
+      CoordinatorLayout activityMain, Button btnAddPortfolio, TextView txtNoportfolio) {
     super(_bindingComponent, _root, _localFieldCount);
     this.activityMain = activityMain;
-    this.btnAddCoin = btnAddCoin;
     this.btnAddPortfolio = btnAddPortfolio;
-    this.lblHolding = lblHolding;
-    this.lblProLoss = lblProLoss;
-    this.recyclerView = recyclerView;
-    this.txtHolding = txtHolding;
-    this.txtProfitLoss = txtProfitLoss;
-  }
-
-  public abstract void setCurrencyAdapter(@Nullable CurrencyAdapter currencyAdapter);
-
-  @Nullable
-  public CurrencyAdapter getCurrencyAdapter() {
-    return mCurrencyAdapter;
+    this.txtNoportfolio = txtNoportfolio;
   }
 
   @NonNull

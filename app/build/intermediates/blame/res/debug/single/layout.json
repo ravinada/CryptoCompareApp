@@ -40,11 +40,23 @@
         "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\activity_signup.xml"
     },
     {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_coin.xml",
+        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\fragment_coin.xml"
+    },
+    {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_following_list.xml",
         "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\fragment_following_list.xml"
     },
     {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_expandable.xml",
+        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\item_expandable.xml"
+    },
+    {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_dashboard.xml",
         "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\activity_dashboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\initial_portfolio.xml",
+        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\initial_portfolio.xml"
     }
 ]

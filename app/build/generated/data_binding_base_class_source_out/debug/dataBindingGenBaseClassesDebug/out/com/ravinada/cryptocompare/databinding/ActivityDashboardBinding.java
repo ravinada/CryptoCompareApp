@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.SearchView;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.viewpager.widget.ViewPager;
@@ -21,10 +22,16 @@ import java.lang.Object;
 
 public abstract class ActivityDashboardBinding extends ViewDataBinding {
   @NonNull
+  public final CoordinatorLayout activityMain;
+
+  @NonNull
   public final RelativeLayout container;
 
   @NonNull
   public final TextView currencyTag;
+
+  @NonNull
+  public final TextView portfolioEdit;
 
   @NonNull
   public final SearchView searchBar;
@@ -45,24 +52,31 @@ public abstract class ActivityDashboardBinding extends ViewDataBinding {
   public final RelativeLayout toolbar;
 
   @NonNull
+  public final TextView txtPortfolioName;
+
+  @NonNull
   public final ImageButton userMenu;
 
   @NonNull
   public final ViewPager viewPager;
 
   protected ActivityDashboardBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      RelativeLayout container, TextView currencyTag, SearchView searchBar, TabItem tabMenuNews,
-      TabItem tabMenuPortfolio, TabItem tabMenuWatchList, TabLayout tabsBottom,
-      RelativeLayout toolbar, ImageButton userMenu, ViewPager viewPager) {
+      CoordinatorLayout activityMain, RelativeLayout container, TextView currencyTag,
+      TextView portfolioEdit, SearchView searchBar, TabItem tabMenuNews, TabItem tabMenuPortfolio,
+      TabItem tabMenuWatchList, TabLayout tabsBottom, RelativeLayout toolbar,
+      TextView txtPortfolioName, ImageButton userMenu, ViewPager viewPager) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.activityMain = activityMain;
     this.container = container;
     this.currencyTag = currencyTag;
+    this.portfolioEdit = portfolioEdit;
     this.searchBar = searchBar;
     this.tabMenuNews = tabMenuNews;
     this.tabMenuPortfolio = tabMenuPortfolio;
     this.tabMenuWatchList = tabMenuWatchList;
     this.tabsBottom = tabsBottom;
     this.toolbar = toolbar;
+    this.txtPortfolioName = txtPortfolioName;
     this.userMenu = userMenu;
     this.viewPager = viewPager;
   }

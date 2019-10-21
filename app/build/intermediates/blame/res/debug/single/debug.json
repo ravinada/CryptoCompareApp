@@ -32,12 +32,12 @@
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\7f6c41cc2a14c0fbaa8d0166c17dc544\\core-1.1.0\\res\\drawable\\notification_bg.xml"
     },
     {
-        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_cancel_action.xml.flat",
-        "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\e7201af0ac6a1eb782d2b896d1ec4242\\media-1.0.0\\res\\layout\\notification_media_cancel_action.xml"
-    },
-    {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_list_selector_holo_dark.xml.flat",
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_cancel_action.xml.flat",
+        "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\e7201af0ac6a1eb782d2b896d1ec4242\\media-1.0.0\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
@@ -150,10 +150,6 @@
     {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\animator_design_fab_show_motion_spec.xml.flat",
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\9ee5da6fca20f6f07dce6c73fc4ca33a\\material-1.0.0\\res\\animator\\design_fab_show_motion_spec.xml"
-    },
-    {
-        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_clear_black_24dp.xml.flat",
-        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\drawable\\ic_clear_black_24dp.xml"
     },
     {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
@@ -740,10 +736,6 @@
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_news.xml.flat",
-        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\list_news.xml"
-    },
-    {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_menu_overflow_material.xml.flat",
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\drawable\\abc_ic_menu_overflow_material.xml"
     },
@@ -794,6 +786,10 @@
     {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_more_horiz_black.xml.flat",
+        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\drawable\\ic_more_horiz_black.xml"
     },
     {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
@@ -1172,6 +1168,10 @@
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\color\\abc_hint_foreground_material_light.xml"
     },
     {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounded_drawable_symbol_delete.xml.flat",
+        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\drawable\\rounded_drawable_symbol_delete.xml"
+    },
+    {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_ab_back_material.xml.flat",
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\drawable\\abc_ic_ab_back_material.xml"
     },
@@ -1242,6 +1242,10 @@
     {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_clear_black.xml.flat",
+        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\drawable\\ic_clear_black.xml"
     },
     {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_longpressed_holo.9.png.flat",
@@ -1332,6 +1336,10 @@
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\7f6c41cc2a14c0fbaa8d0166c17dc544\\core-1.1.0\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable_news.png.flat",
+        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\drawable\\news.png"
+    },
+    {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
@@ -1394,6 +1402,10 @@
     {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_radio_off_to_on_mtrl_animation.xml.flat",
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\drawable\\btn_radio_off_to_on_mtrl_animation.xml"
+    },
+    {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable_database.png.flat",
+        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\drawable\\database.png"
     },
     {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_template_icon_group.xml.flat",
@@ -1528,6 +1540,10 @@
         "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_coin.xml.flat",
+        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\fragment_coin.xml"
+    },
+    {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
@@ -1606,6 +1622,10 @@
     {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\interpolator_btn_checkbox_unchecked_mtrl_animation_interpolator_1.xml.flat",
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\interpolator\\btn_checkbox_unchecked_mtrl_animation_interpolator_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_expandable.xml.flat",
+        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\item_expandable.xml"
     },
     {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -1832,6 +1852,10 @@
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\layout_initial_portfolio.xml.flat",
+        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\initial_portfolio.xml"
+    },
+    {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_tabs_icon_color_selector_colored.xml.flat",
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\9ee5da6fca20f6f07dce6c73fc4ca33a\\material-1.0.0\\res\\color\\mtrl_tabs_icon_color_selector_colored.xml"
     },
@@ -1904,6 +1928,10 @@
         "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\activity_dashboard.xml"
     },
     {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_keyboard_arrow_up_black_24dp.xml.flat",
+        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\drawable\\ic_keyboard_arrow_up_black_24dp.xml"
+    },
+    {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_slide_in_top.xml.flat",
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\anim\\abc_slide_in_top.xml"
     },
@@ -1942,6 +1970,10 @@
     {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_grow_fade_in_from_bottom.xml.flat",
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable_finances.png.flat",
+        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\drawable\\finances.png"
     },
     {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
@@ -2044,12 +2076,12 @@
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\7f6c41cc2a14c0fbaa8d0166c17dc544\\core-1.1.0\\res\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
-        "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
-    },
-    {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
+        "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_currency_selector.xml.flat",
@@ -2214,6 +2246,10 @@
     {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\interpolator_btn_checkbox_checked_mtrl_animation_interpolator_0.xml.flat",
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\interpolator\\btn_checkbox_checked_mtrl_animation_interpolator_0.xml"
+    },
+    {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_add_coin.xml.flat",
+        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\item_add_coin.xml"
     },
     {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_half_black_48dp.png.flat",

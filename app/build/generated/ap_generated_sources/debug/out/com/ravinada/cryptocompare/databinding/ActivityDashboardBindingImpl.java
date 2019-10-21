@@ -14,15 +14,18 @@ public class ActivityDashboardBindingImpl extends ActivityDashboardBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.toolbar, 1);
-        sViewsWithIds.put(R.id.user_menu, 2);
-        sViewsWithIds.put(R.id.searchBar, 3);
-        sViewsWithIds.put(R.id.currencyTag, 4);
-        sViewsWithIds.put(R.id.viewPager, 5);
-        sViewsWithIds.put(R.id.tabsBottom, 6);
-        sViewsWithIds.put(R.id.tabMenuWatchList, 7);
-        sViewsWithIds.put(R.id.tabMenuPortfolio, 8);
-        sViewsWithIds.put(R.id.tabMenuNews, 9);
+        sViewsWithIds.put(R.id.container, 1);
+        sViewsWithIds.put(R.id.toolbar, 2);
+        sViewsWithIds.put(R.id.user_menu, 3);
+        sViewsWithIds.put(R.id.searchBar, 4);
+        sViewsWithIds.put(R.id.currencyTag, 5);
+        sViewsWithIds.put(R.id.txtPortfolioName, 6);
+        sViewsWithIds.put(R.id.portfolio_edit, 7);
+        sViewsWithIds.put(R.id.viewPager, 8);
+        sViewsWithIds.put(R.id.tabsBottom, 9);
+        sViewsWithIds.put(R.id.tabMenuWatchList, 10);
+        sViewsWithIds.put(R.id.tabMenuPortfolio, 11);
+        sViewsWithIds.put(R.id.tabMenuNews, 12);
     }
     // views
     // variables
@@ -31,22 +34,25 @@ public class ActivityDashboardBindingImpl extends ActivityDashboardBinding  {
     // Inverse Binding Event Handlers
 
     public ActivityDashboardBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 10, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 13, sIncludes, sViewsWithIds));
     }
     private ActivityDashboardBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.RelativeLayout) bindings[0]
-            , (android.widget.TextView) bindings[4]
-            , (androidx.appcompat.widget.SearchView) bindings[3]
-            , (com.google.android.material.tabs.TabItem) bindings[9]
-            , (com.google.android.material.tabs.TabItem) bindings[8]
-            , (com.google.android.material.tabs.TabItem) bindings[7]
-            , (com.google.android.material.tabs.TabLayout) bindings[6]
+            , (androidx.coordinatorlayout.widget.CoordinatorLayout) bindings[0]
             , (android.widget.RelativeLayout) bindings[1]
-            , (android.widget.ImageButton) bindings[2]
-            , (androidx.viewpager.widget.ViewPager) bindings[5]
+            , (android.widget.TextView) bindings[5]
+            , (android.widget.TextView) bindings[7]
+            , (androidx.appcompat.widget.SearchView) bindings[4]
+            , (com.google.android.material.tabs.TabItem) bindings[12]
+            , (com.google.android.material.tabs.TabItem) bindings[11]
+            , (com.google.android.material.tabs.TabItem) bindings[10]
+            , (com.google.android.material.tabs.TabLayout) bindings[9]
+            , (android.widget.RelativeLayout) bindings[2]
+            , (android.widget.TextView) bindings[6]
+            , (android.widget.ImageButton) bindings[3]
+            , (androidx.viewpager.widget.ViewPager) bindings[8]
             );
-        this.container.setTag(null);
+        this.activityMain.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();

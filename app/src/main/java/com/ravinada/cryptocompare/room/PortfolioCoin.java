@@ -3,61 +3,29 @@ package com.ravinada.cryptocompare.room;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class PortfolioCoin implements Parcelable {
-    private String currencytag;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "portfolio_coins")
+public class PortfolioCoin {
+    @PrimaryKey(autoGenerate = true)
+    private int coinId;
+    private String currencyTag;
     private float amount;
     private float buyPrice;
     private String buyTag;
     private String date;
     private String description;
+    private int uid;
 
-    public PortfolioCoin(String currencytag, float amount, float buyPrice, String buyTag, String date, String description) {
-        this.currencytag = currencytag;
+    public PortfolioCoin(String currencyTag, float amount, float buyPrice, String buyTag, String date, String description,int uid) {
+        this.currencyTag = currencyTag;
         this.amount = amount;
         this.buyPrice = buyPrice;
         this.buyTag = buyTag;
         this.date = date;
         this.description = description;
-    }
-
-    protected PortfolioCoin(Parcel in) {
-        currencytag = in.readString();
-        amount = in.readFloat();
-        buyPrice = in.readFloat();
-        buyTag = in.readString();
-        date = in.readString();
-        description = in.readString();
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(currencytag);
-        dest.writeFloat(amount);
-        dest.writeFloat(buyPrice);
-        dest.writeString(buyTag);
-        dest.writeString(date);
-        dest.writeString(description);
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    public static final Creator<PortfolioCoin> CREATOR = new Creator<PortfolioCoin>() {
-        @Override
-        public PortfolioCoin createFromParcel(Parcel in) {
-            return new PortfolioCoin(in);
-        }
-
-        @Override
-        public PortfolioCoin[] newArray(int size) {
-            return new PortfolioCoin[size];
-        }
-    };
-
-    public String getCurrencytag() {
-        return currencytag;
+        this.uid = uid;
     }
 
     public float getAmount() {
@@ -74,6 +42,26 @@ public class PortfolioCoin implements Parcelable {
 
     public String getDate() {
         return date;
+    }
+
+    public int getCoinId() {
+        return coinId;
+    }
+
+    public String getCurrencyTag() {
+        return currencyTag;
+    }
+
+    public void setCoinId(int coinId) {
+        this.coinId = coinId;
+    }
+
+    public void setUid(int uid) {
+        this.uid = uid;
+    }
+
+    public int getUid() {
+        return uid;
     }
 
     public String getDescription() {

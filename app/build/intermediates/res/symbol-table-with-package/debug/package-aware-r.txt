@@ -1068,6 +1068,7 @@ dimen padingleft_market_no
 dimen search_view_height
 dimen search_view_textsize
 dimen searchview_width
+dimen space_16
 dimen space_8
 dimen subtitle_corner_radius
 dimen subtitle_outline_width
@@ -1200,6 +1201,7 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable cc2logo
 drawable cclogo
+drawable database
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1209,16 +1211,19 @@ drawable design_snackbar_background
 drawable dialog_basic_transparent
 drawable dialog_rounded_grey_box
 drawable facebook
+drawable finances
 drawable google
 drawable green_sort_selector
 drawable ic_arrow_back_black_24dp
-drawable ic_clear_black_24dp
+drawable ic_clear_black
 drawable ic_dashboard_black_16dp
 drawable ic_enhanced_encryption_black_24dp
 drawable ic_home_black_16dp
 drawable ic_keyboard_arrow_down_black_24dp
+drawable ic_keyboard_arrow_up_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_more_horiz_black
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
@@ -1232,6 +1237,7 @@ drawable markerview
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
+drawable news
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -1251,6 +1257,7 @@ drawable rounded_border_follow
 drawable rounded_drawable_following
 drawable rounded_drawable_submit_grey
 drawable rounded_drawable_symbol
+drawable rounded_drawable_symbol_delete
 drawable rounded_rect_green
 drawable rounded_rect_grey
 drawable tooltip_frame_dark
@@ -1322,7 +1329,6 @@ id alertTitle
 id all
 id always
 id appBarLayout
-id app_bar
 id async
 id auto
 id back
@@ -1336,6 +1342,7 @@ id btnGoogle
 id btnLogin
 id btnSignUp
 id btn_add_coin
+id btn_add_first_coin
 id btn_add_portfolio
 id btn_currency
 id btn_submit
@@ -1399,6 +1406,7 @@ id dialog_button
 id dimensions
 id direct
 id disableHome
+id down_arrow
 id edit_amount
 id edit_buy_insert_amount
 id edit_date
@@ -1408,6 +1416,7 @@ id edtConfirmPassword
 id edtEmail
 id edtPassword
 id edtPhoneNumber
+id emptyPortfolio
 id end
 id end_padder
 id enterAlways
@@ -1436,6 +1445,7 @@ id icon
 id icon_group
 id ifRoom
 id image
+id imageView
 id info
 id invisible
 id italic
@@ -1450,9 +1460,10 @@ id lbl_coin
 id lbl_currency
 id lbl_description
 id lbl_descriptionPortfolio
-id lbl_holding
 id lbl_name
 id lbl_pro_loss
+id lbl_total_val
+id lbl_total_value
 id left
 id line1
 id line3
@@ -1509,6 +1520,7 @@ id percent
 id pickCurrencyText
 id pin
 id portfolio_bar
+id portfolio_edit
 id progress
 id progress_circular
 id progress_horizontal
@@ -1588,6 +1600,7 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView
 id textWatcher
 id text_dashboard
 id text_input_password_toggle
@@ -1611,16 +1624,22 @@ id transition_transform
 id tvFollowing
 id tvTopVolume
 id txtOr
-id txt_holding
+id txtPortfolioName
+id txt_noportfolio
 id txt_private
-id txt_profit_loss
+id txt_profit_loss1
+id txt_profit_loss2
 id txt_public
+id txt_total_value1
+id txt_total_value2
 id unchecked
 id uniform
 id unlabeled
 id up
+id up_arrow
 id useLogo
 id user_menu
+id view
 id viewPager
 id view_offset_helper
 id visible
@@ -1713,6 +1732,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout dialog_loader
+layout fragment_coin
 layout fragment_dashboard
 layout fragment_following_list
 layout fragment_home
@@ -1720,8 +1740,10 @@ layout fragment_news_list
 layout fragment_notifications
 layout fragment_potfolio
 layout fragment_topvolume_list
+layout initial_portfolio
+layout item_add_coin
+layout item_expandable
 layout list
-layout list_news
 layout main_list_fragment
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
@@ -1799,6 +1821,7 @@ string bitcoin
 string bitcoin_maintains_its_trent_of_oscillation_and_trades_with_upper_swing
 string bottom_sheet_behavior
 string btc_market_altcoin
+string btn_first_coin
 string btn_first_portfolio
 string character_counter_content_description
 string character_counter_pattern
@@ -1807,12 +1830,14 @@ string currency
 string description
 string direct_vol
 string direct_vol_24h
+string edit_portfolio
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string follow
 string following
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
+string label_delete
 string label_portfolio
 string label_submit
 string low_high_24h
@@ -2074,6 +2099,7 @@ style RtlOverlay_Widget_AppCompat_Search_DropDown_Text
 style RtlOverlay_Widget_AppCompat_SearchView_MagIcon
 style RtlUnderlay_Widget_AppCompat_ActionButton
 style RtlUnderlay_Widget_AppCompat_ActionButton_Overflow
+style TextAppearance
 style TextAppearance_AppCompat
 style TextAppearance_AppCompat_Body1
 style TextAppearance_AppCompat_Body2

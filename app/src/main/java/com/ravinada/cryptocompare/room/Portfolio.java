@@ -53,16 +53,8 @@ public class Portfolio  {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     public int getAccess() {
         return access;
-    }
-
-    public void setAccess(int access) {
-        this.access = access;
     }
 
 }

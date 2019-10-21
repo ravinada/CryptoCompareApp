@@ -42,4 +42,7 @@
     <string name="Private">Private</string>
     <string name="btn_first_portfolio">+ Add your first portfolio</string>
     <string name="name">Name</string>
+    <string name="btn_first_coin">Add your first coin</string>
+    <string name="label_delete">Delete</string>
+    <string name="edit_portfolio">Edit Portfolio</string>
 </resources>

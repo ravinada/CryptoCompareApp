@@ -12,10 +12,13 @@ import com.ravinada.cryptocompare.databinding.ActivityLoginBindingImpl;
 import com.ravinada.cryptocompare.databinding.ActivityNewsDetailsBindingImpl;
 import com.ravinada.cryptocompare.databinding.ActivitySignupBindingImpl;
 import com.ravinada.cryptocompare.databinding.CoinPortfolioDialogBindingImpl;
+import com.ravinada.cryptocompare.databinding.FragmentCoinBindingImpl;
 import com.ravinada.cryptocompare.databinding.FragmentFollowingListBindingImpl;
 import com.ravinada.cryptocompare.databinding.FragmentNewsListBindingImpl;
 import com.ravinada.cryptocompare.databinding.FragmentPotfolioBindingImpl;
 import com.ravinada.cryptocompare.databinding.FragmentTopvolumeListBindingImpl;
+import com.ravinada.cryptocompare.databinding.InitialPortfolioBindingImpl;
+import com.ravinada.cryptocompare.databinding.ItemExpandableBindingImpl;
 import com.ravinada.cryptocompare.databinding.MainListFragmentBindingImpl;
 import com.ravinada.cryptocompare.databinding.PortfolioDialogBindingImpl;
 import java.lang.IllegalArgumentException;
@@ -41,19 +44,25 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_COINPORTFOLIODIALOG = 6;
 
-  private static final int LAYOUT_FRAGMENTFOLLOWINGLIST = 7;
+  private static final int LAYOUT_FRAGMENTCOIN = 7;
 
-  private static final int LAYOUT_FRAGMENTNEWSLIST = 8;
+  private static final int LAYOUT_FRAGMENTFOLLOWINGLIST = 8;
 
-  private static final int LAYOUT_FRAGMENTPOTFOLIO = 9;
+  private static final int LAYOUT_FRAGMENTNEWSLIST = 9;
 
-  private static final int LAYOUT_FRAGMENTTOPVOLUMELIST = 10;
+  private static final int LAYOUT_FRAGMENTPOTFOLIO = 10;
 
-  private static final int LAYOUT_MAINLISTFRAGMENT = 11;
+  private static final int LAYOUT_FRAGMENTTOPVOLUMELIST = 11;
 
-  private static final int LAYOUT_PORTFOLIODIALOG = 12;
+  private static final int LAYOUT_INITIALPORTFOLIO = 12;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(12);
+  private static final int LAYOUT_ITEMEXPANDABLE = 13;
+
+  private static final int LAYOUT_MAINLISTFRAGMENT = 14;
+
+  private static final int LAYOUT_PORTFOLIODIALOG = 15;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(15);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.ravinada.cryptocompare.R.layout.activity_dashboard, LAYOUT_ACTIVITYDASHBOARD);
@@ -62,10 +71,13 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.ravinada.cryptocompare.R.layout.activity_news_details, LAYOUT_ACTIVITYNEWSDETAILS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.ravinada.cryptocompare.R.layout.activity_signup, LAYOUT_ACTIVITYSIGNUP);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.ravinada.cryptocompare.R.layout.coin_portfolio_dialog, LAYOUT_COINPORTFOLIODIALOG);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.ravinada.cryptocompare.R.layout.fragment_coin, LAYOUT_FRAGMENTCOIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.ravinada.cryptocompare.R.layout.fragment_following_list, LAYOUT_FRAGMENTFOLLOWINGLIST);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.ravinada.cryptocompare.R.layout.fragment_news_list, LAYOUT_FRAGMENTNEWSLIST);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.ravinada.cryptocompare.R.layout.fragment_potfolio, LAYOUT_FRAGMENTPOTFOLIO);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.ravinada.cryptocompare.R.layout.fragment_topvolume_list, LAYOUT_FRAGMENTTOPVOLUMELIST);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.ravinada.cryptocompare.R.layout.initial_portfolio, LAYOUT_INITIALPORTFOLIO);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.ravinada.cryptocompare.R.layout.item_expandable, LAYOUT_ITEMEXPANDABLE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.ravinada.cryptocompare.R.layout.main_list_fragment, LAYOUT_MAINLISTFRAGMENT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.ravinada.cryptocompare.R.layout.portfolio_dialog, LAYOUT_PORTFOLIODIALOG);
   }
@@ -115,6 +127,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for coin_portfolio_dialog is invalid. Received: " + tag);
         }
+        case  LAYOUT_FRAGMENTCOIN: {
+          if ("layout/fragment_coin_0".equals(tag)) {
+            return new FragmentCoinBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_coin is invalid. Received: " + tag);
+        }
         case  LAYOUT_FRAGMENTFOLLOWINGLIST: {
           if ("layout/fragment_following_list_0".equals(tag)) {
             return new FragmentFollowingListBindingImpl(component, view);
@@ -138,6 +156,18 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new FragmentTopvolumeListBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for fragment_topvolume_list is invalid. Received: " + tag);
+        }
+        case  LAYOUT_INITIALPORTFOLIO: {
+          if ("layout/initial_portfolio_0".equals(tag)) {
+            return new InitialPortfolioBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for initial_portfolio is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ITEMEXPANDABLE: {
+          if ("layout/item_expandable_0".equals(tag)) {
+            return new ItemExpandableBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_expandable is invalid. Received: " + tag);
         }
         case  LAYOUT_MAINLISTFRAGMENT: {
           if ("layout/main_list_fragment_0".equals(tag)) {
@@ -208,7 +238,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(12);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(15);
 
     static {
       sKeys.put("layout/activity_dashboard_0", com.ravinada.cryptocompare.R.layout.activity_dashboard);
@@ -217,10 +247,13 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/activity_news_details_0", com.ravinada.cryptocompare.R.layout.activity_news_details);
       sKeys.put("layout/activity_signup_0", com.ravinada.cryptocompare.R.layout.activity_signup);
       sKeys.put("layout/coin_portfolio_dialog_0", com.ravinada.cryptocompare.R.layout.coin_portfolio_dialog);
+      sKeys.put("layout/fragment_coin_0", com.ravinada.cryptocompare.R.layout.fragment_coin);
       sKeys.put("layout/fragment_following_list_0", com.ravinada.cryptocompare.R.layout.fragment_following_list);
       sKeys.put("layout/fragment_news_list_0", com.ravinada.cryptocompare.R.layout.fragment_news_list);
       sKeys.put("layout/fragment_potfolio_0", com.ravinada.cryptocompare.R.layout.fragment_potfolio);
       sKeys.put("layout/fragment_topvolume_list_0", com.ravinada.cryptocompare.R.layout.fragment_topvolume_list);
+      sKeys.put("layout/initial_portfolio_0", com.ravinada.cryptocompare.R.layout.initial_portfolio);
+      sKeys.put("layout/item_expandable_0", com.ravinada.cryptocompare.R.layout.item_expandable);
       sKeys.put("layout/main_list_fragment_0", com.ravinada.cryptocompare.R.layout.main_list_fragment);
       sKeys.put("layout/portfolio_dialog_0", com.ravinada.cryptocompare.R.layout.portfolio_dialog);
     }
