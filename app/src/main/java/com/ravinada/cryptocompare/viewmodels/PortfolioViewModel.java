@@ -29,4 +29,13 @@ public class PortfolioViewModel extends AndroidViewModel {
     public List<Portfolio> getPortfolios(){
         return portfolioRepository.getPortfolios();
     }
+    public String getSelectedPortfolio(){
+        return portfolioRepository.getSelectedName();
+    }
+    public void setUnselected(String name){
+        portfolioRepository.setNotSelected(name);
+    }
+    public void setSelected(String name){
+        portfolioRepository.setSelected(name);
+    }
 }

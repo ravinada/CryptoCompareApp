@@ -35,11 +35,10 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class AddPortfolioDialogue extends DialogFragment implements CurrencyTypePurchaseAdapter.CurrencyPurchaseType {
-    private CurrencyTypePurchaseAdapter currencyChoiceAdapter;
-    PortfolioDialogBinding binding;
-    String currencySelection = "";
-    PortfolioViewModel portfolioViewModel;
-    int access =1;
+    private PortfolioDialogBinding binding;
+    private String currencySelection = "";
+    private PortfolioViewModel portfolioViewModel;
+    private int access =1;
     private ArrayList<CurrencyType> currencyType = new ArrayList<>();
     @Nullable
     @Override
@@ -48,14 +47,14 @@ public class AddPortfolioDialogue extends DialogFragment implements CurrencyType
         setCancelable(false);
         portfolioViewModel = ViewModelProviders.of(this).get(PortfolioViewModel.class);
         getCurrencyList();
-        currencyChoiceAdapter = new CurrencyTypePurchaseAdapter(this,getActivity());
+        CurrencyTypePurchaseAdapter currencyChoiceAdapter = new CurrencyTypePurchaseAdapter(this, getActivity());
         currencyChoiceAdapter.setCurrencies(currencyType);
         binding.selectCurrencyPurchaseCoin.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
         binding.selectCurrencyPurchaseCoin.setAdapter(currencyChoiceAdapter);
         binding.btnSubmit.setOnClickListener(view -> {
             if(validator()){
                 Portfolio portfolio= new Portfolio(binding.etPortfolioName.getText().toString(),
-                        currencySelection,binding.etDescription.getText().toString(),access);
+                        currencySelection,binding.etDescription.getText().toString(),access,false);
                 portfolioViewModel.insertPortfolio(portfolio);
                 dismiss();
             }
@@ -65,14 +64,14 @@ public class AddPortfolioDialogue extends DialogFragment implements CurrencyType
        });
        binding.txtPrivate.setOnClickListener(view -> {
            access =1;
-           binding.txtPrivate.setTextColor(getActivity().getColor(R.color.white));
+           binding.txtPrivate.setTextColor(Objects.requireNonNull(getActivity()).getColor(R.color.white));
            binding.txtPrivate.setBackground(getActivity().getDrawable(R.drawable.rounded_rect_green));
            binding.txtPublic.setBackground(getActivity().getDrawable(R.drawable.rounded_rect_grey));
            binding.txtPublic.setTextColor(getActivity().getColor(R.color.colorBlack));
        });
        binding.txtPublic.setOnClickListener(view -> {
            access =2;
-           binding.txtPrivate.setTextColor(getActivity().getColor(R.color.colorBlack));
+           binding.txtPrivate.setTextColor(Objects.requireNonNull(getActivity()).getColor(R.color.colorBlack));
            binding.txtPrivate.setBackground(getActivity().getDrawable(R.drawable.rounded_rect_grey));
            binding.txtPublic.setBackground(getActivity().getDrawable(R.drawable.rounded_rect_green));
            binding.txtPublic.setTextColor(getActivity().getColor(R.color.white));
@@ -83,7 +82,7 @@ public class AddPortfolioDialogue extends DialogFragment implements CurrencyType
     private String loadJSONFromAsset() {
         String json = null;
         try {
-            InputStream is = Objects.requireNonNull(getActivity().getAssets().open("currencies.json"));
+            InputStream is = Objects.requireNonNull(Objects.requireNonNull(getActivity()).getAssets().open("currencies.json"));
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);

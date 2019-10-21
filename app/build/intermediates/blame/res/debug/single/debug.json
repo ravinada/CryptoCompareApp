@@ -196,6 +196,10 @@
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\drawable\\btn_checkbox_unchecked_to_checked_mtrl_animation.xml"
     },
     {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_radio_button_unchecked_grey.xml.flat",
+        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\drawable\\ic_radio_button_unchecked_grey.xml"
+    },
+    {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_home_black_16dp.xml.flat",
         "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\drawable\\ic_home_black_16dp.xml"
     },
@@ -260,8 +264,16 @@
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\9ee5da6fca20f6f07dce6c73fc4ca33a\\material-1.0.0\\res\\animator-v21\\design_appbar_state_list_animator.xml"
     },
     {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\layout_portfolio_list.xml.flat",
+        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\portfolio_list.xml"
+    },
+    {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_fab_show_motion_spec.xml.flat",
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\9ee5da6fca20f6f07dce6c73fc4ca33a\\material-1.0.0\\res\\animator\\mtrl_fab_show_motion_spec.xml"
+    },
+    {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\layout_portfolio_selection_fragment.xml.flat",
+        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\portfolio_selection_fragment.xml"
     },
     {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\anim_btn_radio_to_off_mtrl_ring_outer_animation.xml.flat",
@@ -1818,6 +1830,10 @@
     {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_check_circle_green.xml.flat",
+        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\drawable\\ic_check_circle_green.xml"
     },
     {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable_design_fab_background.xml.flat",

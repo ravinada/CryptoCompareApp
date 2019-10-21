@@ -49,4 +49,13 @@ public class PortfolioRepository {
     public List<Portfolio> getPortfolios(){
         return portfolioDao.getPortfolios();
     }
+    public String getSelectedName(){
+        return portfolioDao.getSelected(true);
+    }
+    public void setNotSelected(String name){
+        executor.execute(() ->portfolioDao.setNotSelected(name,false));
+    }
+    public void setSelected(String name){
+        executor.execute(()->portfolioDao.setSelected(name,true));
+    }
 }

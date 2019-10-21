@@ -1,9 +1,12 @@
 package com.ravinada.cryptocompare.dialogues;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -28,12 +31,28 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class AddCoinDialogue extends DialogFragment implements CurrencyTypePurchaseAdapter.CurrencyPurchaseType {
+public class  AddCoinDialogue extends DialogFragment implements CurrencyTypePurchaseAdapter.CurrencyPurchaseType {
     CoinPortfolioDialogBinding binding;
     String currencySelection = "";
     PortfolioViewModel portfolioViewModel;
     private ArrayList<CurrencyType> currencyType = new ArrayList<>();
     private CurrencyTypePurchaseAdapter currencyChoiceAdapter;
+    String portfolioName;
+
+    public static AddCoinDialogue newInstance(String portfolioName){
+       AddCoinDialogue fragAddCoin = new AddCoinDialogue();
+        Bundle args = new Bundle();
+        args.putString("portfolio_name", portfolioName);
+        fragAddCoin.setArguments(args);
+        return fragAddCoin;
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        portfolioName = getArguments().getString("portfolio_name");
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -45,8 +64,16 @@ public class AddCoinDialogue extends DialogFragment implements CurrencyTypePurch
         currencyChoiceAdapter.setCurrencies(currencyType);
         binding.selectCurrencyPurchaseCoin.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
         binding.selectCurrencyPurchaseCoin.setAdapter(currencyChoiceAdapter);
+        textValidation();
+        binding.coinDialCancel.setOnClickListener(view -> {
+            dismiss();
+        });
+        binding.btnSubmit.setOnClickListener(view -> {
+        Toast.makeText(getContext(),portfolioName,Toast.LENGTH_LONG).show();
+        });
     return binding.getRoot();
     }
+
     private void getCurrencyList(){
         currencyType.clear();
         try {
@@ -81,9 +108,78 @@ public class AddCoinDialogue extends DialogFragment implements CurrencyTypePurch
         }
         return json;
     }
+    private void textValidation(){
+        binding.editAmount.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if(charSequence.toString().equalsIgnoreCase("")){
+                    binding.lblAmount.setText("Amount is required");
+                    binding.lblAmount.setTextColor(Objects.requireNonNull(getActivity()).getColor(R.color.colorRed));
+                    binding.btnSubmit.setTextColor(getActivity().getColor(R.color.colorBlack));
+                    binding.btnSubmit.setBackground(getActivity().getDrawable(R.drawable.rounded_rect_grey));
+                }
+                else {
+                    binding.lblAmount.setText("Amount");
+                    binding.lblAmount.setTextColor(Objects.requireNonNull(getActivity()).getColor(R.color.colorBlack));
+                    if(!binding.editBuyInsertAmount.getText().toString().equalsIgnoreCase("")
+                            && !binding.selectCoin.getText().toString().equalsIgnoreCase("")
+                    && !currencySelection.equalsIgnoreCase("")){
+                        binding.btnSubmit.setTextColor(getActivity().getColor(R.color.white));
+                        binding.btnSubmit.setBackground(getActivity().getDrawable(R.drawable.rounded_rect_green));
+                    }
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+        binding.editBuyInsertAmount.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if(charSequence.toString().equalsIgnoreCase("")){
+                    binding.buyPrice.setText("Buy Price is required");
+                    binding.buyPrice.setTextColor(Objects.requireNonNull(getActivity()).getColor(R.color.colorRed));
+                    binding.btnSubmit.setTextColor(getActivity().getColor(R.color.colorBlack));
+                    binding.btnSubmit.setBackground(getActivity().getDrawable(R.drawable.rounded_rect_grey));
+                }
+                else {
+                    binding.buyPrice.setText("Buy Price");
+                    binding.buyPrice.setTextColor(Objects.requireNonNull(getActivity()).getColor(R.color.colorBlack));
+                    if(!binding.editAmount.getText().toString().equalsIgnoreCase("")
+                            && !binding.selectCoin.getText().toString().equalsIgnoreCase("")
+                            && !currencySelection.equalsIgnoreCase("")){
+                        binding.btnSubmit.setTextColor(getActivity().getColor(R.color.white));
+                        binding.btnSubmit.setBackground(getActivity().getDrawable(R.drawable.rounded_rect_green));
+                    }
+                }
+            }
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+    }
     @Override
     public void onCurrencyClick(CurrencyType type) {
         currencySelection = type.getAbr();
+        if(!binding.editAmount.getText().toString().equalsIgnoreCase("")&&
+                !binding.editBuyInsertAmount.getText().toString().equalsIgnoreCase("")
+                && !binding.selectCoin.getText().toString().equalsIgnoreCase("")
+                && !currencySelection.equalsIgnoreCase("")){
+            binding.btnSubmit.setTextColor(getActivity().getColor(R.color.white));
+            binding.btnSubmit.setBackground(getActivity().getDrawable(R.drawable.rounded_rect_green));
+        }
     }
 }

@@ -56,7 +56,6 @@ public class DashboardActivity extends AppCompatActivity {
             public void onPageSelected(int position) {
                 if (position == 1){
                     binding.txtPortfolioName.setVisibility(View.VISIBLE);
-                    binding.txtPortfolioName.setText("Portfolio");
                     binding.searchBar.setVisibility(View.GONE);
                     binding.currencyTag.setVisibility(View.GONE);
                     binding.portfolioEdit.setVisibility(View.VISIBLE);

@@ -36,7 +36,6 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.MyView
         return new MyViewHolder(itemView);
     }
 
-    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         Currency currency = currencyList.get(position);

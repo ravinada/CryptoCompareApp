@@ -17,12 +17,14 @@ public class Portfolio  {
     private String currency;
     private String description;
     private int access;
+    private Boolean selected;
 
-    public Portfolio(String name, String currency, String description, int access) {
+    public Portfolio(String name, String currency, String description, int access, Boolean selected) {
         this.name = name;
         this.currency = currency;
         this.description = description;
         this.access = access;
+        this.selected = selected;
     }
 
     public int getId() {
@@ -53,8 +55,23 @@ public class Portfolio  {
         return description;
     }
 
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public int getAccess() {
         return access;
     }
 
+    public void setAccess(int access) {
+        this.access = access;
+    }
+
+    public Boolean getSelected() {
+        return selected;
+    }
+
+    public void setSelected(Boolean selected) {
+        this.selected = selected;
+    }
 }

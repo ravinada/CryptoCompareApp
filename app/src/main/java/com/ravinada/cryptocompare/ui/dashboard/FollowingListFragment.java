@@ -14,7 +14,7 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.ravinada.cryptocompare.viewmodels.CoinDetailViewModel;
-import com.ravinada.cryptocompare.FavouriteCurrencyAdapter;
+import com.ravinada.cryptocompare.adapters.FavouriteCurrencyAdapter;
 import com.ravinada.cryptocompare.R;
 import com.ravinada.cryptocompare.databinding.FragmentFollowingListBinding;
 import com.ravinada.cryptocompare.room.FavouriteCoin;

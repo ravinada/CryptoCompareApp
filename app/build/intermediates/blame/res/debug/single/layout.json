@@ -58,5 +58,9 @@
     {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\initial_portfolio.xml",
         "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\initial_portfolio.xml"
+    },
+    {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\portfolio_selection_fragment.xml",
+        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\portfolio_selection_fragment.xml"
     }
 ]

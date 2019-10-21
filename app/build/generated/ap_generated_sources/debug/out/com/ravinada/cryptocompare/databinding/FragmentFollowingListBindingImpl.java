@@ -60,7 +60,7 @@ public class FragmentFollowingListBindingImpl extends FragmentFollowingListBindi
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.FavouriteCurrencyAdapter == variableId) {
-            setFavouriteCurrencyAdapter((com.ravinada.cryptocompare.FavouriteCurrencyAdapter) variable);
+            setFavouriteCurrencyAdapter((com.ravinada.cryptocompare.adapters.FavouriteCurrencyAdapter) variable);
         }
         else {
             variableSet = false;
@@ -68,7 +68,7 @@ public class FragmentFollowingListBindingImpl extends FragmentFollowingListBindi
             return variableSet;
     }
 
-    public void setFavouriteCurrencyAdapter(@Nullable com.ravinada.cryptocompare.FavouriteCurrencyAdapter FavouriteCurrencyAdapter) {
+    public void setFavouriteCurrencyAdapter(@Nullable com.ravinada.cryptocompare.adapters.FavouriteCurrencyAdapter FavouriteCurrencyAdapter) {
         this.mFavouriteCurrencyAdapter = FavouriteCurrencyAdapter;
         synchronized(this) {
             mDirtyFlags |= 0x1L;
@@ -91,7 +91,7 @@ public class FragmentFollowingListBindingImpl extends FragmentFollowingListBindi
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        com.ravinada.cryptocompare.FavouriteCurrencyAdapter favouriteCurrencyAdapter = mFavouriteCurrencyAdapter;
+        com.ravinada.cryptocompare.adapters.FavouriteCurrencyAdapter favouriteCurrencyAdapter = mFavouriteCurrencyAdapter;
 
         if ((dirtyFlags & 0x3L) != 0) {
         }

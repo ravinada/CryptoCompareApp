@@ -1,4 +1,4 @@
-package com.ravinada.cryptocompare;
+package com.ravinada.cryptocompare.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.ravinada.cryptocompare.CurrencyDetailActivity;
+import com.ravinada.cryptocompare.R;
 import com.ravinada.cryptocompare.room.FavouriteCoin;
 import com.squareup.picasso.Picasso;
 
@@ -48,7 +50,7 @@ public class FavouriteCurrencyAdapter extends RecyclerView.Adapter<FavouriteCurr
 
     public class FavouriteViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        public TextView coinName, coinPrice,coinTag, openDay;
+        TextView coinName, coinPrice,coinTag, openDay;
         public de.hdodenhof.circleimageview.CircleImageView coinImage;
 
         public FavouriteViewHolder(@NonNull View itemView) {

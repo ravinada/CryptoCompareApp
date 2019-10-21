@@ -10,8 +10,8 @@ import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
-import com.ravinada.cryptocompare.FavouriteCurrencyAdapter;
 import com.ravinada.cryptocompare.R;
+import com.ravinada.cryptocompare.adapters.FavouriteCurrencyAdapter;
 import java.lang.Deprecated;
 import java.lang.Object;
 

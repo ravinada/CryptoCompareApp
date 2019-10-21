@@ -7,7 +7,7 @@
 
         <variable
             name="FavouriteCurrencyAdapter"
-            type="com.ravinada.cryptocompare.FavouriteCurrencyAdapter" />
+            type="com.ravinada.cryptocompare.adapters.FavouriteCurrencyAdapter" />
 
     </data>
 

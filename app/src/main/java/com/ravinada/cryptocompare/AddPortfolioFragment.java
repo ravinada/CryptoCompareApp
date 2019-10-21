@@ -23,12 +23,7 @@ public class AddPortfolioFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_potfolio,container,false);
-        binding.btnAddPortfolio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showAddPortfolioDialog();
-            }
-        });
+        binding.btnAddPortfolio.setOnClickListener(view -> showAddPortfolioDialog());
         return binding.getRoot();
     }
     private void showAddPortfolioDialog(){

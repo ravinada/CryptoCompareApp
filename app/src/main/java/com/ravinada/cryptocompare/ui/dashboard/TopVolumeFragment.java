@@ -30,6 +30,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class TopVolumeFragment extends Fragment {
     private final String TAG = TopVolumeFragment.class.getSimpleName();
@@ -52,7 +53,7 @@ public class TopVolumeFragment extends Fragment {
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        View view = getActivity().findViewById(R.id.currencyTag);
+        View view = Objects.requireNonNull(getActivity()).findViewById(R.id.currencyTag);
         if (view instanceof TextView) {
             TextView currencyType = (TextView) view;
             type = currencyType.getText().toString();

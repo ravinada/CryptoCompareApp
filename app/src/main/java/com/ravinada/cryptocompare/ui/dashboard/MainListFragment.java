@@ -28,12 +28,11 @@ public class MainListFragment extends Fragment {
     public static MainListFragment newInstance() {
         return new MainListFragment();
     }
-    private TextView following,topVolume;
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.main_list_fragment, container, false);
-        following = binding.getRoot().findViewById(R.id.tvFollowing);
-        topVolume = binding.getRoot().findViewById(R.id.tvTopVolume);
+
         return binding.getRoot();
     }
 
@@ -44,19 +43,19 @@ public class MainListFragment extends Fragment {
         fragmentManager = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.llDashboardMain, FollowingListFragment.newInstance()).commit();
-        following.setOnClickListener(view -> {
-            following.setBackground(getActivity().getDrawable(R.drawable.topvolume_bg_green));
-            topVolume.setBackground(getActivity().getDrawable(R.drawable.topvolumebg));
-            following.setTextColor(getActivity().getColor(R.color.white));
-            topVolume.setTextColor(getActivity().getColor(R.color.colorBlack));
+        binding.tvFollowing.setOnClickListener(view -> {
+            binding.tvFollowing.setBackground(getActivity().getDrawable(R.drawable.topvolume_bg_green));
+         binding.tvTopVolume.setBackground(getActivity().getDrawable(R.drawable.topvolumebg));
+            binding.tvFollowing.setTextColor(getActivity().getColor(R.color.white));
+            binding.tvTopVolume.setTextColor(getActivity().getColor(R.color.colorBlack));
             fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.llDashboardMain, FollowingListFragment.newInstance()).commit();
         });
-        topVolume.setOnClickListener(view -> {
-            topVolume.setBackground(getActivity().getDrawable(R.drawable.topvolume_bg_green));
-            following.setBackground(getActivity().getDrawable(R.drawable.topvolumebg));
-            following.setTextColor(getActivity().getColor(R.color.colorBlack));
-            topVolume.setTextColor(getActivity().getColor(R.color.white));
+        binding.tvTopVolume.setOnClickListener(view -> {
+            binding.tvTopVolume.setBackground(getActivity().getDrawable(R.drawable.topvolume_bg_green));
+            binding.tvFollowing.setBackground(getActivity().getDrawable(R.drawable.topvolumebg));
+            binding.tvFollowing.setTextColor(getActivity().getColor(R.color.colorBlack));
+            binding.tvTopVolume.setTextColor(getActivity().getColor(R.color.white));
             fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.llDashboardMain, TopVolumeFragment.newInstance()).commit();
         });

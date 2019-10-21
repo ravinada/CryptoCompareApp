@@ -21,6 +21,7 @@ import com.ravinada.cryptocompare.databinding.InitialPortfolioBindingImpl;
 import com.ravinada.cryptocompare.databinding.ItemExpandableBindingImpl;
 import com.ravinada.cryptocompare.databinding.MainListFragmentBindingImpl;
 import com.ravinada.cryptocompare.databinding.PortfolioDialogBindingImpl;
+import com.ravinada.cryptocompare.databinding.PortfolioSelectionFragmentBindingImpl;
 import java.lang.IllegalArgumentException;
 import java.lang.Integer;
 import java.lang.Object;
@@ -62,7 +63,9 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_PORTFOLIODIALOG = 15;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(15);
+  private static final int LAYOUT_PORTFOLIOSELECTIONFRAGMENT = 16;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(16);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.ravinada.cryptocompare.R.layout.activity_dashboard, LAYOUT_ACTIVITYDASHBOARD);
@@ -80,6 +83,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.ravinada.cryptocompare.R.layout.item_expandable, LAYOUT_ITEMEXPANDABLE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.ravinada.cryptocompare.R.layout.main_list_fragment, LAYOUT_MAINLISTFRAGMENT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.ravinada.cryptocompare.R.layout.portfolio_dialog, LAYOUT_PORTFOLIODIALOG);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.ravinada.cryptocompare.R.layout.portfolio_selection_fragment, LAYOUT_PORTFOLIOSELECTIONFRAGMENT);
   }
 
   @Override
@@ -181,6 +185,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for portfolio_dialog is invalid. Received: " + tag);
         }
+        case  LAYOUT_PORTFOLIOSELECTIONFRAGMENT: {
+          if ("layout/portfolio_selection_fragment_0".equals(tag)) {
+            return new PortfolioSelectionFragmentBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for portfolio_selection_fragment is invalid. Received: " + tag);
+        }
       }
     }
     return null;
@@ -238,7 +248,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(15);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(16);
 
     static {
       sKeys.put("layout/activity_dashboard_0", com.ravinada.cryptocompare.R.layout.activity_dashboard);
@@ -256,6 +266,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/item_expandable_0", com.ravinada.cryptocompare.R.layout.item_expandable);
       sKeys.put("layout/main_list_fragment_0", com.ravinada.cryptocompare.R.layout.main_list_fragment);
       sKeys.put("layout/portfolio_dialog_0", com.ravinada.cryptocompare.R.layout.portfolio_dialog);
+      sKeys.put("layout/portfolio_selection_fragment_0", com.ravinada.cryptocompare.R.layout.portfolio_selection_fragment);
     }
   }
 }
