@@ -29,4 +29,11 @@ public interface PortfolioDao {
 
     @Query("UPDATE portfolios SET selected =:selected WHERE name=:choiceName")
     void setSelected(String choiceName,Boolean selected);
+
+    @Query("SELECT id FROM portfolios WHERE selected=:selected")
+    int getidForSelectedName(Boolean selected);
+
+    @Query("SELECT name FROM portfolios")
+    List<String> getNames();
+
 }

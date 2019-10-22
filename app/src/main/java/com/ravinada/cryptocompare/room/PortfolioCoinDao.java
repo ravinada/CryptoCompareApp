@@ -18,4 +18,7 @@ public interface PortfolioCoinDao {
 
     @Query("SELECT * FROM portfolio_coins")
     List<PortfolioCoin> getPortfolioCoins();
+
+    @Query("SELECT * FROM portfolio_coins WHERE uid=:portfolioId")
+    LiveData<List<PortfolioCoin>> getPortfolioCoinsForId(int portfolioId);
 }

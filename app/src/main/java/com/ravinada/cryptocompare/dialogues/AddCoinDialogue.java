@@ -1,12 +1,13 @@
 package com.ravinada.cryptocompare.dialogues;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,6 +20,8 @@ import com.ravinada.cryptocompare.CurrencyTypePurchaseAdapter;
 import com.ravinada.cryptocompare.R;
 import com.ravinada.cryptocompare.databinding.CoinPortfolioDialogBinding;
 import com.ravinada.cryptocompare.modelclasses.CurrencyType;
+import com.ravinada.cryptocompare.room.Portfolio;
+import com.ravinada.cryptocompare.room.PortfolioCoin;
 import com.ravinada.cryptocompare.viewmodels.PortfolioViewModel;
 
 import org.json.JSONArray;
@@ -33,16 +36,15 @@ import java.util.Objects;
 
 public class  AddCoinDialogue extends DialogFragment implements CurrencyTypePurchaseAdapter.CurrencyPurchaseType {
     CoinPortfolioDialogBinding binding;
-    String currencySelection = "";
-    PortfolioViewModel portfolioViewModel;
+    private PortfolioViewModel portfolioViewModel;
     private ArrayList<CurrencyType> currencyType = new ArrayList<>();
-    private CurrencyTypePurchaseAdapter currencyChoiceAdapter;
-    String portfolioName;
+    private int portfolioId;
+    private String coinSelected="",coinUrl,currencySelection="";
 
-    public static AddCoinDialogue newInstance(String portfolioName){
-       AddCoinDialogue fragAddCoin = new AddCoinDialogue();
+    public static AddCoinDialogue newInstance(int id){
+        AddCoinDialogue fragAddCoin = new AddCoinDialogue();
         Bundle args = new Bundle();
-        args.putString("portfolio_name", portfolioName);
+        args.putInt("portfolio_id",id);
         fragAddCoin.setArguments(args);
         return fragAddCoin;
     }
@@ -50,7 +52,8 @@ public class  AddCoinDialogue extends DialogFragment implements CurrencyTypePurc
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        portfolioName = getArguments().getString("portfolio_name");
+        portfolioId = getArguments().getInt("portfolio_id");
+
     }
 
     @Nullable
@@ -60,18 +63,37 @@ public class  AddCoinDialogue extends DialogFragment implements CurrencyTypePurc
         setCancelable(false);
         portfolioViewModel = ViewModelProviders.of(this).get(PortfolioViewModel.class);
         getCurrencyList();
-        currencyChoiceAdapter = new CurrencyTypePurchaseAdapter(this,getActivity());
+        CurrencyTypePurchaseAdapter currencyChoiceAdapter = new CurrencyTypePurchaseAdapter(this, getActivity());
         currencyChoiceAdapter.setCurrencies(currencyType);
         binding.selectCurrencyPurchaseCoin.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
         binding.selectCurrencyPurchaseCoin.setAdapter(currencyChoiceAdapter);
         textValidation();
         binding.coinDialCancel.setOnClickListener(view -> {
-            dismiss();
+           dismiss();
         });
         binding.btnSubmit.setOnClickListener(view -> {
-        Toast.makeText(getContext(),portfolioName,Toast.LENGTH_LONG).show();
+            if (validation()){
+                PortfolioCoin portfolioCoin = new PortfolioCoin(currencySelection,
+                        Float.parseFloat(binding.editAmount.getText().toString()),
+                Float.parseFloat(binding.editBuyInsertAmount.getText().toString()),coinSelected,
+                        binding.editDate.getText().toString(),binding.editDescription.getText().toString(),portfolioId);
+                portfolioViewModel.insertPortfolioCoin(portfolioCoin);
+                dismiss();
+            }
+        });
+        binding.selectCoin.setOnClickListener(view -> {
+            showSelectCoinDialog();
         });
     return binding.getRoot();
+    }
+    private boolean validation(){
+        if(!binding.editAmount.getText().toString().equalsIgnoreCase("")&&
+                !binding.editBuyInsertAmount.getText().toString().equalsIgnoreCase("")
+                && !coinSelected.equalsIgnoreCase("")
+                && !currencySelection.equalsIgnoreCase("")){
+                    return true;
+        }
+      return false;
     }
 
     private void getCurrencyList(){
@@ -181,5 +203,33 @@ public class  AddCoinDialogue extends DialogFragment implements CurrencyTypePurc
             binding.btnSubmit.setTextColor(getActivity().getColor(R.color.white));
             binding.btnSubmit.setBackground(getActivity().getDrawable(R.drawable.rounded_rect_green));
         }
+    }
+    private void showSelectCoinDialog(){
+       SelectCoinDialog selectCoinDialog = new SelectCoinDialog();
+       selectCoinDialog.setTargetFragment(this,0);
+       selectCoinDialog.show(getFragmentManager().beginTransaction(),"SELECT_COIN_DIALOG");
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode){
+        case 0:
+        {
+            if (resultCode== Activity.RESULT_OK){
+                Bundle bundle = data.getExtras();
+                coinSelected=bundle.getString("name");
+                binding.selectCoin.setText(coinSelected);
+                if(!binding.editAmount.getText().toString().equalsIgnoreCase("")&&
+                        !binding.editBuyInsertAmount.getText().toString().equalsIgnoreCase("")
+                        && !coinSelected.equalsIgnoreCase("")
+                        && !currencySelection.equalsIgnoreCase("")){
+                    binding.btnSubmit.setTextColor(getActivity().getColor(R.color.white));
+                    binding.btnSubmit.setBackground(getActivity().getDrawable(R.drawable.rounded_rect_green));
+                }
+            }
+            break;
+        }
+    }
     }
 }

@@ -11,11 +11,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.ravinada.cryptocompare.adapters.PortfolioSelectorAdapter;
 import com.ravinada.cryptocompare.databinding.PortfolioSelectionFragmentBinding;
+import com.ravinada.cryptocompare.dialogues.AddPortfolioDialogue;
 import com.ravinada.cryptocompare.room.Portfolio;
 import com.ravinada.cryptocompare.viewmodels.PortfolioViewModel;
 
@@ -24,11 +26,9 @@ import java.util.List;
 
 public class PortfolioSelectorFragment extends Fragment implements PortfolioSelectorAdapter.SetPortfolio {
     private PortfolioSelectionFragmentBinding binding;
-    PortfolioViewModel portfolioViewModel;
-    List<Portfolio> portfolios = new ArrayList<>();
+    private PortfolioViewModel portfolioViewModel;
     PortfolioSelectorAdapter portfolioSelectorAdapter;
-    String selected ;
-    String previouslySelected;
+    List<Portfolio> portfolios;
 
     public static PortfolioSelectorFragment newInstance() {
         return new PortfolioSelectorFragment();
@@ -38,6 +38,15 @@ public class PortfolioSelectorFragment extends Fragment implements PortfolioSele
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater,R.layout.portfolio_selection_fragment,container,false);
         portfolioViewModel = ViewModelProviders.of(this).get(PortfolioViewModel.class);
+        portfolios = portfolioViewModel.getPortfolios();
+        portfolioSelectorAdapter = new PortfolioSelectorAdapter(this, getActivity());
+        portfolioSelectorAdapter.setPortfolios(portfolios);
+        binding.rvPortfolioSelected.setLayoutManager(new LinearLayoutManager(getActivity()));
+        binding.rvPortfolioSelected.setAdapter(portfolioSelectorAdapter);
+        binding.btnScrollAddPortfolio.setOnClickListener(view -> {
+            showAddPortfolioDialog();
+
+        });
         return binding.getRoot();
     }
 
@@ -45,26 +54,33 @@ public class PortfolioSelectorFragment extends Fragment implements PortfolioSele
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         portfolioViewModel = ViewModelProviders.of(this).get(PortfolioViewModel.class);
-        portfolios = portfolioViewModel.getPortfolios();
-        portfolioSelectorAdapter = new PortfolioSelectorAdapter(this,getActivity());
-        portfolioSelectorAdapter.setPortfolios(portfolios);
-        binding.rvPortfolioSelected.setLayoutManager(new LinearLayoutManager(getActivity()));
-        binding.rvPortfolioSelected.setAdapter(portfolioSelectorAdapter);
         binding.transparentViewCoinSelector.setOnClickListener(view -> {
+            assert getFragmentManager() != null;
             getFragmentManager().beginTransaction().remove(PortfolioSelectorFragment.this).commit();
         });
     }
 
     @Override
-    public void onPortfolioClick(Portfolio portfolio) {
-        selected = portfolio.getName();
-        previouslySelected = portfolioViewModel.getSelectedPortfolio();
-        if(selected.equalsIgnoreCase(previouslySelected)){
+    public void onResume() {
+        super.onResume();
+        portfolios = portfolioViewModel.getPortfolios();
+        portfolioSelectorAdapter.setPortfolios(portfolios);
+        binding.rvPortfolioSelected.setAdapter(portfolioSelectorAdapter);
+    }
 
-        }
-        else{
+    @Override
+    public void onPortfolioClick(Portfolio portfolio) {
+        String selected = portfolio.getName();
+        String previouslySelected = portfolioViewModel.getSelectedPortfolio();
+        if(!selected.equalsIgnoreCase(previouslySelected)){
             portfolioViewModel.setSelected(selected);
             portfolioViewModel.setUnselected(previouslySelected);
         }
+    }
+    private void showAddPortfolioDialog(){
+        FragmentManager manager = getFragmentManager();
+        AddPortfolioDialogue addPortfolioDialogue = new AddPortfolioDialogue();
+        assert manager != null;
+        addPortfolioDialogue.show(manager,"PORTFOLIO_DIALOG");
     }
 }

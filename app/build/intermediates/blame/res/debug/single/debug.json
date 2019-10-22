@@ -272,12 +272,12 @@
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\9ee5da6fca20f6f07dce6c73fc4ca33a\\material-1.0.0\\res\\animator\\mtrl_fab_show_motion_spec.xml"
     },
     {
-        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\layout_portfolio_selection_fragment.xml.flat",
-        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\portfolio_selection_fragment.xml"
-    },
-    {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\anim_btn_radio_to_off_mtrl_ring_outer_animation.xml.flat",
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\anim\\btn_radio_to_off_mtrl_ring_outer_animation.xml"
+    },
+    {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\layout_portfolio_selection_fragment.xml.flat",
+        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\portfolio_selection_fragment.xml"
     },
     {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_black_48dp.png.flat",
@@ -1016,12 +1016,12 @@
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\drawable-xxxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
-        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\layout_coin_portfolio_dialog.xml.flat",
-        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\coin_portfolio_dialog.xml"
-    },
-    {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ratingbar_material.xml.flat",
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\drawable\\abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\layout_coin_portfolio_dialog.xml.flat",
+        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\coin_portfolio_dialog.xml"
     },
     {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_design_ic_visibility.png.flat",
@@ -1612,6 +1612,10 @@
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\layout-watch-v20\\abc_alert_dialog_title_material.xml"
     },
     {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\layout_select_coin_dialog_item.xml.flat",
+        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\select_coin_dialog_item.xml"
+    },
+    {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\color_switch_thumb_material_light.xml.flat",
         "source": "C:\\Users\\muthr\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\color\\switch_thumb_material_light.xml"
     },
@@ -1870,6 +1874,10 @@
     {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\layout_initial_portfolio.xml.flat",
         "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\initial_portfolio.xml"
+    },
+    {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\layout_select_coin_dialog.xml.flat",
+        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\select_coin_dialog.xml"
     },
     {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_tabs_icon_color_selector_colored.xml.flat",

@@ -2,6 +2,8 @@ package com.ravinada.cryptocompare.repositories;
 
 import android.app.Application;
 
+import androidx.lifecycle.LiveData;
+
 import com.ravinada.cryptocompare.room.Portfolio;
 import com.ravinada.cryptocompare.room.PortfolioCoin;
 import com.ravinada.cryptocompare.room.PortfolioCoinDao;
@@ -57,5 +59,15 @@ public class PortfolioRepository {
     }
     public void setSelected(String name){
         executor.execute(()->portfolioDao.setSelected(name,true));
+    }
+    public List<String> getPortfolioNames(){
+        return portfolioDao.getNames();
+    }
+    public  int getIdForSelectedName(){
+        return portfolioDao.getidForSelectedName(true);
+    }
+
+    public LiveData<List<PortfolioCoin>> getPortfolioCoinsForId(int portfolioId) {
+        return portfolioCoinDao.getPortfolioCoinsForId(portfolioId);
     }
 }

@@ -6,9 +6,12 @@ import android.content.Context;
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
 
+import com.facebook.stetho.Stetho;
 import com.ravinada.cryptocompare.utils.SharedPreferenceUtil;
 
 public class CryptoCompareApp extends MultiDexApplication {
+
+
 
     private static CryptoCompareApp mInstance;
     public static synchronized CryptoCompareApp getInstance() {
@@ -19,6 +22,7 @@ public class CryptoCompareApp extends MultiDexApplication {
     public void onCreate() {
         super.onCreate();
         mInstance = this;
+        Stetho.initializeWithDefaults(this);
         SharedPreferenceUtil.init(this);
         SharedPreferenceUtil.save();
     }

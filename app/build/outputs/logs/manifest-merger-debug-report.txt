@@ -6,6 +6,7 @@ INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\Androi
 INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:2:1-52:12
 MERGED from [androidx.databinding:databinding-adapters:3.5.1] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\105d15325a3ab4ba84ad2886bc5bf858\databinding-adapters-3.5.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:3.5.1] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\61fe8212f7a95dd36088044ddcbbfc07\databinding-runtime-3.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.facebook.stetho:stetho:1.5.1] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\75eb0332e6159cab3ac37f76e164d7e3\jetified-stetho-1.5.1\AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.room:room-runtime:2.2.0-rc01] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\1db915c361236921d1fb04cd8bec5b57\room-runtime-2.2.0-rc01\AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.navigation:navigation-ui:2.1.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\b045f059454d9b54f20119609d4b4729\jetified-navigation-ui-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\9ee5da6fca20f6f07dce6c73fc4ca33a\material-1.0.0\AndroidManifest.xml:17:1-24:12
@@ -47,11 +48,11 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\muthr\.gradle\
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\9a29ee90fd211f611caccd9d338a3e44\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.sqlite:sqlite-framework:2.0.1] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\5fa9083dab59ec66a8e8d2104bc9b94b\sqlite-framework-2.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.sqlite:sqlite:2.0.1] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\a7fe82364247c45122c7fd1113a3991b\sqlite-2.0.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\fb37b7f790edcc9d7fe6d3e5314b8c56\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\c034f7088c57e18a85dafc68b942945f\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\bd0a62944459a1adc1265a78d0c60d40\lifecycle-livedata-2.1.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.1.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\03f4a17b2aa275cfc7a94c5e6df20a9c\lifecycle-livedata-core-2.1.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\7fd288a66b1b8e0d6669d784ba4e7ede\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\fb37b7f790edcc9d7fe6d3e5314b8c56\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\c034f7088c57e18a85dafc68b942945f\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\f031147607d3aeb238f176a00d5e308c\savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\55566c395264c409f125230efea7fd76\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\2408ced8daf1596b7f4eddd47404170f\exifinterface-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -84,6 +85,8 @@ ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidMa
 		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:6:22-64
 application
 ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:8:5-50:19
+MERGED from [com.facebook.stetho:stetho:1.5.1] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\75eb0332e6159cab3ac37f76e164d7e3\jetified-stetho-1.5.1\AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.stetho:stetho:1.5.1] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\75eb0332e6159cab3ac37f76e164d7e3\jetified-stetho-1.5.1\AndroidManifest.xml:11:5-20
 MERGED from [androidx.room:room-runtime:2.2.0-rc01] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\1db915c361236921d1fb04cd8bec5b57\room-runtime-2.2.0-rc01\AndroidManifest.xml:24:5-28:19
 MERGED from [androidx.room:room-runtime:2.2.0-rc01] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\1db915c361236921d1fb04cd8bec5b57\room-runtime-2.2.0-rc01\AndroidManifest.xml:24:5-28:19
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\9ee5da6fca20f6f07dce6c73fc4ca33a\material-1.0.0\AndroidManifest.xml:22:5-20
@@ -198,6 +201,8 @@ MERGED from [androidx.databinding:databinding-adapters:3.5.1] C:\Users\muthr\.gr
 MERGED from [androidx.databinding:databinding-adapters:3.5.1] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\105d15325a3ab4ba84ad2886bc5bf858\databinding-adapters-3.5.1\AndroidManifest.xml:22:5-44
 MERGED from [androidx.databinding:databinding-runtime:3.5.1] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\61fe8212f7a95dd36088044ddcbbfc07\databinding-runtime-3.5.1\AndroidManifest.xml:22:5-44
 MERGED from [androidx.databinding:databinding-runtime:3.5.1] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\61fe8212f7a95dd36088044ddcbbfc07\databinding-runtime-3.5.1\AndroidManifest.xml:22:5-44
+MERGED from [com.facebook.stetho:stetho:1.5.1] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\75eb0332e6159cab3ac37f76e164d7e3\jetified-stetho-1.5.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.stetho:stetho:1.5.1] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\75eb0332e6159cab3ac37f76e164d7e3\jetified-stetho-1.5.1\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.room:room-runtime:2.2.0-rc01] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\1db915c361236921d1fb04cd8bec5b57\room-runtime-2.2.0-rc01\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.room:room-runtime:2.2.0-rc01] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\1db915c361236921d1fb04cd8bec5b57\room-runtime-2.2.0-rc01\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-ui:2.1.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\b045f059454d9b54f20119609d4b4729\jetified-navigation-ui-2.1.0\AndroidManifest.xml:20:5-22:41
@@ -280,16 +285,16 @@ MERGED from [androidx.sqlite:sqlite-framework:2.0.1] C:\Users\muthr\.gradle\cach
 MERGED from [androidx.sqlite:sqlite-framework:2.0.1] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\5fa9083dab59ec66a8e8d2104bc9b94b\sqlite-framework-2.0.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.sqlite:sqlite:2.0.1] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\a7fe82364247c45122c7fd1113a3991b\sqlite-2.0.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.sqlite:sqlite:2.0.1] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\a7fe82364247c45122c7fd1113a3991b\sqlite-2.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\fb37b7f790edcc9d7fe6d3e5314b8c56\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\fb37b7f790edcc9d7fe6d3e5314b8c56\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\c034f7088c57e18a85dafc68b942945f\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\c034f7088c57e18a85dafc68b942945f\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\bd0a62944459a1adc1265a78d0c60d40\lifecycle-livedata-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\bd0a62944459a1adc1265a78d0c60d40\lifecycle-livedata-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.1.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\03f4a17b2aa275cfc7a94c5e6df20a9c\lifecycle-livedata-core-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.1.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\03f4a17b2aa275cfc7a94c5e6df20a9c\lifecycle-livedata-core-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\7fd288a66b1b8e0d6669d784ba4e7ede\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\7fd288a66b1b8e0d6669d784ba4e7ede\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\fb37b7f790edcc9d7fe6d3e5314b8c56\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\fb37b7f790edcc9d7fe6d3e5314b8c56\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\c034f7088c57e18a85dafc68b942945f\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\c034f7088c57e18a85dafc68b942945f\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\f031147607d3aeb238f176a00d5e308c\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\f031147607d3aeb238f176a00d5e308c\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\55566c395264c409f125230efea7fd76\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44

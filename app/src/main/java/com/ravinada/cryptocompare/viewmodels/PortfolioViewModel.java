@@ -4,6 +4,7 @@ import android.app.Application;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
 
 import com.ravinada.cryptocompare.repositories.PortfolioRepository;
 import com.ravinada.cryptocompare.room.Portfolio;
@@ -37,5 +38,14 @@ public class PortfolioViewModel extends AndroidViewModel {
     }
     public void setSelected(String name){
         portfolioRepository.setSelected(name);
+    }
+    public List<String> getPortfolioNames(){
+      return portfolioRepository.getPortfolioNames();
+    }
+    public int getIdForSelectedName(){
+        return portfolioRepository.getIdForSelectedName();
+    }
+    public LiveData<List<PortfolioCoin>> getPortfolioCoinsForId(int portfolioId) {
+        return portfolioRepository.getPortfolioCoinsForId(portfolioId);
     }
 }

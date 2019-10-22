@@ -56,7 +56,7 @@ public class CoinPortfolioDialogBindingImpl extends CoinPortfolioDialogBinding  
             , (android.widget.TextView) bindings[2]
             , (android.widget.TextView) bindings[7]
             , (android.widget.TextView) bindings[6]
-            , (android.widget.EditText) bindings[9]
+            , (android.widget.TextView) bindings[9]
             , (androidx.recyclerview.widget.RecyclerView) bindings[14]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];

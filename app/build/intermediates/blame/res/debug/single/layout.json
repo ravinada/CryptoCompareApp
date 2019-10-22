@@ -44,6 +44,10 @@
         "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\fragment_coin.xml"
     },
     {
+        "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\select_coin_dialog.xml",
+        "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\select_coin_dialog.xml"
+    },
+    {
         "merged": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_following_list.xml",
         "source": "C:\\Users\\muthr\\OneDrive\\Desktop\\New folder (6)\\app\\src\\main\\res\\layout\\fragment_following_list.xml"
     },

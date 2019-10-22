@@ -30,6 +30,7 @@ import java.util.Objects;
 
 public class PortfolioFragment extends Fragment {
     private InitialPortfolioBinding binding;
+    String portfolioSelectedName;
     List<PortfolioCoin> coins= new ArrayList<>();
     private List<Portfolio> portfolios = new ArrayList<>();
     private FragmentManager fragmentManager;
@@ -62,6 +63,13 @@ public class PortfolioFragment extends Fragment {
             fragmentTransaction.replace(R.id.emptyPortfolio, AddPortfolioFragment.newInstance()).commit();
         }
         else {
+            portfolioSelectedName = portfolioViewModel.getSelectedPortfolio();
+            if (portfolioSelectedName.equalsIgnoreCase("")){
+                portfolioName.setText("portfolios");
+            }
+            else {
+            portfolioName.setText(portfolioSelectedName);}
+            portfolioName.setTextColor(getActivity().getColor(R.color.colorBlack));
             fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.emptyPortfolio, AddCoinFragment.newInstance()).commit();
             portfolioName.setOnClickListener(view -> {

@@ -58,7 +58,7 @@ public abstract class CoinPortfolioDialogBinding extends ViewDataBinding {
   public final TextView lblDescription;
 
   @NonNull
-  public final EditText selectCoin;
+  public final TextView selectCoin;
 
   @NonNull
   public final RecyclerView selectCurrencyPurchaseCoin;
@@ -67,7 +67,7 @@ public abstract class CoinPortfolioDialogBinding extends ViewDataBinding {
       Button btnSubmit, TextView buyPrice, ImageView coinDialCancel, EditText editAmount,
       EditText editBuyInsertAmount, EditText editDate, EditText editDescription,
       TextView lblAddCoin, TextView lblAmount, TextView lblBoughton, TextView lblCoin,
-      TextView lblCurrency, TextView lblDescription, EditText selectCoin,
+      TextView lblCurrency, TextView lblDescription, TextView selectCoin,
       RecyclerView selectCurrencyPurchaseCoin) {
     super(_bindingComponent, _root, _localFieldCount);
     this.btnSubmit = btnSubmit;
