@@ -1,0 +1,115 @@
+{
+  "currency_types":[
+    
+      {
+        "symbol":"$",
+        "abr":"USD",
+        "name":"US Dollar"
+      },
+       {
+        "symbol":"€",
+        "abr":"EUR",
+        "name":"Euro"
+      },
+      {
+        "symbol":"£",
+        "abr":"GBP",
+        "name":"British Pound"
+      },
+      {
+        "symbol":"Ƀ",
+        "abr":"BTC",
+        "name":"Bitcoin"
+      },
+      {
+        "symbol":"Ξ",
+        "abr":"ETH",
+        "name":"Ether"
+      },
+      {
+        "symbol":"Gold g",
+        "abr":"GOLD",
+        "name":"Gold"
+      },
+      {
+        "symbol":"AUD",
+        "abr":"AUD",
+        "name":"Australian Dollar"
+      },
+      {
+        "symbol":"R$",
+        "abr":"BRL",
+        "name":"Brazilian Real"
+      },
+       {
+        "symbol":"CAD",
+        "abr":"CAD",
+        "name":"Canadian Dollar"
+      },
+       {
+        "symbol":"¥",
+        "abr":"CNY",
+        "name":"Chinese Yuan"
+      },
+       {
+        "symbol":"HKD",
+        "abr":"HKD",
+        "name":"Hong Kong Dollar"
+      },
+       {
+        "symbol":"₹",
+        "abr":"INR",
+        "name":"Australian Dollar"
+      },
+       {
+        "symbol":"¥",
+        "abr":"JPY",
+        "name":"Japanese Yen"
+      },
+      {
+        "symbol":"₩",
+        "abr":"KRW",
+        "name":"South Korean Won"
+      },
+      {
+        "symbol":"MXN",
+        "abr":"MXN",
+        "name":"Mexican Peso"
+      },
+      {
+        "symbol":"NZD",
+        "abr":"NZD",
+        "name":"New Zealand Dollar"
+      },
+      {
+        "symbol":"₱",
+        "abr":"PHP",
+        "name":"Philippines Peso"
+      },
+      {
+        "symbol":"zł",
+        "abr":"PLN",
+        "name":"Polish Zloty"
+      },
+      {
+        "symbol":"lei",
+        "abr":"RON",
+        "name":"Romanian New Leu"
+      },
+      {
+        "symbol":"₽",
+        "abr":"RUB",
+        "name":"Russian Ruble"
+      },
+      {
+        "symbol":"SGD",
+        "abr":"SGD",
+        "name":"Singapore Dollar"
+      },
+      {
+        "symbol":"Bs",
+        "abr":"VEF",
+        "name":"Venezulean Bolivar"
+      }
+      ]
+  }
