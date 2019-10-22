@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/tabMenuWatchList"
+        android:icon="@drawable/database2"
+        android:title="@string/title_watchlist" />
+
+    <item
+        android:id="@+id/tabMenuPortfolio"
+        android:icon="@drawable/finances"
+        android:title="@string/title_portfolio" />
+
+    <item
+        android:id="@+id/tabMenuNews"
+        android:icon="@drawable/news"
+        android:title="@string/title_news" />
+
+</menu>
