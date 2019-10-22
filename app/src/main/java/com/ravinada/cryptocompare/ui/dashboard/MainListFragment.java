@@ -24,6 +24,7 @@ public class MainListFragment extends Fragment {
     private MainListFragmentBinding binding;
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
+    int flag=1;
 
     public static MainListFragment newInstance() {
         return new MainListFragment();
@@ -32,33 +33,37 @@ public class MainListFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.main_list_fragment, container, false);
-
         return binding.getRoot();
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
+        
         fragmentManager = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.llDashboardMain, FollowingListFragment.newInstance()).commit();
         binding.tvFollowing.setOnClickListener(view -> {
+          flag=1;
+        });
+        binding.tvTopVolume.setOnClickListener(view -> {
+          flag=2;
+        });
+        if(flag==1){
             binding.tvFollowing.setBackground(getActivity().getDrawable(R.drawable.topvolume_bg_green));
-         binding.tvTopVolume.setBackground(getActivity().getDrawable(R.drawable.topvolumebg));
+            binding.tvTopVolume.setBackground(getActivity().getDrawable(R.drawable.topvolumebg));
             binding.tvFollowing.setTextColor(getActivity().getColor(R.color.white));
             binding.tvTopVolume.setTextColor(getActivity().getColor(R.color.colorBlack));
             fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.llDashboardMain, FollowingListFragment.newInstance()).commit();
-        });
-        binding.tvTopVolume.setOnClickListener(view -> {
+        }
+        else if(flag==2){
             binding.tvTopVolume.setBackground(getActivity().getDrawable(R.drawable.topvolume_bg_green));
             binding.tvFollowing.setBackground(getActivity().getDrawable(R.drawable.topvolumebg));
             binding.tvFollowing.setTextColor(getActivity().getColor(R.color.colorBlack));
             binding.tvTopVolume.setTextColor(getActivity().getColor(R.color.white));
             fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.llDashboardMain, TopVolumeFragment.newInstance()).commit();
-        });
-
+        }
     }
 }

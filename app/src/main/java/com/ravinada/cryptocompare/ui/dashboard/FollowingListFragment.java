@@ -28,8 +28,6 @@ public class FollowingListFragment extends Fragment {
     private String type;
     private FavouriteCurrencyAdapter adapter;
     private CoinDetailViewModel coinDetailViewModel;
-    private List<FavouriteCoin> favouriteCoins;
-
     public static FollowingListFragment newInstance() {
         return new FollowingListFragment();
     }
@@ -50,9 +48,10 @@ public class FollowingListFragment extends Fragment {
         }
         super.onActivityCreated(savedInstanceState);
         coinDetailViewModel = ViewModelProviders.of(this).get(CoinDetailViewModel.class);
-        favouriteCoins= coinDetailViewModel.getFavouriteCoinLiveData();
-        adapter = new FavouriteCurrencyAdapter(getActivity(),favouriteCoins);
-        binding.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        binding.setFavouriteCurrencyAdapter(adapter);
+        coinDetailViewModel.getFavouriteCoinLiveData().observe(this,favouriteCoins -> {
+            adapter = new FavouriteCurrencyAdapter(getActivity(),favouriteCoins);
+            binding.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+            binding.setFavouriteCurrencyAdapter(adapter);
+        });
     }
 }

@@ -3,6 +3,8 @@ package com.ravinada.cryptocompare.repositories;
 import android.app.Application;
 import android.content.Context;
 
+import androidx.lifecycle.LiveData;
+
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -60,39 +62,8 @@ public class CoinDetailRepository {
         return favouriteCoinDao.getCoinExistance(tag);
     }
 
-    public List<FavouriteCoin> getFavouriteCoins() {
+    public LiveData<List<FavouriteCoin>> getFavouriteCoins() {
         return favouriteCoinDao.getFavouriteCoins();
     }
 
-    public List<DailyHistoricalData> getMonthlyData(Context graphContext, String fsym, String tsym, int limit){
-
-        List<DailyHistoricalData> dailyHistoricalDataList = new ArrayList<>();
-        final String DAILY_DATA_URL ="https://min-api.cryptocompare.com/data/v2/histoday?fsym=";
-            String url =DAILY_DATA_URL+fsym+"&tsyms="+tsym+"&limit"+limit;
-            RequestQueue queue = Volley.newRequestQueue(graphContext);
-            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, response -> {
-                try {
-                    JSONObject data = response.getJSONObject("Data");
-                    JSONArray dailyDataObjects = data.getJSONArray("Data");
-                    for(int iterator =0;iterator<=dailyDataObjects.length();iterator++){
-                        JSONObject dailyData = dailyDataObjects.getJSONObject(iterator);
-                        long time = dailyData.getLong("time");
-                        double high = dailyData.getDouble("high");
-                        double low = dailyData.getDouble("low");
-                        double close = dailyData.getDouble("close");
-                        DailyHistoricalData dailyHistoricalData = new DailyHistoricalData(time,high,low,close);
-                        dailyHistoricalDataList.add(dailyHistoricalData);
-                    }
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                }
-            });
-            queue.add(jsonObjectRequest);
-            return dailyHistoricalDataList;
-        }
     }

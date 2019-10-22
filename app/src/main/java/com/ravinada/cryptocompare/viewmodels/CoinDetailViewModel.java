@@ -5,6 +5,7 @@ import android.content.Context;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
 
 import com.ravinada.cryptocompare.modelclasses.DailyHistoricalData;
 import com.ravinada.cryptocompare.repositories.CoinDetailRepository;
@@ -40,11 +41,7 @@ public class CoinDetailViewModel extends AndroidViewModel {
         return coinDetailRepository.getCoinExistance(tag);
     }
 
-    public List<FavouriteCoin> getFavouriteCoinLiveData() {
+    public LiveData<List<FavouriteCoin>> getFavouriteCoinLiveData() {
         return coinDetailRepository.getFavouriteCoins();
     }
-    public List<DailyHistoricalData> getMonthlyData(Context context,String fsym,String tsym,int limit){
-        return coinDetailRepository.getMonthlyData(context,fsym,tsym,limit);
-    }
-
 }
