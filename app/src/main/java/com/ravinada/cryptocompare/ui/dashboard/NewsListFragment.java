@@ -18,10 +18,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.ravinada.cryptocompare.modelclasses.News;
 import com.ravinada.cryptocompare.R;
 import com.ravinada.cryptocompare.adapters.NewsListAdapter;
 import com.ravinada.cryptocompare.databinding.FragmentNewsListBinding;
+import com.ravinada.cryptocompare.modelclasses.News;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -55,11 +55,9 @@ public class NewsListFragment extends Fragment {
                 new SwipeRefreshLayout.OnRefreshListener() {
                     @Override
                     public void onRefresh() {
-                        //Log.i(LOG_TAG, "onRefresh called from SwipeRefreshLayout");
-
-                        // This method performs the actual data-refresh operation.
-                        // The method calls setRefreshing(false) when it's finished.
                         prepareNews();
+                        binding.swipeRefresh.setRefreshing(false);
+
                     }
                 }
         );

@@ -1,15 +1,24 @@
 package com.ravinada.cryptocompare.modelclasses;
 
 public class DailyHistoricalData {
-    long time;
-    double high;
-    double low;
-    double close;
+    private long time;
+    private double high;
+    private double low;
+    private double close;
 
-    public DailyHistoricalData(long time, double high, double low, double close) {
+    public void setTime(long time) {
         this.time = time;
+    }
+
+    public void setHigh(double high) {
         this.high = high;
+    }
+
+    public void setLow(double low) {
         this.low = low;
+    }
+
+    public void setClose(double close) {
         this.close = close;
     }
 

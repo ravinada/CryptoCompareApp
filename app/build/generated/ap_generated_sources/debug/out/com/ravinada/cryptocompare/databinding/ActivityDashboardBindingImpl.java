@@ -22,10 +22,7 @@ public class ActivityDashboardBindingImpl extends ActivityDashboardBinding  {
         sViewsWithIds.put(R.id.txtPortfolioName, 6);
         sViewsWithIds.put(R.id.portfolio_edit, 7);
         sViewsWithIds.put(R.id.viewPager, 8);
-        sViewsWithIds.put(R.id.tabsBottom, 9);
-        sViewsWithIds.put(R.id.tabMenuWatchList, 10);
-        sViewsWithIds.put(R.id.tabMenuPortfolio, 11);
-        sViewsWithIds.put(R.id.tabMenuNews, 12);
+        sViewsWithIds.put(R.id.bottom_nav, 9);
     }
     // views
     // variables
@@ -34,19 +31,16 @@ public class ActivityDashboardBindingImpl extends ActivityDashboardBinding  {
     // Inverse Binding Event Handlers
 
     public ActivityDashboardBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 13, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 10, sIncludes, sViewsWithIds));
     }
     private ActivityDashboardBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
             , (androidx.coordinatorlayout.widget.CoordinatorLayout) bindings[0]
+            , (com.google.android.material.bottomnavigation.BottomNavigationView) bindings[9]
             , (android.widget.RelativeLayout) bindings[1]
             , (android.widget.TextView) bindings[5]
             , (android.widget.TextView) bindings[7]
             , (androidx.appcompat.widget.SearchView) bindings[4]
-            , (com.google.android.material.tabs.TabItem) bindings[12]
-            , (com.google.android.material.tabs.TabItem) bindings[11]
-            , (com.google.android.material.tabs.TabItem) bindings[10]
-            , (com.google.android.material.tabs.TabLayout) bindings[9]
             , (android.widget.RelativeLayout) bindings[2]
             , (android.widget.TextView) bindings[6]
             , (android.widget.ImageButton) bindings[3]

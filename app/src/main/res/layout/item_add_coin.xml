@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,7 +8,11 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/porfolioCoinDetails"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp">
 
@@ -105,5 +109,127 @@
             android:visibility="gone"
             app:srcCompat="@drawable/ic_keyboard_arrow_up_black_24dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/expandedCoinDetails"
+        app:layout_constraintTop_toBottomOf="@id/porfolioCoinDetails">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/expandedActivity"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="bottom"
+                android:layout_width="0dp"
+                android:background="@drawable/rounded_option_delete"
+                android:textColor="@color/colorRed"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Delete"/>
+            <Button
+                android:id="@+id/btn_edit"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/rounded_border_follow"
+                android:layout_gravity="bottom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Edit"/>
+            <ImageView
+                android:id="@+id/iv_options_back"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                app:srcCompat="@drawable/ic_more_horiz_black" />
+        </LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/expandedDetails"
+            android:layout_height="match_parent">
 
-</androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/lbl_total_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="8dp"
+                android:text="Total Value"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_profit_loss1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="$ 163.48"
+                android:textColor="@color/colorGreen"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/lbl_pro_loss"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_pro_loss" />
+
+            <TextView
+                android:id="@+id/txt_total_value1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="$ 1773.48 K"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/lbl_total_val"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_total_val" />
+
+            <TextView
+                android:id="@+id/txt_total_value2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="$ 53.48"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/txt_total_value1"
+                app:layout_constraintTop_toBottomOf="@+id/txt_total_value1" />
+
+            <TextView
+                android:id="@+id/txt_profit_loss2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="$ 173.48"
+                android:textColor="@color/colorRed"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/txt_profit_loss1"
+                app:layout_constraintTop_toBottomOf="@+id/txt_profit_loss1" />
+
+            <TextView
+                android:id="@+id/lbl_pro_loss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="28dp"
+                android:text="Profit/Loss"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintEnd_toStartOf="@+id/iv_options"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_options"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_more_horiz_black" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

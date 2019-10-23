@@ -1,5 +1,6 @@
 package com.ravinada.cryptocompare.ui.dashboard;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -23,6 +24,7 @@ import com.ravinada.cryptocompare.modelclasses.Currency;
 import com.ravinada.cryptocompare.adapters.CurrencyAdapter;
 import com.ravinada.cryptocompare.R;
 import com.ravinada.cryptocompare.databinding.FragmentTopvolumeListBinding;
+import com.ravinada.cryptocompare.modelclasses.DailyHistoricalData;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -33,11 +35,13 @@ import java.util.List;
 import java.util.Objects;
 
 public class TopVolumeFragment extends Fragment {
+
+    public String type;
     private final String TAG = TopVolumeFragment.class.getSimpleName();
     String BASE_URL = "https://min-api.cryptocompare.com";
     String IMAGE_URL = "https://www.cryptocompare.com";
     FragmentTopvolumeListBinding binding;
-    String type;
+    static List<DailyHistoricalData> dailyHistoricalDataList = new ArrayList<>();
     private CurrencyAdapter adapter;
     private List<Currency> currencyList = new ArrayList<>();
 
@@ -48,6 +52,7 @@ public class TopVolumeFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_topvolume_list, container, false);
+
         return binding.getRoot();
     }
 
@@ -68,14 +73,17 @@ public class TopVolumeFragment extends Fragment {
                     public void onRefresh() {
                         String url = BASE_URL + "/data/top/totalvolfull?limit=20&tsym=" + type;
                         prepareCurrencies(url);
+                        binding.swipeRefresh.setRefreshing(false);
                     }
                 }
         );
+
     }
 
     @Override
     public void onResume() {
         super.onResume();
+        // binding.shimmerViewContainer.stopShimmerAnimation();
         View view = getActivity().findViewById(R.id.currencyTag);
         if (view instanceof TextView) {
             TextView currencyType = (TextView) view;
@@ -83,8 +91,13 @@ public class TopVolumeFragment extends Fragment {
         }
         String url = BASE_URL + "/data/top/totalvolfull?limit=20&tsym=" + type;
         prepareCurrencies(url);
+
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
     private void prepareCurrencies(String url) {
         currencyList.clear();
         RequestQueue queue = Volley.newRequestQueue(getActivity());
@@ -120,5 +133,6 @@ public class TopVolumeFragment extends Fragment {
         queue.add(jsObjRequest);
 
     }
+
 
 }

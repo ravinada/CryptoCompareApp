@@ -10,6 +10,7 @@ import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.ravinada.cryptocompare.R;
 import com.ravinada.cryptocompare.adapters.FavouriteCurrencyAdapter;
 import java.lang.Deprecated;
@@ -17,14 +18,18 @@ import java.lang.Object;
 
 public abstract class FragmentFollowingListBinding extends ViewDataBinding {
   @NonNull
+  public final SwipeRefreshLayout followingSwipeRefresh;
+
+  @NonNull
   public final RecyclerView recyclerView;
 
   @Bindable
   protected FavouriteCurrencyAdapter mFavouriteCurrencyAdapter;
 
   protected FragmentFollowingListBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      RecyclerView recyclerView) {
+      SwipeRefreshLayout followingSwipeRefresh, RecyclerView recyclerView) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.followingSwipeRefresh = followingSwipeRefresh;
     this.recyclerView = recyclerView;
   }
 

@@ -1202,6 +1202,7 @@ drawable btn_radio_on_to_off_mtrl_animation
 drawable cc2logo
 drawable cclogo
 drawable database
+drawable database2
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1221,6 +1222,7 @@ drawable ic_dashboard_black_16dp
 drawable ic_enhanced_encryption_black_24dp
 drawable ic_home_black_16dp
 drawable ic_keyboard_arrow_down_black_24dp
+drawable ic_keyboard_arrow_right_black_24dp
 drawable ic_keyboard_arrow_up_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -1260,10 +1262,13 @@ drawable rounded_drawable_following
 drawable rounded_drawable_submit_grey
 drawable rounded_drawable_symbol
 drawable rounded_drawable_symbol_delete
+drawable rounded_option_delete
 drawable rounded_rect_green
 drawable rounded_rect_grey
+drawable selector
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable topbar_rounded_border_add_portfolio
 drawable topvolume_bg_green
 drawable topvolumebg
 id ALT
@@ -1339,6 +1344,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id bottom_nav
 id btnFPass
 id btnFacebook
 id btnGoogle
@@ -1348,6 +1354,8 @@ id btn_add_coin
 id btn_add_first_coin
 id btn_add_portfolio
 id btn_currency
+id btn_delete
+id btn_edit
 id btn_scrollAddPortfolio
 id btn_submit
 id buttonPanel
@@ -1430,17 +1438,20 @@ id et_description
 id et_portfolioName
 id exitUntilCollapsed
 id expand_activities_button
+id expandedActivity
+id expandedCoinDetails
+id expandedDetails
 id expanded_menu
 id fill
 id fill_horizontal
 id fill_vertical
 id filled
 id fixed
+id following_swipe_refresh
 id forever
 id forgotPassword
 id ghost_view
 id gone
-id graph
 id group_divider
 id groups
 id guide1
@@ -1455,6 +1466,8 @@ id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
+id iv_options
+id iv_options_back
 id iv_selected
 id labeled
 id largeLabel
@@ -1473,6 +1486,7 @@ id lbl_total_value
 id left
 id line1
 id line3
+id line_chart
 id listMode
 id list_item
 id llDashboardMain
@@ -1497,7 +1511,6 @@ id navigation_header_container
 id navigation_home
 id navigation_notifications
 id never
-id newsBar
 id news_category
 id news_image
 id news_source
@@ -1513,7 +1526,7 @@ id onAttachStateChangeListener
 id onDateChanged
 id one_day
 id one_hour
-id one_month
+id one_minute
 id one_week
 id openDay
 id outline
@@ -1525,7 +1538,7 @@ id parent_matrix
 id percent
 id pickCurrencyText
 id pin
-id portfolio_bar
+id porfolioCoinDetails
 id portfolio_edit
 id progress
 id progress_circular
@@ -1536,6 +1549,7 @@ id recycler_view
 id right
 id right_icon
 id right_side
+id rvCoinData
 id rvCurrency
 id rv_portfolioSelected
 id save_image_matrix
@@ -1595,7 +1609,6 @@ id tabMenuNews
 id tabMenuPortfolio
 id tabMenuWatchList
 id tabMode
-id tabsBottom
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -1630,6 +1643,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id transparentViewCoinSelector
+id tvContent
 id tvFollowing
 id tvNoCoinAdded
 id tvTopVolume
@@ -1655,7 +1669,6 @@ id view
 id viewPager
 id view_offset_helper
 id visible
-id watch_list_bar
 id webView
 id withText
 id wrap
@@ -1757,6 +1770,7 @@ layout item_add_coin
 layout item_expandable
 layout list
 layout main_list_fragment
+layout marker_view
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout news_card

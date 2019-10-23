@@ -6,7 +6,7 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-@Database(entities = {Portfolio.class},version = 2,exportSchema = false)
+@Database(entities = {Portfolio.class},version = 3,exportSchema = false)
 public abstract class PortfolioDatabase extends RoomDatabase {
     private static PortfolioDatabase instance;
 

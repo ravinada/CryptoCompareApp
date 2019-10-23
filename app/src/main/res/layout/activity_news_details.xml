@@ -20,6 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="@color/white"
+                android:layout_gravity="center"
                 app:popupTheme="@style/AppTheme.PopupOverlay"
                 app:titleTextColor="@color/colorBlack"/>
         </com.google.android.material.appbar.AppBarLayout>

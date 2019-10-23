@@ -13,14 +13,13 @@
         <Button
             android:id="@+id/btn_scrollAddPortfolio"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="32dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/rounded_border_add_portfolio"
+            android:paddingLeft="56dp"
+            android:paddingRight="56dp"
+            android:background="@drawable/topbar_rounded_border_add_portfolio"
             android:text="+     ADD PORTFOLIO"
             android:textColor="@color/colorGreen"/>
         <androidx.recyclerview.widget.RecyclerView
@@ -28,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/btn_scrollAddPortfolio"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="8dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             tools:listitem="@layout/portfolio_list"/>

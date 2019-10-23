@@ -32,7 +32,6 @@ public class PortfolioFragment extends Fragment {
     private InitialPortfolioBinding binding;
     String portfolioSelectedName;
     List<PortfolioCoin> coins= new ArrayList<>();
-    private List<Portfolio> portfolios = new ArrayList<>();
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
     int flag =0;
@@ -55,36 +54,38 @@ public class PortfolioFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         PortfolioViewModel portfolioViewModel = ViewModelProviders.of(this).get(PortfolioViewModel.class);
-        portfolios = portfolioViewModel.getPortfolios();
-        fragmentManager = getActivity().getSupportFragmentManager();
-        if (portfolios.isEmpty()){
-            portfolioName.setText("portfolios");
-            fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.emptyPortfolio, AddPortfolioFragment.newInstance()).commit();
-        }
-        else {
-            portfolioSelectedName = portfolioViewModel.getSelectedPortfolio();
-            if (portfolioSelectedName.equalsIgnoreCase("")){
+        portfolioViewModel.getPortfolios().observe(this ,portfolios -> {
+            fragmentManager = getActivity().getSupportFragmentManager();
+            if (portfolios.isEmpty()){
                 portfolioName.setText("portfolios");
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.emptyPortfolio, AddPortfolioFragment.newInstance()).commit();
             }
             else {
-            portfolioName.setText(portfolioSelectedName);}
-            portfolioName.setTextColor(getActivity().getColor(R.color.colorBlack));
-            fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.emptyPortfolio, AddCoinFragment.newInstance()).commit();
-            portfolioName.setOnClickListener(view -> {
-                if (flag==0){
-                    flag =1;
-                fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.add(R.id.addCoinFragment, PortfolioSelectorFragment.newInstance(),"remove-me").commit();}
-                else if(flag==1){
-                    flag=0;
-                    fragmentTransaction = fragmentManager.beginTransaction();
-                    Fragment fragment = fragmentManager.findFragmentByTag("remove-me");
-                    if (fragment!=null){
-                    fragmentTransaction.remove(fragment).commit();}
+                portfolioSelectedName = portfolioViewModel.getSelectedPortfolio();
+                if (portfolioSelectedName.equalsIgnoreCase("")){
+                    portfolioName.setText("portfolios");
                 }
-            });
-        }
+                else {
+                    portfolioName.setText(portfolioSelectedName);}
+                portfolioName.setTextColor(getActivity().getColor(R.color.colorBlack));
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.emptyPortfolio, AddCoinFragment.newInstance()).commit();
+                portfolioName.setOnClickListener(view -> {
+                    if (flag==0){
+                        flag =1;
+                        fragmentTransaction = fragmentManager.beginTransaction();
+                        fragmentTransaction.add(R.id.addCoinFragment, PortfolioSelectorFragment.newInstance(),"remove-me").commit();}
+                    else if(flag==1){
+                        flag=0;
+                        fragmentTransaction = fragmentManager.beginTransaction();
+                        Fragment fragment = fragmentManager.findFragmentByTag("remove-me");
+                        if (fragment!=null){
+                            fragmentTransaction.remove(fragment).commit();}
+                    }
+                });
+            }
+        });
+
     }
 }

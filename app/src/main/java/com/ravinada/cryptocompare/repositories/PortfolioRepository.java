@@ -46,9 +46,9 @@ public class PortfolioRepository {
         executor.execute(()-> portfolioCoinDao.delete(portfolioCoin));
     }
     public List<PortfolioCoin> getPortfolioCoins(){
-       return portfolioCoinDao.getPortfolioCoins();
+        return portfolioCoinDao.getPortfolioCoins();
     }
-    public List<Portfolio> getPortfolios(){
+    public LiveData<List<Portfolio>>getPortfolios(){
         return portfolioDao.getPortfolios();
     }
     public String getSelectedName(){
@@ -60,14 +60,14 @@ public class PortfolioRepository {
     public void setSelected(String name){
         executor.execute(()->portfolioDao.setSelected(name,true));
     }
-    public List<String> getPortfolioNames(){
-        return portfolioDao.getNames();
-    }
     public  int getIdForSelectedName(){
         return portfolioDao.getidForSelectedName(true);
     }
 
     public LiveData<List<PortfolioCoin>> getPortfolioCoinsForId(int portfolioId) {
         return portfolioCoinDao.getPortfolioCoinsForId(portfolioId);
+    }
+    public LiveData<String> getCurrencyForSelectedPortfolio(){
+        return portfolioDao.getCurrencySelectionForSelectedPortfolio(true);
     }
 }

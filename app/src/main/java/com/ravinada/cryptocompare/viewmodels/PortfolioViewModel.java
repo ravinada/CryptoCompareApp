@@ -25,9 +25,9 @@ public class PortfolioViewModel extends AndroidViewModel {
         portfolioRepository.insertPortfolioCoin(portfolioCoin);
     }
     public List<PortfolioCoin> getPortfolioCoins (){
-     return portfolioRepository.getPortfolioCoins();
+        return portfolioRepository.getPortfolioCoins();
     }
-    public List<Portfolio> getPortfolios(){
+    public LiveData<List<Portfolio>> getPortfolios(){
         return portfolioRepository.getPortfolios();
     }
     public String getSelectedPortfolio(){
@@ -39,13 +39,13 @@ public class PortfolioViewModel extends AndroidViewModel {
     public void setSelected(String name){
         portfolioRepository.setSelected(name);
     }
-    public List<String> getPortfolioNames(){
-      return portfolioRepository.getPortfolioNames();
-    }
     public int getIdForSelectedName(){
         return portfolioRepository.getIdForSelectedName();
     }
     public LiveData<List<PortfolioCoin>> getPortfolioCoinsForId(int portfolioId) {
         return portfolioRepository.getPortfolioCoinsForId(portfolioId);
+    }
+    public LiveData<String> getCurrencyForSelectedPortfolio(){
+        return portfolioRepository.getCurrencyForSelectedPortfolio();
     }
 }

@@ -19,7 +19,7 @@ public interface PortfolioDao {
     void delete(Portfolio portfolio);
 
     @Query("SELECT * FROM portfolios")
-    List<Portfolio> getPortfolios();
+    LiveData<List<Portfolio>> getPortfolios();
 
     @Query("Select name From portfolios Where selected=:selection")
     String getSelected(Boolean selection);
@@ -36,4 +36,6 @@ public interface PortfolioDao {
     @Query("SELECT name FROM portfolios")
     List<String> getNames();
 
+    @Query("SELECT currency FROM portfolios WHERE selected=:selected")
+    LiveData<String> getCurrencySelectionForSelectedPortfolio(Boolean selected);
 }

@@ -14,8 +14,7 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.viewpager.widget.ViewPager;
-import com.google.android.material.tabs.TabItem;
-import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.ravinada.cryptocompare.R;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -23,6 +22,9 @@ import java.lang.Object;
 public abstract class ActivityDashboardBinding extends ViewDataBinding {
   @NonNull
   public final CoordinatorLayout activityMain;
+
+  @NonNull
+  public final BottomNavigationView bottomNav;
 
   @NonNull
   public final RelativeLayout container;
@@ -37,18 +39,6 @@ public abstract class ActivityDashboardBinding extends ViewDataBinding {
   public final SearchView searchBar;
 
   @NonNull
-  public final TabItem tabMenuNews;
-
-  @NonNull
-  public final TabItem tabMenuPortfolio;
-
-  @NonNull
-  public final TabItem tabMenuWatchList;
-
-  @NonNull
-  public final TabLayout tabsBottom;
-
-  @NonNull
   public final RelativeLayout toolbar;
 
   @NonNull
@@ -61,20 +51,16 @@ public abstract class ActivityDashboardBinding extends ViewDataBinding {
   public final ViewPager viewPager;
 
   protected ActivityDashboardBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CoordinatorLayout activityMain, RelativeLayout container, TextView currencyTag,
-      TextView portfolioEdit, SearchView searchBar, TabItem tabMenuNews, TabItem tabMenuPortfolio,
-      TabItem tabMenuWatchList, TabLayout tabsBottom, RelativeLayout toolbar,
+      CoordinatorLayout activityMain, BottomNavigationView bottomNav, RelativeLayout container,
+      TextView currencyTag, TextView portfolioEdit, SearchView searchBar, RelativeLayout toolbar,
       TextView txtPortfolioName, ImageButton userMenu, ViewPager viewPager) {
     super(_bindingComponent, _root, _localFieldCount);
     this.activityMain = activityMain;
+    this.bottomNav = bottomNav;
     this.container = container;
     this.currencyTag = currencyTag;
     this.portfolioEdit = portfolioEdit;
     this.searchBar = searchBar;
-    this.tabMenuNews = tabMenuNews;
-    this.tabMenuPortfolio = tabMenuPortfolio;
-    this.tabMenuWatchList = tabMenuWatchList;
-    this.tabsBottom = tabsBottom;
     this.toolbar = toolbar;
     this.txtPortfolioName = txtPortfolioName;
     this.userMenu = userMenu;

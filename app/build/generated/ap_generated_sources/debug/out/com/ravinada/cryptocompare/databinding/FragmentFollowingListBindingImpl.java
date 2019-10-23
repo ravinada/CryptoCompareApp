@@ -13,7 +13,8 @@ public class FragmentFollowingListBindingImpl extends FragmentFollowingListBindi
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
         sIncludes = null;
-        sViewsWithIds = null;
+        sViewsWithIds = new android.util.SparseIntArray();
+        sViewsWithIds.put(R.id.following_swipe_refresh, 2);
     }
     // views
     @NonNull
@@ -24,10 +25,11 @@ public class FragmentFollowingListBindingImpl extends FragmentFollowingListBindi
     // Inverse Binding Event Handlers
 
     public FragmentFollowingListBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 2, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
     }
     private FragmentFollowingListBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
+            , (androidx.swiperefreshlayout.widget.SwipeRefreshLayout) bindings[2]
             , (androidx.recyclerview.widget.RecyclerView) bindings[1]
             );
         this.mboundView0 = (android.widget.LinearLayout) bindings[0];

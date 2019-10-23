@@ -1,19 +1,16 @@
 package com.ravinada.cryptocompare;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.databinding.DataBindingUtil;
-
 import androidx.viewpager.widget.ViewPager;
+
 import com.ravinada.cryptocompare.databinding.ActivityDashboardBinding;
 import com.ravinada.cryptocompare.ui.dashboard.MainListFragment;
 import com.ravinada.cryptocompare.ui.dashboard.NewsListFragment;
@@ -23,37 +20,50 @@ import com.ravinada.cryptocompare.ui.dashboard.PortfolioFragment;
 public class DashboardActivity extends AppCompatActivity {
     TextView currencySelector;
     ActivityDashboardBinding binding;
-    private int[] tabIcons = {
-            R.drawable.database,
-            R.drawable.finances,
-            R.drawable.news
-    };
+    private ViewPager viewPager;
+    MenuItem prevMenuItem;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_dashboard);
         currencySelector = findViewById(R.id.currencyTag);
         currencySelector.setOnClickListener(view -> {
-            Intent intent = new Intent(DashboardActivity.this,CurrencySelector.class);
+            Intent intent = new Intent(DashboardActivity.this, CurrencySelector.class);
             startActivityForResult(intent,1);
         });
 
-
-        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this.getSupportFragmentManager());
-        viewPagerAdapter.addFragment(MainListFragment.newInstance(),"Watchlist");
-        viewPagerAdapter.addFragment(PortfolioFragment.newInstance(),"Portfolio");
-        viewPagerAdapter.addFragment(NewsListFragment.newInstance(),"News");
-        binding.viewPager.setAdapter(viewPagerAdapter);
-        binding.tabsBottom.setupWithViewPager(binding.viewPager);
-        setupTabIcons();
+        binding.bottomNav.setOnNavigationItemSelectedListener(
+                item -> {
+                    switch (item.getItemId()) {
+                        case R.id.tabMenuWatchList:
+                            binding.viewPager.setCurrentItem(0);
+                            break;
+                        case R.id.tabMenuPortfolio:
+                            binding.viewPager.setCurrentItem(1);
+                            break;
+                        case R.id.tabMenuNews:
+                            binding.viewPager.setCurrentItem(2);
+                            break;
+                    }
+                    return false;
+                });
         binding.viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
             }
-
             @Override
             public void onPageSelected(int position) {
+                if (prevMenuItem != null) {
+                    prevMenuItem.setChecked(false);
+                }
+                else
+                {
+                    binding.bottomNav.getMenu().getItem(0).setChecked(false);
+                }
+                binding.bottomNav.getMenu().getItem(position).setChecked(true);
+                prevMenuItem = binding.bottomNav.getMenu().getItem(position);
+
+
                 if (position == 1){
                     binding.txtPortfolioName.setVisibility(View.VISIBLE);
                     binding.searchBar.setVisibility(View.GONE);
@@ -80,12 +90,16 @@ public class DashboardActivity extends AppCompatActivity {
 
             }
         });
+        setupViewPager(viewPager);
 
     }
-    private void setupTabIcons() {
-        binding.tabsBottom.getTabAt(0).setIcon(tabIcons[0]);
-        binding.tabsBottom.getTabAt(1).setIcon(tabIcons[1]);
-        binding.tabsBottom.getTabAt(2).setIcon(tabIcons[2]);
+    private void setupViewPager(ViewPager viewPager)
+    {
+        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this.getSupportFragmentManager());
+        viewPagerAdapter.addFragment(MainListFragment.newInstance(),"Watchlist");
+        viewPagerAdapter.addFragment(PortfolioFragment.newInstance(),"Portfolio");
+        viewPagerAdapter.addFragment(NewsListFragment.newInstance(),"News");
+        binding.viewPager.setAdapter(viewPagerAdapter);
     }
     @Override
     protected void onResumeFragments() {

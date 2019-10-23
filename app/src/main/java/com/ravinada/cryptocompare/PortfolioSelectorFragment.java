@@ -2,6 +2,7 @@ package com.ravinada.cryptocompare;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,7 +29,7 @@ public class PortfolioSelectorFragment extends Fragment implements PortfolioSele
     private PortfolioSelectionFragmentBinding binding;
     private PortfolioViewModel portfolioViewModel;
     PortfolioSelectorAdapter portfolioSelectorAdapter;
-    List<Portfolio> portfolios;
+
 
     public static PortfolioSelectorFragment newInstance() {
         return new PortfolioSelectorFragment();
@@ -38,15 +39,17 @@ public class PortfolioSelectorFragment extends Fragment implements PortfolioSele
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater,R.layout.portfolio_selection_fragment,container,false);
         portfolioViewModel = ViewModelProviders.of(this).get(PortfolioViewModel.class);
-        portfolios = portfolioViewModel.getPortfolios();
-        portfolioSelectorAdapter = new PortfolioSelectorAdapter(this, getActivity());
-        portfolioSelectorAdapter.setPortfolios(portfolios);
-        binding.rvPortfolioSelected.setLayoutManager(new LinearLayoutManager(getActivity()));
-        binding.rvPortfolioSelected.setAdapter(portfolioSelectorAdapter);
-        binding.btnScrollAddPortfolio.setOnClickListener(view -> {
-            showAddPortfolioDialog();
+        portfolioViewModel.getPortfolios().observe(this,portfolios -> {
+            portfolioSelectorAdapter = new PortfolioSelectorAdapter(this, getActivity());
+            portfolioSelectorAdapter.setPortfolios(portfolios);
+            binding.rvPortfolioSelected.setLayoutManager(new LinearLayoutManager(getActivity()));
+            binding.rvPortfolioSelected.setAdapter(portfolioSelectorAdapter);
+            binding.btnScrollAddPortfolio.setOnClickListener(view -> {
+                showAddPortfolioDialog();
 
+            });
         });
+
         return binding.getRoot();
     }
 
@@ -63,9 +66,7 @@ public class PortfolioSelectorFragment extends Fragment implements PortfolioSele
     @Override
     public void onResume() {
         super.onResume();
-        portfolios = portfolioViewModel.getPortfolios();
-        portfolioSelectorAdapter.setPortfolios(portfolios);
-        binding.rvPortfolioSelected.setAdapter(portfolioSelectorAdapter);
+
     }
 
     @Override
@@ -78,6 +79,7 @@ public class PortfolioSelectorFragment extends Fragment implements PortfolioSele
         }
     }
     private void showAddPortfolioDialog(){
+        Log.e("ara", "showAddPortfolioDialog: " );
         FragmentManager manager = getFragmentManager();
         AddPortfolioDialogue addPortfolioDialogue = new AddPortfolioDialogue();
         assert manager != null;

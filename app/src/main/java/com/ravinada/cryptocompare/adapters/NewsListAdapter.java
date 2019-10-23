@@ -10,9 +10,9 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.ravinada.cryptocompare.modelclasses.News;
 import com.ravinada.cryptocompare.NewsDetailsActivity;
 import com.ravinada.cryptocompare.R;
+import com.ravinada.cryptocompare.modelclasses.News;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -42,6 +42,7 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.NewsVi
         holder.newsSource.setText(news.getNewsSource());
         Picasso.get().load(news.getNewsImageURL()).into(holder.newsImage);
         holder.news = news;
+        holder.categories.setText(news.getNewsCategory());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,9 +59,8 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.NewsVi
     }
 
     public class NewsViewHolder extends RecyclerView.ViewHolder {
-        public TextView newsTitle, newsSource;
+        public TextView newsTitle, newsSource,categories;
         public ImageView newsImage;
-
         public News news;
 
         public NewsViewHolder(View view) {
@@ -68,6 +68,7 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.NewsVi
             newsTitle = view.findViewById(R.id.news_title);
             newsSource = view.findViewById(R.id.news_source);
             newsImage = view.findViewById(R.id.news_image);
+            categories = view.findViewById(R.id.news_category);
         }
     }
 

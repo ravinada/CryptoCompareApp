@@ -17,14 +17,22 @@
         android:background="@color/white"
         android:orientation="vertical">
 
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/following_swipe_refresh"
+            android:layout_width="match_parent"
+            android:background="@color/dark_transparent"
+            android:layout_marginTop="6dp"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:adapter="@{FavouriteCurrencyAdapter}"
-                android:background="@color/dark_transparent"
+                android:background="@color/white"
                 android:orientation="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
     </LinearLayout>
 
 </layout>

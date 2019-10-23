@@ -9,7 +9,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:background="@color/colorGrey"
+        android:background="@color/colorLightGrey"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -17,10 +17,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_radio_button_unchecked_grey"
+        android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="10dp"
         app:layout_constraintHorizontal_bias=".1"
         />
 
@@ -28,12 +28,12 @@
         android:id="@+id/tv_dbItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp"
         android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@id/iv_selected"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="db item"
-        app:layout_constraintHorizontal_bias=".4"/>
+        tools:text="db item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

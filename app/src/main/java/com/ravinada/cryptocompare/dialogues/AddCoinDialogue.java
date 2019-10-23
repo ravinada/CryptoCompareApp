@@ -39,7 +39,7 @@ public class  AddCoinDialogue extends DialogFragment implements CurrencyTypePurc
     private PortfolioViewModel portfolioViewModel;
     private ArrayList<CurrencyType> currencyType = new ArrayList<>();
     private int portfolioId;
-    private String coinSelected="",coinUrl,currencySelection="";
+    private String coinSelected="",coinUrl,currencySelection="",fullName;
 
     public static AddCoinDialogue newInstance(int id){
         AddCoinDialogue fragAddCoin = new AddCoinDialogue();
@@ -76,7 +76,7 @@ public class  AddCoinDialogue extends DialogFragment implements CurrencyTypePurc
                 PortfolioCoin portfolioCoin = new PortfolioCoin(currencySelection,
                         Float.parseFloat(binding.editAmount.getText().toString()),
                 Float.parseFloat(binding.editBuyInsertAmount.getText().toString()),coinSelected,
-                        binding.editDate.getText().toString(),binding.editDescription.getText().toString(),portfolioId);
+                        binding.editDate.getText().toString(),binding.editDescription.getText().toString(),portfolioId,coinUrl,fullName);
                 portfolioViewModel.insertPortfolioCoin(portfolioCoin);
                 dismiss();
             }
@@ -219,6 +219,8 @@ public class  AddCoinDialogue extends DialogFragment implements CurrencyTypePurc
             if (resultCode== Activity.RESULT_OK){
                 Bundle bundle = data.getExtras();
                 coinSelected=bundle.getString("name");
+                coinUrl = bundle.getString("url");
+                fullName = bundle.getString("full_name");
                 binding.selectCoin.setText(coinSelected);
                 if(!binding.editAmount.getText().toString().equalsIgnoreCase("")&&
                         !binding.editBuyInsertAmount.getText().toString().equalsIgnoreCase("")

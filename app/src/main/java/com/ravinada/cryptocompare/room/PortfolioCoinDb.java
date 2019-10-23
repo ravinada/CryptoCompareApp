@@ -6,7 +6,7 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-@Database(entities = {PortfolioCoin.class},version = 1 ,exportSchema = false)
+@Database(entities = {PortfolioCoin.class},version = 2 ,exportSchema = false)
 public abstract class PortfolioCoinDb extends RoomDatabase {
     private static PortfolioCoinDb instance;
     public abstract PortfolioCoinDao portfolioCoinDao();

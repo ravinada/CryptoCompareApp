@@ -100,6 +100,8 @@ public class SelectCoinDialog extends DialogFragment implements CoinSelectorAdap
             selectedCoinImg = currency.getImageURL();
             Intent intent = new Intent();
             intent.putExtra("name",coinSelected);
+            intent.putExtra("url",currency.getImageURL());
+            intent.putExtra("full_name",currency.getFullName());
             getTargetFragment().onActivityResult(getTargetRequestCode(), Activity.RESULT_OK, intent);
             dismiss();
         }

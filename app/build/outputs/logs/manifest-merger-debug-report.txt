@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:2:1-52:12
-INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:2:1-52:12
-INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:2:1-52:12
-INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:2:1-52:12
+ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:2:1-52:12
 MERGED from [androidx.databinding:databinding-adapters:3.5.1] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\105d15325a3ab4ba84ad2886bc5bf858\databinding-adapters-3.5.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:3.5.1] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\61fe8212f7a95dd36088044ddcbbfc07\databinding-runtime-3.5.1\AndroidManifest.xml:17:1-24:12
 MERGED from [com.facebook.stetho:stetho:1.5.1] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\75eb0332e6159cab3ac37f76e164d7e3\jetified-stetho-1.5.1\AndroidManifest.xml:2:1-13:12
@@ -60,31 +60,31 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\muthr\.gradle\ca
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\8506ddbc1ed30380944ad7f0369e4760\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\35d6382087ac1999db47004e3bf24934\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\8893b90c6f2a61edd1acfa898cb4cde1\print-1.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:2:1-52:12
-INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:2:1-52:12
-INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:2:1-52:12
 	package
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:4:5-41
-		INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:4:5-41
+		INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:2:1-52:12
-		INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:2:1-52:12
+		INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:3:5-51
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:2:1-52:12
-		INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:2:1-52:12
+		INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:6:5-67
+ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:6:5-67
 	android:name
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:6:22-64
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:6:22-64
 application
-ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:8:5-50:19
+ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:8:5-50:19
 MERGED from [com.facebook.stetho:stetho:1.5.1] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\75eb0332e6159cab3ac37f76e164d7e3\jetified-stetho-1.5.1\AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.stetho:stetho:1.5.1] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\75eb0332e6159cab3ac37f76e164d7e3\jetified-stetho-1.5.1\AndroidManifest.xml:11:5-20
 MERGED from [androidx.room:room-runtime:2.2.0-rc01] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\1db915c361236921d1fb04cd8bec5b57\room-runtime-2.2.0-rc01\AndroidManifest.xml:24:5-28:19
@@ -112,91 +112,91 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\mu
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\7f6c41cc2a14c0fbaa8d0166c17dc544\core-1.1.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:14:9-35
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:12:9-41
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:12:9-41
 	tools:ignore
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:17:9-48
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:17:9-48
 	android:roundIcon
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:13:9-54
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:13:9-54
 	android:icon
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:11:9-43
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:11:9-43
 	android:allowBackup
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:15:9-40
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:15:9-40
 	android:usesCleartextTraffic
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:16:9-44
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:16:9-44
 	android:name
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:9:9-41
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:9:9-41
 activity#com.ravinada.cryptocompare.DashboardActivity
-ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:18:9-20:46
+ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:18:9-20:46
 	android:theme
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:20:13-43
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:20:13-43
 	android:name
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:19:13-46
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:19:13-46
 activity#com.ravinada.cryptocompare.Main2Activity
-ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:21:9-23:71
+ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:21:9-23:71
 	android:theme
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:23:13-69
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:23:13-69
 	android:name
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:22:13-42
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:22:13-42
 activity#com.ravinada.cryptocompare.ForgotPasswordActivity
-ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:24:9-26:72
+ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:24:9-26:72
 	android:theme
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:26:13-69
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:26:13-69
 	android:name
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:25:13-51
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:25:13-51
 activity#com.ravinada.cryptocompare.SplashActivity
-ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:27:9-35:20
+ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:27:9-35:20
 	android:theme
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:29:13-69
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:29:13-69
 	android:name
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:28:13-43
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:28:13-43
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:30:13-34:29
+ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:30:13-34:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:31:17-69
+ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:31:17-69
 	android:name
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:31:25-66
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:31:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:33:17-77
+ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:33:17-77
 	android:name
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:33:27-74
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:33:27-74
 activity#com.ravinada.cryptocompare.LoginActivity
-ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:36:9-38:72
+ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:36:9-38:72
 	android:theme
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:38:13-69
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:38:13-69
 	android:name
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:37:13-42
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:37:13-42
 activity#com.ravinada.cryptocompare.SignupActivity
-ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:39:9-41:72
+ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:39:9-41:72
 	android:theme
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:41:13-69
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:41:13-69
 	android:name
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:40:13-43
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:40:13-43
 activity#com.ravinada.cryptocompare.NewsDetailsActivity
-ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:42:9-44:71
+ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:42:9-44:71
 	android:theme
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:44:13-69
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:44:13-69
 	android:name
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:43:13-48
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:43:13-48
 activity#com.ravinada.cryptocompare.CurrencySelector
-ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:45:9-46:55
+ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:45:9-46:55
 	android:theme
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:46:13-53
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:46:13-53
 	android:name
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:45:19-51
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:45:19-51
 activity#com.ravinada.cryptocompare.CurrencyDetailActivity
-ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:47:9-48:71
+ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:47:9-48:71
 	android:theme
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:48:13-69
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:48:13-69
 	android:name
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml:47:19-57
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml:47:19-57
 uses-sdk
-INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml
 MERGED from [androidx.databinding:databinding-adapters:3.5.1] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\105d15325a3ab4ba84ad2886bc5bf858\databinding-adapters-3.5.1\AndroidManifest.xml:22:5-44
 MERGED from [androidx.databinding:databinding-adapters:3.5.1] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\105d15325a3ab4ba84ad2886bc5bf858\databinding-adapters-3.5.1\AndroidManifest.xml:22:5-44
 MERGED from [androidx.databinding:databinding-runtime:3.5.1] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\61fe8212f7a95dd36088044ddcbbfc07\databinding-runtime-3.5.1\AndroidManifest.xml:22:5-44
@@ -309,16 +309,16 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\35d6382087ac1999db47004e3bf24934\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\8893b90c6f2a61edd1acfa898cb4cde1\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\8893b90c6f2a61edd1acfa898cb4cde1\print-1.0.0\AndroidManifest.xml:20:5-44
-INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (6)\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\muthr\OneDrive\Desktop\New folder (10)\New folder (6)\app\src\main\AndroidManifest.xml
 service#androidx.room.MultiInstanceInvalidationService
 ADDED from [androidx.room:room-runtime:2.2.0-rc01] C:\Users\muthr\.gradle\caches\transforms-2\files-2.1\1db915c361236921d1fb04cd8bec5b57\room-runtime-2.2.0-rc01\AndroidManifest.xml:25:9-27:40
 	android:exported

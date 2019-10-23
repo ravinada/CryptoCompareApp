@@ -2,18 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/watch_list_bar"
-        android:icon="@drawable/ic_home_black_16dp"
+        android:id="@+id/tabMenuWatchList"
+        android:icon="@drawable/database2"
         android:title="@string/title_watchlist" />
 
     <item
-        android:id="@+id/portfolio_bar"
-        android:icon="@drawable/ic_dashboard_black_16dp"
+        android:id="@+id/tabMenuPortfolio"
+        android:icon="@drawable/finances"
         android:title="@string/title_portfolio" />
 
     <item
-        android:id="@+id/newsBar"
-        android:icon="@drawable/ic_notifications_black_16dp"
+        android:id="@+id/tabMenuNews"
+        android:icon="@drawable/news"
         android:title="@string/title_news" />
 
 </menu>
